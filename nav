@@ -1,4 +1,7 @@
-<h1>[KDLP] Program Homepage</h1>
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
 
 <hr>
 <p><a href="index.html">Home</a>

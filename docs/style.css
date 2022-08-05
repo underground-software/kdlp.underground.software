@@ -16,12 +16,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-body {
-  display: block ;
-  margin: auto ;
-  width: 50% ;
-}
-
 img {
   width: auto ;
   height: 400 ;
@@ -37,8 +31,14 @@ body {
   padding-top: 10px;
   display: block ;
   margin: auto ;
-  width: 40% ;
+  width: 45% ;
   font-family: courier ;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    width: 90% ;
+  }
 }
 
 img {
@@ -56,6 +56,12 @@ a:visited {
 
 p {
   font-size: 11pt ;
+}
+
+@media only screen and (max-width: 1000px) {
+  p {
+    font-size: 24pt ;
+  }
 }
 
 h5 {
