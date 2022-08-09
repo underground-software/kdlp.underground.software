@@ -32,7 +32,17 @@ A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join)
 Q: Where can I disucuss Linux kernel development with like-minded people?
 
 A: [Join our discord server](https://discord.gg/CFpuxqYgHM)
+
 Q: What is this group up to?
 
 A: [Check out our GitHub project](https://github.com/orgs/underground-software/projects/2)
 
+Q: Who is behind this program?
+
+A: [These people](who.html)
+
+
+
+### Fun fact
+
+You can view this website in a CLI browser (such as [lynx](https://lynx.invisible-island.net/lynx2.8.9/index.html))
