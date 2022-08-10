@@ -20,6 +20,7 @@ TODO
 Example:
 
 |Name|Grade|
+|--|--|
 |bob|0|
 |bobb|0|
 |bobbb|0|
