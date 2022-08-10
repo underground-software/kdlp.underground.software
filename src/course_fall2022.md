@@ -12,3 +12,14 @@ Raspberry Pi 4B
 #### Course outline
 
 TODO
+
+
+
+##### Assignment 1
+
+Example:
+
+|Name|Grade|
+|bob|0|
+|bobb|0|
+|bobbb|0|
