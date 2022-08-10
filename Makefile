@@ -23,7 +23,7 @@ SLDIR	= slides
 DOCS 	= $(patsubst $(SRCDIR)/%.md, %.html, $(shell find $(SRCDIR) -wholename '*.md'))
 SLIDES	= $(patsubst $(SLDIR)/%.md, $(DOCDIR)/%.html, $(shell find $(SLDIR) -wholename '*.md'))
 
-.PHONY: all sl clean cleandir dist
+.PHONY: all sl clean dist
 
 all: $(DOCDIR) $(DOCS) $(SLIDES)
 	@echo Generating Website...
