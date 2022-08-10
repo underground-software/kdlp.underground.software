@@ -19,8 +19,4 @@ TODO
 
 Example:
 
-|Name|Grade|
-|--|--|
-|bob|0|
-|bobb|0|
-|bobbb|0|
+<iframe border="0" cellspacing="0" frameborder="0" src="assignment0_fall22.html">
