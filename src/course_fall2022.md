@@ -16,7 +16,7 @@ Raspberry Pi 4B
 
 #### Course schedule
 
-Each number on the chart below is a scheduled course session.
+Each number on the chart below is a course session scheduled for 5:00 - 6:15 PM Eastern USA time.
 
 |# week|S|M|T|W|R|F|S|
 |--|--|--|--|--|--|--|--|
