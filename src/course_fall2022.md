@@ -1,6 +1,6 @@
 ### Fall 2022 Course
 
-To enroll, request to join [this](https://groups.google.com/g/kdlp-fall22) mailing list before 7 September 2022.
+The semester has begun. To audit this course and gain access to our materials, request to join [this](https://groups.google.com/g/kdlp-fall22) mailing list. We also recommend joining our [discord](https://discord.gg/CFpuxqYgHM).
 
 #### Required Materials
 
