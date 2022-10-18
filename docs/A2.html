@@ -1,0 +1,88 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<h3 id="assignment2">A2 - Scavenger Hunt 🤪 </h3>
+<p>We will assign you a syscall and give you our specially designed program.</p>
+<p>1. strace our program</p>
+<p>&emsp;&emsp;a. Locate the lines corresponding to call(s) to your syscall in the output and put them into assignment.md</p>
+<p>2. Answer question 0 in assignment.md</p>
+<p>&emsp;&emsp;a. Suggested: make use of the system’s manual pages</p>
+<p>3. Find the syscall definition within the kernel source</p>
+<p>&emsp;&emsp;a. Put the location into assignment.md</p>
+<p>&emsp;&emsp;b. Suggested: make use of <a href="https://elixir.bootlin.com/">elixir</a> or <a href="http://cscope.sourceforge.net/">cscope</a></p>
+<p>4. Answer  question 1 in the assignment.md file</p>
+<p>&emsp;&emsp;a. Who last modified your syscall’s code? What were they trying to do</p>
+<p>5. Write a bpftrace snippet to insert a probe that will print the syscall args and kernel stack in real time as the syscall is invoked</p>
+<p>&emsp;&emsp;a. Ensure that the bpf probe is only triggered when our specific command is run</p>
+<p>&emsp;&emsp;b. Suggested: <a href="https://github.com/iovisor/bpftrace/blob/master/docs/reference_guide.md#5-str-strings">bpftrace/reference_guide.md at master</a></p>
+<p>&emsp;&emsp;c. Hint: The first line of an executable bpftrace file must be “#!/usr/bin/env bpftrace”</p>
+<p>&emsp;&emsp;d. Hint: A script file must be marked as executable to be run</p>
+<p>6. Re-run the program with the bpf probe inserted via your bpftrace code</p>
+<p>&emsp;&emsp;a. Save the results into assignment.md</p>
+<p>7. Document your process in the cover letter as always</p>
+<br></br>
+<p>Tools of interest</p>
+<p>- strace</p>
+<p>- man</p>
+<p>- cscope</p>
+<p>- git-blame</p>
+<p>- grep (-rnw)</p>
+<p>- bpftrace</p>
+<br></br>
+<p> What to submit (the patches should be numbered in the order they are listed):</p>
+<p>- A cover letter following the assignment submission guidelines (as always)</p>
+<p>- A patch that includes your changes to assignment.md</p>
+<p>- A patch that includes the new entries in log.txt from all the times you ran the program</p>
+<p>- A patch that includes two full logs from strace from running the program. Once as your regular user and once as running as root using sudo. Make sure you label which is which</p>
+<p>- A patch that adds your .bp bpftrace program</p>
+<a href="submission_guidelines.html">Submission Guidelines</a>

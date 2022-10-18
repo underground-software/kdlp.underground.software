@@ -1,0 +1,69 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<h3 id="assignment3">A3 - Hello kernel 🐧</h3>
+<p>Write a kernel module that prints a message to the kernel ring buffer when the module is inserted and initialized and when the module is removed and exits.</p>
+<p>Keep in mind that messages sent to the kernel ring buffer with printk (or its macro variants in the pr_* family) will not be shown in dmesg until a newline is sent or printk is called a second time. For that reason, we recommend using printk directly in this assignment and, of course, ending your format string with the ‘\n’ newline escape character.</p>
+<p>There are numerous examples online, including one in the slides that we showed in class. Feel free to start from any of these.</p>
+<p>The string “hello world” is acceptable but boring. If you can make us laugh at your patch we will honor you in front of your peers.</p>
+<p>Your submission must include the output of dmesg that is generated upon inserting and removing your module.</p>
+<br></br>
+<p>What to submit:</p>
+<p>- The first patch should create a directory in A3/ titled firstname_lastname and add your Makefile.</p>
+<p>&emsp;&emsp;- Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</p>
+<p>- Within the firsname_lastname/ directory:</p>
+<p>&emsp;&emsp;- Feel free to name files, other than the Makefile, as you please.</p>
+<p>&emsp;&emsp;- The second patch should add your .c file containing the module code.</p>
+<p>&emsp;&emsp;- The third patch should contain the output of dmesg.</p>
+<p>&emsp;&emsp;- Remember to include a cover letter as an additional patch</p>
+<a href="submission_guidelines.html">Submission Guidelines</a>
