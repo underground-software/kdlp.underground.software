@@ -57,28 +57,28 @@ ga('send', 'pageview');
 <p>Clone the latest Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</a></p>
 <p>Compile the kernel with a custom version tag:</p>
 <p><br></br></p>
-<p># clone the kernel tree</p>
+<p># clone the kernel tree</p>
 <p>git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</p>
-<p># change the current directory to the kernel tree</p>
+<p># change the current directory to the kernel tree</p>
 <p>cd linux</p>
-<p># change the current directory to the kernel tree</p>
+<p># change the current directory to the kernel tree</p>
 <p>cp /boot/config-$(uname -r)* .config</p>
-<p># set any new config options to the defaults</p>
+<p># set any new config options to the defaults</p>
 <p>make olddefconfig</p>
-<p># to add label to the new kernel version string,</p>
-<p># edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable</p>
-<p># you can print the new version string to test it by:</p>
+<p># to add label to the new kernel version string,</p>
+<p># edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable</p>
+<p># you can print the new version string to test it by:</p>
 <p>make kernelversion</p>
-<p># build the kernel</p>
-<p># -j species the number of threads</p>
-<p># nproc finds the correct number for your machine</p>
+<p># build the kernel</p>
+<p># -j species the number of threads</p>
+<p># nproc finds the correct number for your machine</p>
 <p>make -j $(nproc)</p>
-<p># install the modules</p>
-<p># you need to be root for this step so use sudo</p>
+<p># install the modules</p>
+<p># you need to be root for this step so use sudo</p>
 <p>sudo make modules_install -j $(nproc)</p>
-<p># install the new kernel</p>
+<p># install the new kernel</p>
 <p>sudo make install</p>
-<p># reboot – hopefully the new kernel is set as the default :)</p>
+<p># reboot – hopefully the new kernel is set as the default :)</p>
 <p>reboot</p>
 <p>…</p>
 <p>uname -a</p>
