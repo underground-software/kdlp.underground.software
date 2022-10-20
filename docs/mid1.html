@@ -51,4 +51,29 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h1 id="http-error-404-not-found">HTTP ERROR 404: NOT FOUND</h1>
+<h3 id="mid1---specification">Mid1 - Specification 📐</h3>
+<p>Write a specification and userspace test program for a character device</p>
+<p>You should come up with a simple but interesting and non-trivial character device that does something entertaining.</p>
+<p><br></br></p>
+<p>The test program should exercise the followinf system calls:</p>
+<ul>
+<li><p>read</p></li>
+<li><p>write</p></li>
+<li><p>ioctl/unlocked_ioctl</p></li>
+<li><p>llseek/lseek</p></li>
+<li><p>open</p></li>
+<li><p>close/release</p></li>
+</ul>
+<p><br></br></p>
+<p>What to submit:</p>
+<ul>
+<li><p>A patch to the assignment directory containing your directory named firstname_lastname.</p>
+<ul>
+<li><p>The first patch should create this directory and add a Makefile to build your test program.</p></li>
+<li><p>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</p></li>
+</ul></li>
+<li><p>The second patch should add your test program.</p></li>
+<li><p>The third patch should add your spec.</p></li>
+<li><p>Don’t forget a cover letter.</p></li>
+</ul>
+<p><a href="submission_guidelines.html">Submission Guidelines</a></p>
