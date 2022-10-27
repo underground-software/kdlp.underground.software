@@ -9,6 +9,7 @@
 
 #### Course Slides
 Slides coming soon.
+[Slide Test](slide_tester.html)
 
 #### Course Assignments
 The first half of the semester has weekly assignments for six weeks.
