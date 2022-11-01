@@ -8,8 +8,7 @@
 |Spring 2021|Initial attemmpt|
 
 #### Course Slides
-Slides coming soon.
-[Slide Test](slide_tester.html)
+[Git](git.html) Coming soon. | [Linux Crash Course](linux_crash_course.html) Coming soon. | [Linux Tips of Great Power](linux_tips_of_great_power.html) Coming soon.
 
 #### Course Assignments
 The first half of the semester has weekly assignments for six weeks.
