@@ -337,7 +337,6 @@ e.g. git merge --abort
 # References
 - man git
 - https://www.youtube.com/watch?v=RGOj5yH7evk 
-- man git
 - [https://www.youtube.com/watch?v=_UZEXUrj-Ds](https://www.youtube.com/watch?v=_UZEXUrj-Ds) git rebase
 - [https://www.youtube.com/watch?v=CRlGDDprdOQ](https://www.youtube.com/watch?v=CRlGDDprdOQ) git rebase vs git merge
 - [https://www.youtube.com/watch?v=wIY824wWpu4](https://www.youtube.com/watch?v=wIY824wWpu4) git cherry-pick
