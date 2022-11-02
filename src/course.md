@@ -5,7 +5,7 @@
 |[Fall 2022](course_fall2022.html)|Forthcoming at [UMass Lowell](https://uml.edu)|
 |[Spring 2022](course_spring2022.html)|Recordings available soon|
 |Fall 2021|First iteration|
-|Spring 2021|Initial attemmpt|
+|Spring 2021|Initial attempt|
 
 #### Course Slides
 [Git](git.html) Coming soon. | [Linux Crash Course](linux_crash_course.html) Coming soon. | [Linux Tips of Great Power](linux_tips_of_great_power.html) Coming soon.
