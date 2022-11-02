@@ -334,15 +334,14 @@ e.g. git merge --abort
 
 ---
 
-- Softcore git:
-  - man git
-  - https://www.youtube.com/watch?v=RGOj5yH7evk 
-- Hardcore git:
-  - man git
-  - [https://www.youtube.com/watch?v=_UZEXUrj-Ds](https://www.youtube.com/watch?v=_UZEXUrj-Ds) git rebase
-  - [https://www.youtube.com/watch?v=CRlGDDprdOQ](https://www.youtube.com/watch?v=CRlGDDprdOQ) git rebase vs git merge
-  - [https://www.youtube.com/watch?v=wIY824wWpu4](https://www.youtube.com/watch?v=wIY824wWpu4) git cherry-pick
-  - [https://www.youtube.com/watch?v=QtXj9tt-RUE](https://www.youtube.com/watch?v=QtXj9tt-RUE) Creating and applying git patches
-  - [https://www.youtube.com/watch?v=vSsypsDRiMU](https://www.youtube.com/watch?v=vSsypsDRiMU) Tags
-  - [https://www.youtube.com/watch?v=ecK3EnyGD8o](https://www.youtube.com/watch?v=ecK3EnyGD8o) useful techniques
-  - [https://www.youtube.com/watch?v=P3ZR_s3NFvM](https://www.youtube.com/watch?v=P3ZR_s3NFvM) git bisect
+# References
+- man git
+- https://www.youtube.com/watch?v=RGOj5yH7evk 
+- man git
+- [https://www.youtube.com/watch?v=_UZEXUrj-Ds](https://www.youtube.com/watch?v=_UZEXUrj-Ds) git rebase
+- [https://www.youtube.com/watch?v=CRlGDDprdOQ](https://www.youtube.com/watch?v=CRlGDDprdOQ) git rebase vs git merge
+- [https://www.youtube.com/watch?v=wIY824wWpu4](https://www.youtube.com/watch?v=wIY824wWpu4) git cherry-pick
+- [https://www.youtube.com/watch?v=QtXj9tt-RUE](https://www.youtube.com/watch?v=QtXj9tt-RUE) Creating and applying git patches
+- [https://www.youtube.com/watch?v=vSsypsDRiMU](https://www.youtube.com/watch?v=vSsypsDRiMU) Tags
+- [https://www.youtube.com/watch?v=ecK3EnyGD8o](https://www.youtube.com/watch?v=ecK3EnyGD8o) useful techniques
+- [https://www.youtube.com/watch?v=P3ZR_s3NFvM](https://www.youtube.com/watch?v=P3ZR_s3NFvM) git bisect
