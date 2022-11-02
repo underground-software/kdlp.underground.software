@@ -25,12 +25,12 @@ An open source version control system
 
 # Visualization
 We will use a tree structure to illustrate the behavior of how saved states of a repository behave when manipulated with git commands. E.g. Below is a repository which has three commits to the main branch and one commit to the X branch. The blue pointer indicates that we are viewing the first commit of the X branch.
-![git tree](../images/git_slide4.png)
+![git tree](../images/Git/git_slide4.png)
 
 ---
 
 # Diagram Key
-![diagram key](../images/git_slide5.png)
+![diagram key](../images/Git/git_slide5.png)
 
 ---
 
@@ -42,7 +42,7 @@ We will use a tree structure to illustrate the behavior of how saved states of a
 ---
 
 # Git Commands: git clone
-![git clone diagram](../images/git_slide7.png)
+![git clone diagram](../images/Git/git_slide7.png)
 Copies a repository that is hosted on GitHub, or similar website, to your local directory
 
 ---
@@ -54,7 +54,7 @@ Copies a repository that is hosted on GitHub, or similar website, to your local 
 ---
 
 # Git Commands: git commit
-![git commit diagram](../images/git_slide9.png)
+![git commit diagram](../images/Git/git_slide9.png)
 - Saves the current state of your repository in Git. Changes are not live, need to push 
 - git commit -m “somemessage” to add a short message to your commit and avoid opening your editor
 
@@ -91,13 +91,13 @@ $ git push
 ---
 
 # Git Commands: git push
-![git push diagram](../images/git_slide13.png)
+![git push diagram](../images/Git/git_slide13.png)
 Uploads new Git commits to a remote repository. e.g. to GitHub
 
 ---
 
 # Git Commands: git pull
-![ git pull diagram](../images/git_slide14.png)
+![ git pull diagram](../images/Git/git_slide14.png)
 Opposite of git push. Download changes locally from remote repository 
 
 ---
@@ -112,7 +112,7 @@ Opposite of git push. Download changes locally from remote repository
 ---
 
 # Branching
-![git branching d1](../images/git_slide16.png)
+![git branching d1](../images/Git/git_slide16.png)
 $ git branch
 \* main
   feature1
@@ -120,7 +120,7 @@ $ git branch
 
 ---
 
-![git branching d2](../images/git_slide17.png)
+![git branching d2](../images/Git/git_slide17.png)
 $ git checkout feature1
 (switch to an existing branch)
 $ git branch
@@ -129,7 +129,7 @@ $ git branch
 
 ---
 
-![git branching d3](../images/git_slide18.png)
+![git branching d3](../images/Git/git_slide18.png)
 $ git checkout main; git branch
 \* main
   feature1
@@ -174,7 +174,7 @@ $ git push -u origin PRbranch
 ---
 
 # Merging and pull requests
-![merging d1](../images/git_slide20_1.png)
+![merging d1](../images/Git/git_slide20_1.png)
 $ git branch
 \* main
   feature1
@@ -182,7 +182,7 @@ $ git branch
 
 ---
 
-![merging d2](../images/git_slide20_2.png)
+![merging d2](../images/Git/git_slide20_2.png)
 $ git merge feature1
 - If you use the '--squash' tag, it will merge but stop before making the merge commit
 $ git merge --squash feature1
@@ -192,14 +192,14 @@ $ git add . && git commit -m "some message"
 
 ---
 
-![merging d3](../images/git_slide20_3.png)
+![merging d3](../images/Git/git_slide20_3.png)
 $ git merge feature2
 
 ---
 
 # Group project note
 When new changes are pushed to main by other people in your group, in order to keep your branch up to date pull changes from your GH to your local machine and then merge local main into your branch. Just step one in the example.
-![group project note diagram](../images/git_slide21.png)
+![group project note diagram](../images/Git/git_slide21.png)
 
 ---
 
@@ -222,7 +222,7 @@ You might not have direct access to working with someone else’s repo online, s
 ---
 
 # Advanced Git: git rebase
-![rebase 1](../images/git_slide25_1.png) ![rebase 2](../images/git_slide25_2.png)
+![rebase 1](../images/Git/git_slide25_1.png) ![rebase 2](../images/Git/git_slide25_2.png)
 $ git branch
 \* main
   feature1
@@ -232,7 +232,7 @@ $ git rebase feature1
 
 # Advanced Git: git cherry-pick
 You use this to pick one particular commit to merge with main->HEAD
-![cherrypick 1](../images/git_slide26_1.png) ![cherrypick 2](../images/git_slide26_2.png)
+![cherrypick 1](../images/Git/git_slide26_1.png) ![cherrypick 2](../images/Git/git_slide26_2.png)
 $ git branch
 \* main
   feature1
@@ -245,7 +245,7 @@ Note: you can use -n to merge the commit with HEAD without committing
 # Advanced Git: git tag
 - The ways to reference commits are by checking out a branch, which will bring you to branchname -> HEAD, or by referencing the hash of a particular commit
 - But if we have an interesting commit which we want easy access to later, we can tag it so we don’t have to look up it’s hash
-![git tag](../images/git_slide27.png)
+![git tag](../images/Git/git_slide27.png)
 
 ---
 
@@ -307,14 +307,14 @@ $ git-rev-list --help
 - Another way to merge two branches is by applying a patchset
 - A patchset contains patches which is essentially a diff file in an email format
 - Gives your group the ability to review the patch before merging
-![format patch d1](../images/git_slide33.png)
+![format patch d1](../images/Git/git_slide33.png)
 
 ---
 
 # Advanced Git: formatting and applying a patchset
 - You can apply individual patches by patch name in the patches directory
 - If you do this, make sure that the parent of the commit that is to be applied as a patch is already in the branch you are applying to
-![format patch d2](../images/git_slide34.png)
+![format patch d2](../images/Git/git_slide34.png)
 
 ---
 
