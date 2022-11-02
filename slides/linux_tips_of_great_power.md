@@ -66,7 +66,7 @@ pwd - print working directory
 ---
 
 # sed - a text processing utility - Stream EDitor
-![sed](../images/Linux_ToGP/sed.png)
+![sed](images/Linux_ToGP/sed.png)
 
 ---
 
@@ -101,7 +101,7 @@ $ → end of line
 ---
 
 # awk - a text processing utility
-![awk](../images/Linux_ToGP/awk.png)
+![awk](images/Linux_ToGP/awk.png)
 
 ---
 
@@ -205,12 +205,12 @@ You can reference the arguments passed to your script with \$i where i is the in
 ---
 
 # If statements: integers and strings
-![if statements](../images/Linux_ToGP/if_statements.png)
+![if statements](images/Linux_ToGP/if_statements.png)
 
 ---
 
 # Loops
-![loops](../images/Linux_ToGP/loops.png)
+![loops](images/Linux_ToGP/loops.png)
 
 ---
 
@@ -254,11 +254,11 @@ What is echoed?
 
 ---
 
-![ttl cable](../images/Linux_ToGP/ttl_cable.png)
+![ttl cable](images/Linux_ToGP/ttl_cable.png)
 
 ---
 
-![ttl wiring](../images/Linux_ToGP/ttl_wiring.png)
+![ttl wiring](images/Linux_ToGP/ttl_wiring.png)
 
 ---
 
