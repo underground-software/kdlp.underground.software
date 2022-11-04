@@ -10,6 +10,8 @@
 #### Course Slides
 [Git](git.html) | [Linux Crash Course](linux_crash_course.html) | [Linux Tips of Great Power](linux_tips_of_great_power.html) | [Kernel Compilation](kernel_compilation.html)
 
+[Debugging Techniques](debugging_techniques.html)
+
 #### Course Assignments
 The first half of the semester has weekly assignments for six weeks.
 
