@@ -8,7 +8,7 @@
 |Spring 2021|Initial attempt|
 
 #### Course Slides
-[Git](git.html) | [Linux Crash Course](linux_crash_course.html) | [Linux Tips of Great Power](linux_tips_of_great_power.html)
+[Git](git.html) | [Linux Crash Course](linux_crash_course.html) | [Linux Tips of Great Power](linux_tips_of_great_power.html) | [Kernel Compilation](kernel_compilation.html)
 
 #### Course Assignments
 The first half of the semester has weekly assignments for six weeks.
