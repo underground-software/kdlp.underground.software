@@ -96,9 +96,15 @@ unload:
 # Compiling Modules (out-of-tree)
 - Develop your code in own folder
 - Reference kernel headers as needed
-  - You can install them with sudo dnf install kernel-headers-`uname -r` 
+  - You can install them with:
+```console
+sudo dnf install kernel-headers-`uname -r
+```` 
 - Your Makefile should use the kernel makefile
-  - You can install it using sudo dnf install kernel-devel-`uname -r`
+  - You can install it using:
+```console
+sudo dnf install kernel-devel-`uname -r
+````
 
 ---
 
