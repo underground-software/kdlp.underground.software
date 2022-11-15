@@ -12,7 +12,9 @@
 
 [Debugging Techniques](debugging_techniques.html) | [Modules and Drivers](modules_drivers.html) | [Writing Modules](writing_modules.html) | [Writing Character Drivers](writing_character_drivers.html)
 
-[Advanced Character Driver Operations](advanced_char_driver_ops.html) | [Kernel Data Types](kernel_data_types.html) | [Memory Allocation](memory_allocation.html) | [Concurrency](concurrency.html) 
+[Advanced Character Driver Operations](advanced_char_driver_ops.html) | [Kernel Data Types](kernel_data_types.html) | [Memory Allocation](memory_allocation.html) | [Concurrency](concurrency.html)
+
+[Interrupts](interrupts.html) 
 
 #### Course Assignments
 The first half of the semester has weekly assignments for six weeks.
