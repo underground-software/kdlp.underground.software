@@ -14,7 +14,7 @@
 
 [Advanced Character Driver Operations](advanced_char_driver_ops.html) | [Kernel Data Types](kernel_data_types.html) | [Memory Allocation](memory_allocation.html) | [Concurrency](concurrency.html)
 
-[Interrupts](interrupts.html) | [Timing and Scheduling](timing_scheduling.html)
+[Interrupts](interrupts.html) | [Timing and Scheduling](timing_scheduling.html) | [Memory Mapping and DMA](mm_dma.html)
 
 #### Course Assignments
 The first half of the semester has weekly assignments for six weeks.
