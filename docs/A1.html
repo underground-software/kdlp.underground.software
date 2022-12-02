@@ -51,46 +51,86 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3 id="a1---the-big-upgrade">A1 - The Big Upgrade 🎢</h3>
+<h3>A1 - The Big Upgrade 🎢</h3>
+
 <p>Build, install, and boot the latest Linux kernel fresh off Linus Torvalds’ tree</p>
+
 <p>Get access to a Linux system on which you have root permissions.</p>
+
 <p>Clone the latest Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</a></p>
+
 <p>Compile the kernel with a custom version tag:</p>
+
 <p><br></br></p>
+
 <p># clone the kernel tree</p>
+
 <p>git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</p>
+
 <p># change the current directory to the kernel tree</p>
+
 <p>cd linux</p>
+
 <p># change the current directory to the kernel tree</p>
+
 <p>cp /boot/config-$(uname -r)* .config</p>
+
 <p># set any new config options to the defaults</p>
+
 <p>make olddefconfig</p>
+
 <p># to add label to the new kernel version string,</p>
+
 <p># edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable</p>
+
 <p># you can print the new version string to test it by:</p>
+
 <p>make kernelversion</p>
+
 <p># build the kernel</p>
+
 <p># -j species the number of threads</p>
+
 <p># nproc finds the correct number for your machine</p>
+
 <p>make -j $(nproc)</p>
+
 <p># install the modules</p>
+
 <p># you need to be root for this step so use sudo</p>
+
 <p>sudo make modules_install -j $(nproc)</p>
+
 <p># install the new kernel</p>
+
 <p>sudo make install</p>
+
 <p># reboot – hopefully the new kernel is set as the default :)</p>
+
 <p>reboot</p>
-<p>…</p>
+
+<p>&hellip;</p>
+
 <p>uname -a</p>
+
 <p>dmesg | head</p>
+
 <p>whoami</p>
+
 <p><br></br></p>
+
 <p>Seems easy enough right? 😉</p>
+
 <p>Expect the compilation to take a little while Make sure you have 5-10 GB of free space on the partition where you are storing the kernel tree and a bit of extra space on whatever partition /boot resides in to store the new kernel image and initramfs.</p>
+
 <p><br></br></p>
+
 <p>What to submit:</p>
+
 <ul>
 <li><p>The output of <code>uname -a</code> and <code>dmesg | head</code> and <code>whoami</code> on the system running your newly compiled Linux kernel. Rename template.md in the assignment directory to firstname_lastname.md and submit it as a patch.</p></li>
 <li><p>Don’t forget a cover letter.</p></li>
 </ul>
+
+
 <p><a href="submission_guidelines.html">Submission Guidelines</a></p>
