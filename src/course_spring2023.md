@@ -12,7 +12,7 @@ WELCOME APPLICANTS!
 
 Please thoroughly read and then complete the following steps:
 
-1. Send an email to kdlp-fall23-application@googlegroups.com satisfying the following conditions:
+1. Send an email to kdlp-spring23-application@googlegroups.com satisfying the following conditions:
 
 	a) The subject of the email contains your full legal name followed by the exact text "-- Application for Introduction to Linux Kernel Development"
 	
