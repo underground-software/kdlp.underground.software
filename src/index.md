@@ -2,40 +2,31 @@
 
 The Kernel Development Learning Pipeline (KDLP) program aims to create a comprehensive Linux kernel talent pipeline to address the current shortage of qualified entry level kernel candidates. 
 
-### The What 
+### More detail
 
-Kernel Development Learning Pipeline (KDLP) is a program composed of two primary aspects.
+KDLP is a novel program run by Red Hat engineers to address the industry-wide shortage of qualified entry-level candidates for low-level software engineering jobs in general, and the Linux kernel in particular.
 
+We created, developed, and teach an "Introduction to Linux Kernel" development course to University of Massachusetts Lowell students and anyone who is [interested](https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957).
 
-**The first** is a program to develop a comprehensive Linux kernel education, mentoring, onboarding, and a talent development pipeline.
+We recruit qualified students from our class to internship programs within Red Hat, and we promote the best interns to hiring managers with the aim of bringing them into the industry as full time software engineers.
 
-**The second** is an open source initiative to improve Fedora Linux on the Raspberry Pi.
+We have pulled together this program from scratch over the past few years, iterating our program and curriculum design in order to stand the program on its feet.
 
-
-With our team of associates, interns and mentors, we are:
-
-* Developing an individually-driven kernel engineering skills training program and talent pipeline.
-* Broadening the accessibility of the Linux kernel engineering space to include people from backgrounds where they otherwise would not be exposed.
-* Giving students a relatively unique (for academia) hands-on software engineering experience that they otherwise would not get without first obtaining an internship.
-* Improving Fedora Linux usability, stability, and performance on the Raspberry Pi, a platform on which Fedora's status quo demands engineering attention.
-* Producing up to date open source Linux kernel education materials and content to go along with Red Hat’s open source software, solving the common problem of stale documentation.
-* Providing opportunities for public speaking and mentorship for engineers at any level of experience, from interns leading class sessions to Distinguished Engineers adding unique wisdom to any and all content.
-
-The virtual and distributed nature of our program empowers us to include students from a diverse range of backgrounds. Not only can we offer this program to college students, we can include ambitious and advanced high school students, self-studying engineers, and determined career-switchers. We provide the rigorous standards, mentorship, and hardware, and the students bring their grit, intensity, and determination to succeed.
+As an established program, we plan to continue to scale our program and strengthen our partnerships, including a recent one with the Linux Foundation, in order to bring Linux kernel and low-level software engineering education to a larger audience and global talent pool.
 
 ### Frequently Asked Questions (FAQ):
 
-Q: How can I join?
+Q: How do I apply for the program?
 
-A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join) to chat and recieve occasional updates.
+A: Unless this program is offered at your university, apply for Introduction to Linux Kernel Development via [LFX](https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957).
+
+Q: How can I stay informed about this program?
+
+A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join) to recieve our quarterly newsletter.
 
 Q: Where can I disucuss Linux kernel development with like-minded people?
 
 A: [Join our discord server](https://discord.gg/CFpuxqYgHM)
-
-Q: What is this group up to?
-
-A: [Check out our GitHub project](https://github.com/orgs/underground-software/projects/2)
 
 Q: Who is behind this program?
 
