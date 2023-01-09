@@ -1,4 +1,4 @@
-### Spring 2022 Course
+### Spring 2023 Course
 
 #### Required Materials
 
@@ -45,3 +45,5 @@ Please thoroughly read and then complete the following steps:
 *Forthcoming*
 
 #### Course policies
+
+*Imminently Forthcoming*
