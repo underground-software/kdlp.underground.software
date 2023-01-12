@@ -1,0 +1,300 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<h2>Course Policies</h2>
+
+<p><strong>Assignment Procedures:</strong></p>
+
+<ul>
+<li><p>Coding Assignments:</p>
+
+<ul>
+<li>Assignments must be submitted in the format of plaintext unless explicitly specified.</li>
+<li>Assignments must be submitted in the form of email code patches, and furthermore:
+
+<ul>
+<li>Submissions must onform to all Linux kernel coding standards that are sane in a particular context.</li>
+<li>Submissions must not contain whitespace errors</li>
+</ul>
+</li>
+<li>The instructors will provide detailed guidelines for automated checking of these requirements, and will gladly explain them upon request to any interested student
+
+<ul>
+<li>Therefore the instructors reserve the right to refuse to grade any submission that does not conform to these standards.</li>
+</ul>
+</li>
+<li>Students will participate in peer review for these assignments, as explained in the section below.</li>
+</ul>
+</li>
+<li><p>Presentation Assignments:</p>
+
+<ul>
+<li>Students will be required to complete two (2) presentations throughout the course</li>
+<li>Students must deliver their presentations over a live video call</li>
+<li>Presentations must include original visual content, such as slides</li>
+<li>Students are required to include live demonstrations of their code by sharing their text editor and/or terminal during the presentation</li>
+</ul>
+</li>
+<li><p>Instructors reserve the right to change due dates within reason</p>
+
+<ul>
+<li>In such a case, we will provide sufficient advance notice to students</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Peer Review Procedure (only for coding assignments)</strong></p>
+
+<ul>
+<li>Students must participate in the class mailing list for submissions by giving other students feedback on their work.</li>
+<li>This is a part of each assignment grade and the tripartite scheme is as follows:
+
+<ul>
+<li>The review process spans 2 days</li>
+<li>Part 1: Initial submission
+
+<ul>
+<li>The student makes their submission to mailing list using git-send-email.</li>
+<li>This submission is due on the listed assignment &ldquo;due date&rdquo;.</li>
+</ul>
+</li>
+<li>Part 2: Peer review
+
+<ul>
+<li>A student is given two other student names (call them student A and student B)</li>
+<li>The student is assigned to review student A&rsquo;s and student B&rsquo;s submissions</li>
+<li>If the student approves of a submission, then the student will reply to the approved email with what we call an &ldquo;ack&rdquo;
+
+<ul>
+<li>This consists of a single line containing the following: Acked-by: Firstname Lastname &lt;email@domain.tld></li>
+</ul>
+</li>
+<li>If the student sees problems with a submission, the the student will reply to the problematic email with their feedback</li>
+<li>In parallel, other students have been assigned the student&rsquo;s submission and the student should recieve feedback from two other students.</li>
+<li>This review is due one day past initial submission.</li>
+</ul>
+</li>
+<li>Part 3: Final submission
+
+<ul>
+<li>The student, if canny, will act on the feedback from the received reviews and make a second, final submission</li>
+<li>This is due two days after the initial submission, and due one day after receiving the reviews.</li>
+</ul>
+</li>
+<li>The student is graded only on the student&rsquo;s final submission</li>
+<li>Reviews are graded based on how many issues a student missed
+
+<ul>
+<li>The student receives 20% off for each unique issue not spotted with max penalty of 100%</li>
+<li>Each review given is worth 10% of the grade per assignment with the actual submission being 80%</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Late Work Policy:</strong></p>
+
+<ul>
+<li>There is no late work!
+
+<ul>
+<li>Students receive a zero for assignments not submitted on time</li>
+</ul>
+</li>
+<li>One exception (a once per semester get out of jail free card):
+
+<ul>
+<li>Students may choose to opt out of the peer review process</li>
+<li>By bypassing the ack requirement (both giving and receiving) students receive the two days that would be used for that process as an extension before they make their first and only final submission.</li>
+<li>This means that you do you not get a chance to receive early feedback from your peers and so you get what you get for a final grade.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Mentorship Graduation:</strong></p>
+
+<ul>
+<li>Students and mentees will be given the status of “Graduated” if we determine that their performance has been suitable to the degree that we would recommend as a strong candidate for an internship doing basic Linux kernel engineering work.</li>
+</ul>
+
+
+<p><details>
+<summary>
+<strong>Additional policies specific to LFX mentees:</strong>
+</summary></p>
+
+<ul>
+<li>Removal from the course
+
+<ul>
+<li>In the case that a student fails to complete a task by a deadline with no prior notice, an instructor will reach out to you via email and/or direct message. If the student fails to respond to this message within seven (7) days of it’s receipt, the instructors reserve the right to remove the student from the program.</li>
+<li>Attendance is not required (because of timezones) but students should watch the recorded videos of class sessions
+</details></li>
+</ul>
+</li>
+</ul>
+
+
+<p><details>
+<summary>
+<strong>Additional policies specific to UMass Lowell students:</strong>
+</summary></p>
+
+<ul>
+<li>Automatic Course Failure (Grade of F)
+
+<ul>
+<li>In the case that a student fails to complete a task by a deadline with no prior notice, an instructor will reach out to you via email and/or direct message. If the student fails to respond to this message within seven (7) days of it’s receipt, the instructors reserve the right to give the student a failing grade (F) for the course.</li>
+<li>Attendance is&hellip; required</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>UMass Lowell Grading Policy:</strong></p>
+
+<p>Student grades will be weighted according to the following scheme:</p>
+
+<table>
+<thead>
+<tr>
+<th> Category </th>
+<th> Percentage </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Assignments </td>
+<td> 40% </td>
+</tr>
+<tr>
+<td> Presentation 1 </td>
+<td> 25% </td>
+</tr>
+<tr>
+<td> Presentation 2 </td>
+<td> 30% </td>
+</tr>
+<tr>
+<td> Participation </td>
+<td> 5% </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Students will be given a letter grade according to the following this scheme:</p>
+
+<table>
+<thead>
+<tr>
+<th>Letter grade</th>
+<th>Percentage range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A                              </td>
+<td>90 ~ 100</td>
+</tr>
+<tr>
+<td>A-</td>
+<td>                            85 ~ 89.99</td>
+</tr>
+<tr>
+<td>B+</td>
+<td>                            80 ~ 84.99</td>
+</tr>
+<tr>
+<td>B                              </td>
+<td>75 ~ 79.99</td>
+</tr>
+<tr>
+<td>B-</td>
+<td>                            70 ~ 74.99</td>
+</tr>
+<tr>
+<td>C+</td>
+<td>                            65 ~ 69.99</td>
+</tr>
+<tr>
+<td>C                              </td>
+<td>60 ~ 64.99</td>
+</tr>
+<tr>
+<td>C-</td>
+<td>                            55 ~ 59.99</td>
+</tr>
+<tr>
+<td>D+</td>
+<td>                            50 ~ 54.99</td>
+</tr>
+<tr>
+<td>D                              </td>
+<td>40 ~ 49.99</td>
+</tr>
+<tr>
+<td>F                              </td>
+<td>below 40</td>
+</tr>
+</tbody>
+</table>
+
+
+<h6>A (4.0), A- (3.7), B+ (3.3), B (3.0), B- (2.7), C+ (2.3), C (2.0), C- (1.7), D+ (1.3), D (1.0), F (0.0)</h6>
+
+<p></details></p>
