@@ -51,35 +51,23 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3>A4 - Building Character 1 💪</h3>
-
+<h3 id="a4---building-character-1">A4 - Building Character 1 💪</h3>
 <p>Get familiar with the system calls you can make on a character device by writing a userspace program to interact with the character driver from class.</p>
-
 <p>There is a twist however. You will apply a patch to the driver code from class so that it logs a sequence number associated with each operation.</p>
-
 <p>You will be assigned a random sequence of operations and you must write a userspace program that performs the operations in the correct order to get a matching output in dmesg.</p>
-
 <p>Your program should check for system call errors.</p>
-
 <p>Submit your userspace program and the logs from dmesg for a successful run along with your assignment writeup.</p>
-
 <p><br></br></p>
-
 <p>What to submit:</p>
-
 <ul>
 <li><p>A patch to the assignment directory containing a directory named firstname_lastname.</p>
-
 <ul>
 <li><p>The first patch should create this directory and add your Makefile</p></li>
 <li><p>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</p></li>
-</ul>
-</li>
+</ul></li>
 <li><p>The second patch should add your userspace program that implements the assignment.</p></li>
 <li><p>The third patch should add a file containing the output in dmesg from the driver upon a successful run of your program</p></li>
 <li><p>It is not necessary to submit the patched driver.</p></li>
-<li><p>Don&rsquo;t forget the cover letter</p></li>
+<li><p>Don’t forget the cover letter</p></li>
 </ul>
-
-
 <p><a href="submission_guidelines.html">Submission Guidelines</a></p>
