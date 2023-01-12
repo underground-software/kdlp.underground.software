@@ -25,7 +25,7 @@ Then there is a midpoint presentation from each student.
 
 The second half of the semester consists of two midpoint assignments, a final project assignment, and a final presentation.
 
-[Submission Guidelines](submission_guidelines.html)
+[Submission Guidelines](submission_guidelines.html) | [Peer Review Process](peer_review.html)
 
 [A(-1)](course_application.html) | [A0](A0.html) | [A1](A1.html) | [A2](A2.html) | [A3](A3.html) | [A4](A4.html) | [A5](A5.html)
 
