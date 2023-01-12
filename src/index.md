@@ -24,14 +24,9 @@ Q: How can I stay informed about this program?
 
 A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join) to recieve our quarterly newsletter.
 
-Q: Where can I disucuss Linux kernel development with like-minded people?
-
-A: [Join our discord server](https://discord.gg/CFpuxqYgHM)
-
 Q: Who is behind this program?
 
 A: [These people](who.html)
-
 
 
 ### Fun fact
