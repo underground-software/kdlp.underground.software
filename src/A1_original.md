@@ -1,0 +1,81 @@
+### A1 - The Big Upgrade 🎢
+
+Build, install, and boot the latest Linux kernel fresh off Linus Torvalds’ tree
+
+Get access to a Linux system on which you have root permissions.
+
+Clone the latest Linux kernel: [https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git)
+
+Compile the kernel with a custom version tag:
+
+<br></br>
+
+\# clone the kernel tree
+
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+
+\# change the current directory to the kernel tree
+
+cd linux
+
+\# change the current directory to the kernel tree
+
+cp /boot/config-$(uname -r)* .config
+
+\# set any new config options to the defaults
+
+make olddefconfig
+
+\# to add label to the new kernel version string,
+
+\# edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable
+
+\# you can print the new version string to test it by:
+
+make kernelversion
+
+\# build the kernel
+
+\# -j species the number of threads
+
+\# nproc finds the correct number for your machine
+
+make -j $(nproc)
+
+\# install the modules
+
+\# you need to be root for this step so use sudo
+
+sudo make modules_install -j $(nproc)
+
+\# install the new kernel
+
+sudo make install
+
+\# reboot – hopefully the new kernel is set as the default :)
+
+reboot
+
+...
+
+uname -a
+
+dmesg | head
+
+whoami
+
+<br></br>
+
+Seems easy enough right? 😉
+
+Expect the compilation to take a little while Make sure you have 5-10 GB of free space on the partition where you are storing the kernel tree and a bit of extra space on whatever partition /boot resides in to store the new kernel image and initramfs.
+
+<br></br>
+
+What to submit:
+
+* The output of `uname -a` and `dmesg | head` and `whoami` on the system running your newly compiled Linux kernel. Rename template.md in the assignment directory to firstname_lastname.md and submit it as a patch.
+
+* Don’t forget a cover letter.
+
+[Submission Guidelines](submission_guidelines.html)
