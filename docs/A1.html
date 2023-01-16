@@ -62,8 +62,8 @@ ga('send', 'pageview');
 <h4 id="procedure">Procedure:</h4>
 <ul>
 <li>This assignment will guide you through the process of building a shell by iteratively improving your code and adding more features, starting with a very simple program. At the end you should have a shell that mostly works.</li>
-<li>You must make at least one commit per tier passed, and label clearly at which commit you think you completed a particular level.</li>
-<li>You are required to pass level 5. You are welcome to go further, see level 6+ for details…</li>
+<li>You must make at least one commit per level completed, and label clearly at which commit you think you completed a particular level.</li>
+<li>You must pass all ten levels listed below. If you want to go further for an extra challange, see the list of ideas at the bottom.</li>
 </ul>
 <h4 id="levels">Levels:</h4>
 <ul>
@@ -128,5 +128,16 @@ ga('send', 'pageview');
 <li>Each command seperated by a <code>|</code> is spawned as its own child process. The shell can handle more than one pipe.</li>
 <li>The shell creates a unidirectional pipe (see <code>man 2 pipe</code>) for each <code>|</code> and redirects the stdout from the left command to the writing end of the pipe and redirects the stdin of the right command to the reading end of the pipe.</li>
 <li>Any file redirections specified by the user take precedence over any implied redirections of the <code>|</code>.</li>
+</ul></li>
+<li>If you were inspired by completing all ten required level and you want to go further (for fun and bragging rights), feel free to add some or all of these features.
+<ul>
+<li>Add support for <code>;</code> to put multiple commands on one line and the <code>#</code> for comments.</li>
+<li>Add support for the <code>&amp;&amp;</code> and <code>||</code> operators to chain commands based on their return codes.</li>
+<li>Add support for special variables like <code>$?</code>, <code>$#</code>, <code>$*</code>, <code>$$</code>.</li>
+<li>Add support for reading environment variables using <code>$NAME</code> (i.e. that would be replaced with <code>getenv("NAME")</code>).</li>
+<li>Add support for modifying environment variables using an <code>export</code> builtin.</li>
+<li>Add support for background jobs (<code>jobs</code>, <code>fg</code>, <code>bg</code> builtins), and <code>&amp;</code> for spawning a job in the background.</li>
+<li>Add support for the <code>source</code> builtin to run commands from a file.</li>
+<li>Add support for control flow operators (e.g. loops, conditionals, selection statements).</li>
 </ul></li>
 </ul>
