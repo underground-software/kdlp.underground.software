@@ -51,25 +51,68 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3 id="a3---hello-kernel">A3 - Hello kernel 🐧</h3>
-<p>Write a kernel module that prints a message to the kernel ring buffer when the module is inserted and initialized and when the module is removed and exits.</p>
-<p>Keep in mind that messages sent to the kernel ring buffer with printk (or its macro variants in the pr_* family) will not be shown in dmesg until a newline is sent or printk is called a second time. For that reason, we recommend using printk directly in this assignment and, of course, ending your format string with the ‘\n’ newline escape character.</p>
-<p>There are numerous examples online, including one in the slides that we showed in class. Feel free to start from any of these.</p>
-<p>The string “hello world” is acceptable but boring. If you can make us laugh at your patch we will honor you in front of your peers.</p>
-<p>Your submission must include the output of dmesg that is generated upon inserting and removing your module.</p>
+<h3 id="a3---scavenger-hunt">A3 - Scavenger Hunt 🤪</h3>
+<p>We will assign you a syscall and give you our specially designed program.</p>
+<ol type="1">
+<li>strace our program</li>
+</ol>
+<ul>
+<li>Locate the lines corresponding to call(s) to your syscall in the output and put them into assignment.md</li>
+</ul>
+<ol start="2" type="1">
+<li>Answer question 0 in assignment.md</li>
+</ol>
+<ul>
+<li>Suggested: make use of the system’s manual pages</li>
+</ul>
+<ol start="3" type="1">
+<li>Find the syscall definition within the kernel source</li>
+</ol>
+<ul>
+<li><p>Put the location into assignment.md</p></li>
+<li><p>Suggested: make use of <a href="https://elixir.bootlin.com/">elixir</a> or <a href="http://cscope.sourceforge.net/">cscope</a></p></li>
+</ul>
+<ol start="4" type="1">
+<li>Answer question 1 in the assignment.md file</li>
+</ol>
+<ul>
+<li>Who last modified your syscall’s code? What were they trying to do</li>
+</ul>
+<ol start="5" type="1">
+<li>Write a bpftrace snippet to insert a probe that will print the syscall args and kernel stack in real time as the syscall is invoked</li>
+</ol>
+<ul>
+<li><p>Ensure that the bpf probe is only triggered when our specific command is run</p></li>
+<li><p>Suggested: <a href="https://github.com/iovisor/bpftrace/blob/master/docs/reference_guide.md#5-str-strings">bpftrace/reference_guide.md at master</a></p></li>
+<li><p>Hint: The first line of an executable bpftrace file must be “#!/usr/bin/env bpftrace”</p></li>
+<li><p>Hint: A script file must be marked as executable to be run</p></li>
+</ul>
+<ol start="6" type="1">
+<li>Re-run the program with the bpf probe inserted via your bpftrace code</li>
+</ol>
+<ul>
+<li>Save the results into assignment.md</li>
+</ul>
+<ol start="7" type="1">
+<li>Document your process in the cover letter as always</li>
+</ol>
 <p><br></br></p>
-<p>What to submit:</p>
+<p>Tools of interest</p>
 <ul>
-<li><p>The first patch should create a directory in A3/ titled firstname_lastname and add your Makefile.</p>
+<li><p>strace</p></li>
+<li><p>man</p></li>
+<li><p>cscope</p></li>
+<li><p>git-blame</p></li>
+<li><p>grep (-rnw)</p></li>
+<li><p>bpftrace</p></li>
+</ul>
+<p><br></br></p>
+<p>What to submit (the patches should be numbered in the order they are listed):</p>
 <ul>
-<li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
-</ul></li>
-<li><p>Within the firsname_lastname/ directory:</p>
-<ul>
-<li><p>Feel free to name files, other than the Makefile, as you please.</p></li>
-<li><p>The second patch should add your .c file containing the module code.</p></li>
-<li><p>The third patch should contain the output of dmesg.</p></li>
-<li><p>Remember to include a cover letter as an additional patch</p></li>
-</ul></li>
+<li><p>A cover letter following the assignment submission guidelines (as always)</p></li>
+<li><p>A patch that includes your changes to assignment.md</p></li>
+<li><p>A patch that includes the new entries in log.txt from all the times you ran the program</p></li>
+<li><p>A patch that includes two full logs from strace from running the program. Once as your regular user and once as running as root using sudo. Make sure you label which is which</p></li>
+<li><p>A patch that adds your .bp bpftrace program</p></li>
 </ul>
 <p><a href="submission_guidelines.html">Submission Guidelines</a></p>
