@@ -69,58 +69,64 @@ ga('send', 'pageview');
 <ul>
 <li>lvl 0:
 <ul>
-<li>Get the shell to spit out a prompt, informing the user about which absolute path they are currently on (using getcwd followed by a $ and a space).</li>
+<li>The shell prints a prompt, informing the user about which absolute path they are currently in (see <code>man 3 getcwd</code>) followed by a $ and a space (e.g. <code>/your/current/directory$</code>).</li>
 <li>The shell then prints a new line and exits without any user interaction.</li>
 </ul></li>
 <li>lvl 1:
 <ul>
-<li>The shell should take in any input at this stage, but doesn’t need to do anything with it. It will simply print a new prompt if text is sent to stdin.</li>
-<li>Loops until EOF from user input (ctl+d).</li>
+<li>The shell reads lines of user input, but doesn’t need to do anything with them. It just prints a new prompt before each line.</li>
+<li>The shell loops until it gets EOF from user input (ctrl+d).</li>
+<li>The shell exits with code 0.</li>
 </ul></li>
 <li>lvl 2:
 <ul>
-<li>Print “Unrecognized command” if the user enters any text, but do not exit the shell.</li>
-<li>However, if the user just hits enter without typing anything, there shouldn’t be any error message.</li>
+<li>If the user types any text, the shell prints “Unrecognized command” (but does not exit the loop).</li>
+<li>However, if the user just hits enter without typing anything, no error message is printed.</li>
 </ul></li>
 <li>lvl 3:
 <ul>
-<li>Reads the line of input, splits it into pieces delimited by whitespace characters (see <code>man 3 isspace</code>).</li>
-<li>Instead of just printing “Unrecognized commmand” it shall include the name of the program (e.g. if the user types <code>cat shell.c</code>, the shell prints “Unrecognized commmand: cat”).</li>
+<li>The shell splits the line of input into pieces delimited by whitespace characters (see <code>man 3 isspace</code>).</li>
+<li>Instead of just printing “Unrecognized commmand” the shell shall include the name of the program in the error message (e.g. if the user types <code>cat shell.c</code>, the shell prints “Unrecognized commmand: cat”).</li>
 </ul></li>
 <li>lvl 4:
 <ul>
-<li>the shell will support a few builtin commands (exit, cd and exec). If the first piece of the input is not “exit” or “cd” or “exec” it will still print the unrecognized command message, otherwise:
+<li>the shell supports a few builtin commands (exit, cd and exec). If the first piece of the input is not “exit” or “cd” or “exec” it will still print the unrecognized command message, otherwise:
 <ul>
-<li>exit: takes no arguments (should print error if they are provided) and closes the shell (return value of 0)</li>
-<li>cd: should take exactly one argument (otherwise it prints usage info) and changes the working directory of shell process (see <code>man 2 chdir</code>). If chdir does not accept the path provided, an error message with the description of the errno returned should be printed. The new directory will appear in the prompt.</li>
-<li>exec: takes at least one argument (maybe more) and replaces the shell with an instance of the command specified using the execv function. If execv fails, an error message should be printed explaining the errno returned.</li>
+<li>exit: takes no arguments (prints error if they are provided) and closes the shell (return value of 0)</li>
+<li>cd: takes exactly one argument (otherwise it prints usage info) and changes the working directory of the shell process (see <code>man 2 chdir</code>). If chdir does not accept the path provided, an error message including a description of the errno is printed. The new working directory is reflected in the prompt.</li>
+<li>exec: takes at least one argument (maybe more) and replaces the shell with an instance of the command specified (see <code>man 3 execv</code>). If execution fails, an error message is printed including a description of the errno, and the shell continues. Otherwise, having been replaced, the shell does not return.</li>
 </ul></li>
 </ul></li>
 <li>lvl 5:
 <ul>
-<li>The shell will be able to run executable files as commands within child processes. If the first piece of the input looks like a path (starts with . or /) a child process should be created (see <code>man 2 fork</code>) and the command specified by the first argument should be executed within the child using the provided arguments (see <code>man 3 execv</code>) similar to the exec builtin, otherwise the child process should print and error message with execv’s errno describing the issue (don’t forget to exit the child process). The shell should wait for the child to finish running before printing the next prompt (see <code>man 2 waitpid</code>). le</li>
+<li>The shell supports running executable files as commands within child processes. If the first piece of the input looks like a path (starts with . or /) a child process is created (see <code>man 2 fork</code>) and the command specified by the first argument is executed within the child using the provided arguments (see <code>man 3 execv</code>) similar to the exec builtin. If executing the command fails, the child process prints an error message including a description of the errno (don’t forget to exit the child process). The shell waits for the child to finish running before printing the next prompt (see <code>man 2 waitpid</code>).</li>
 </ul></li>
 <li>lvl 6:
 <ul>
-<li>In the case that the user types something that isn’t a path or a builtin, before printing the unrecognized command error, the shell should check whether a file with that name exists in each of the directories listed in the <code>PATH</code> environment variable in order (see <code>man 3 getenv</code> and <code>man 2 stat</code>). If a file, with that name is found, the search can stop and that file can be executed. Only if no file is found in any of the directories, should the unrecognized command error be printed (NOTE: you must do the path searching manually, and cannot rely on a member of the exec family that does path searching automatically e.g. <code>execvp</code>).</li>
+<li>In the case that the user types something that isn’t a path or a builtin, before printing the unrecognized command error, the shell checks whether a file with that name exists in each of the directories listed in the <code>PATH</code> environment variable in order (see <code>man 3 getenv</code> and <code>man 2 stat</code>). If a file, with that name is found, the search can stop and that file is executed with arguments in a child process. Only if no file is found in any of the directories, should the unrecognized command error be printed (NOTE: you must do the path searching manually, and cannot rely on a member of the exec family that does path searching automatically e.g. <code>execvp</code>).</li>
 </ul></li>
 <li>lvl 7:
 <ul>
-<li>Before processing the entered commands, the shell should do home directory substitution on pieces (comman name or arguments) that start with a <code>~</code>.</li>
-<li>See the following requirements:
+<li>Before processing the entered commands, the shell performs home directory substitution on the pieces (command name or arguments) that start with a <code>~</code>.
 <ul>
-<li>The shell should determine a username string, by taking a substring from after the <code>~</code> until the end of the string or the first <code>/</code>, whichever comes first.</li>
-<li>If the username string is empty, then the <code>~</code> should be replaced with the value of the <code>HOME</code> environment variable.</li>
-<li>If the username string is not empty, the shell should attempt to locate the the user with that name and replace the <code>~</code> and the username substring with their home directory (see <code>man 3 getpwnam</code>).</li>
-<li>If <code>getpwnam</code> does not locate such user, the shell should leave the string unmodified.</li>
+<li>The shell determines a username string by taking a substring of the piece after the <code>~</code> until the end of the string or the first <code>/</code>, whichever comes first.</li>
+<li>If the username string is empty, then the <code>~</code> is replaced with the value of the <code>HOME</code> environment variable (see <code>man 3 getenv</code>).</li>
+<li>If the username string is not empty, the shell attempts to locate the the user with that username and, if successful, replaces the <code>~</code> and the username substring with their home directory (see <code>man 3 getpwnam</code>).</li>
+<li>If <code>getpwnam</code> does not locate such a user, the shell leaves the piece unmodified.</li>
 </ul></li>
 </ul></li>
 <li>lvl 8:
 <ul>
-<li>As the shell is processing the commands and arguments is it finds a <code>&lt;</code> or <code>&gt;</code>, it should skip any whitespace characters, if any, and attempt to treat the next string as a filename for redirection (see <code>man 2 dup</code> and <code>man 2 dup2</code>). If there are multiple same redirections, then the right-most one takes precedence.</li>
+<li>As the shell is processing the commands and arguments, if it finds a <code>&lt;</code> or <code>&gt;</code>, it skips any whitespace characters and attempts to treat the next piece of the input as a filename for redirection. If there is no filename before the end of the string, an error message is printed.</li>
+<li>A command can have more than one redirection (even more than one of the same type). If there are multiple of the same redirections, then the right-most one takes precedence.</li>
+<li>A redirection beginning with <code>&lt;</code> causes the shell to open the corresponding file and replace the stdin of the child process with the file descriptor of the open file (see <code>man 2 dup</code>).</li>
+<li>A redirection beginning with <code>&gt;</code> behaves similarly, but it replaces the stdout of the process.</li>
 </ul></li>
 <li>lvl 9:
 <ul>
-<li>The shell needs to take the <code>|</code> operator and redirect the output from the left hand operand to the right hand operand (see <code>man 2 pipe</code> or <code>man 2 pipe2</code> 👀). The shell should be able to handle more than one pipe. Any file redirections should take precedence over the implied redirections of the pipe.</li>
+<li>The shell supports the <code>|</code> (pipe) operator to chain multiple commands and their inputs and outputs.</li>
+<li>Each command seperated by a <code>|</code> is spawned as its own child process. The shell can handle more than one pipe.</li>
+<li>The shell creates a unidirectional pipe (see <code>man 2 pipe</code>) for each <code>|</code> and redirects the stdout from the left command to the writing end of the pipe and redirects the stdin of the right command to the reading end of the pipe.</li>
+<li>Any file redirections specified by the user take precedence over any implied redirections of the <code>|</code>.</li>
 </ul></li>
 </ul>
