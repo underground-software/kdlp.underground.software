@@ -127,10 +127,8 @@ ga('send', 'pageview');
 <li>The shell supports the <code>|</code> (pipe) operator to chain multiple commands and their inputs and outputs.</li>
 <li>Each command seperated by a <code>|</code> is spawned as its own child process. The shell can handle more than one pipe.</li>
 <li>The shell creates a unidirectional pipe (see <code>man 2 pipe</code>) for each <code>|</code> and redirects the stdout from the left command to the writing end of the pipe and redirects the stdin of the right command to the reading end of the pipe.</li>
-<li>Any file redirections specified by the user take precedence over any implied redirections of the <code>|</code>. <br></br></li>
+<li>Any file redirections specified by the user take precedence over any implied redirections of the <code>|</code>. <br></br> If you were inspired by completing all ten required level and you want to go further (for fun and bragging rights), feel free to add some or all of these features.</li>
 </ul></li>
-<li>If you were inspired by completing all ten required level and you want to go further (for fun and bragging rights), feel free to add some or all of these features.
-<ul>
 <li>Add support for <code>;</code> to put multiple commands on one line and the <code>#</code> for comments.</li>
 <li>Add support for the <code>&amp;&amp;</code> and <code>||</code> operators to chain commands based on their return codes.</li>
 <li>Add support for special variables like <code>$?</code>, <code>$#</code>, <code>$*</code>, <code>$$</code>.</li>
@@ -139,5 +137,4 @@ ga('send', 'pageview');
 <li>Add support for background jobs (<code>jobs</code>, <code>fg</code>, <code>bg</code> builtins), and <code>&amp;</code> for spawning a job in the background.</li>
 <li>Add support for the <code>source</code> builtin to run commands from a file.</li>
 <li>Add support for control flow operators (e.g. loops, conditionals, selection statements).</li>
-</ul></li>
 </ul>
