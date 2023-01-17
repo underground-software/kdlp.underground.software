@@ -1,4 +1,4 @@
-### Mid2 - Writing some actual kernel code at last 🕴️
+### Fin2 - Writing some actual kernel code at last 🕴️
 
 You will be assigned someone else’s specification and tests. Your task is to implement the specification with a character device module. The existing tests should pass when run against your module.
 

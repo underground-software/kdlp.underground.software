@@ -1,4 +1,4 @@
-### Mid1 - Specification 📐
+### Fin1 - Specification 📐
 
 Assignment Summary: You should come up with the specification for a simple but interesting and non-trivial character device that does something entertaining. This is intentionally open ended.
 
