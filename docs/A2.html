@@ -52,43 +52,80 @@ ga('send', 'pageview');
 </p>
 <hr>
 <h3 id="a2---the-big-upgrade">A2 - The Big Upgrade 🎢</h3>
-<p>Build, install, and boot the latest Linux kernel fresh off Linus Torvalds’ tree</p>
-<p>Get access to a Linux system on which you have root permissions.</p>
-<p>Clone the latest Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</a></p>
-<p>Compile the kernel with a custom version tag:</p>
-<p><br></br></p>
-<p># clone the kernel tree</p>
-<p>git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</p>
-<p># change the current directory to the kernel tree</p>
-<p>cd linux</p>
-<p># change the current directory to the kernel tree</p>
-<p>cp /boot/config-$(uname -r)* .config</p>
-<p># set any new config options to the defaults</p>
-<p>make olddefconfig</p>
-<p># to add label to the new kernel version string,</p>
-<p># edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable</p>
-<p># you can print the new version string to test it by:</p>
-<p>make kernelversion</p>
-<p># build the kernel</p>
-<p># -j species the number of threads</p>
-<p># nproc finds the correct number for your machine</p>
-<p>make -j $(nproc)</p>
-<p># install the modules</p>
-<p># you need to be root for this step so use sudo</p>
-<p>sudo make modules_install -j $(nproc)</p>
-<p># install the new kernel</p>
-<p>sudo make install</p>
-<p># reboot – hopefully the new kernel is set as the default :)</p>
-<p>reboot</p>
-<p>…</p>
-<p>uname -a</p>
-<p>dmesg | head</p>
-<p>whoami</p>
-<p><br></br></p>
-<p>Seems easy enough right? 😉</p>
-<p>Expect the compilation to take a little while Make sure you have 5-10 GB of free space on the partition where you are storing the kernel tree and a bit of extra space on whatever partition /boot resides in to store the new kernel image and initramfs.</p>
-<p><br></br></p>
-<p>What to submit:</p>
+<p>Build, install, and boot the latest Linux kernel fresh off Linus Torvalds’ tree.</p>
+<h4 id="outcomes">Outcomes:</h4>
+<ul>
+<li>Set up a kernel development environment.</li>
+<li>Get comfortable with building the kernel.</li>
+</ul>
+<h4 id="procedure">Procedure:</h4>
+<ul>
+<li>Get access to a Linux system on which you have root permissions.</li>
+<li>Install dependencies:</li>
+</ul>
+<pre><code>        sudo dnf -y install gcc flex make bison openssl openssl-devel elfutils-libelf-devel ncurses-devel bc git tar dwarves</code></pre>
+<ul>
+<li>Clone the latest Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git" class="uri">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</a>.</li>
+<li>Compile the kernel with a custom version tag.</li>
+</ul>
+<pre><code>        # clone the kernel tree
+
+        git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+
+        # change the current directory to the kernel tree
+
+        cd linux
+
+        # change the current directory to the kernel tree
+
+        cp /boot/config-$(uname -r)* .config
+
+        # set any new config options to the defaults
+
+        make olddefconfig
+
+        # to add label to the new kernel version string,
+
+        # edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable
+
+        # you can print the new version string to test it by:
+
+        make kernelversion
+
+        # build the kernel
+
+        # -j species the number of threads
+
+        # nproc finds the correct number for your machine
+
+        make -j $(nproc)
+
+        # install the modules
+
+        # you need to be root for this step so use sudo
+
+        sudo make modules_install -j $(nproc)
+
+        # install the new kernel
+
+        sudo make install
+
+        # reboot – hopefully the new kernel is set as the default :)
+
+        reboot
+
+        ...
+
+        uname -a
+
+        dmesg | head
+
+        whoami</code></pre>
+<ul>
+<li>Seems easy enough right? 😉</li>
+<li>Expect the compilation to take a little while Make sure you have 5-10 GB of free space on the partition where you are storing the kernel tree and a bit of extra space on whatever partition /boot resides in to store the new kernel image and initramfs.</li>
+</ul>
+<h4 id="what-to-submit">What to submit:</h4>
 <ul>
 <li><p>The output of <code>uname -a</code> and <code>dmesg | head</code> and <code>whoami</code> on the system running your newly compiled Linux kernel. Rename template.md in the assignment directory to firstname_lastname.md and submit it as a patch.</p></li>
 <li><p>Don’t forget a cover letter.</p></li>
