@@ -9,64 +9,49 @@ the Free Software Foundation, either version 3 of the License, or
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+along with this program.	If not, see <https://www.gnu.org/licenses/>.
 */
 
 img {
-  width: auto ;
-  height: 400 ;
+	width: 35%;
+	height: auto;
 }
 
 hr {
-  background: #e83d2a ;
-  height: 2px ;
-  border: 0px ;
+	background: #e83d2a;
+	height: 2px;
+	border: 0px;
 }
 
 body {
-  padding-top: 10px;
-  display: block ;
-  margin: auto ;
-  width: 45% ;
-  font-family: courier ;
-}
-
-@media only screen and (max-width: 1000px) {
-  body {
-    width: 90% ;
-  }
-}
-
-img {
-  width: 35% ;
-  height: auto ;
+	padding-top: 10px;
+	display: block;
+	margin: auto;
+	width: 45vw;
+	/* max-width: 600px; */
+	min-width: 800px;
+	font-family: courier;
 }
 
 a {
-  color: #2db8d4 ;
+	color: #2db8d4;
 }
 
 a:visited {
-  color: #005d70 ;
+	color: #005d70;
 }
 
 p {
-  font-size: 11pt ;
-}
-
-@media only screen and (max-width: 1000px) {
-  p {
-    font-size: 24pt ;
-  }
+	font-size: 11pt;
 }
 
 h5 {
-  font-size: 14pt ;
-  margin: 0 ;
+	font-size: 14pt;
+	margin: 0;
 }
 
 table {
@@ -77,3 +62,25 @@ table, th, td {
 	border: 1px solid;
 	padding: 0.5em;
 }
+
+pre {
+	white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		width: 90%;
+		min-width: 0px;
+		word-wrap: break-word;
+	}
+	p, li, td, th, pre, code {
+		font-size: 24pt;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	h3 {
+		font-size: 1.7em;
+	}
+}
+
