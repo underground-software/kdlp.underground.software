@@ -1,0 +1,81 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<h3 id="mid1---specification">Mid1 - Specification 📐</h3>
+<p>Assignment Summary: You should come up with the specification for a simple but interesting and non-trivial character device that does something entertaining. This is intentionally open ended.</p>
+<p>You will write a detailed specification that someone else could follow to successfully implement the driver and also write a userspace program that implements unit tests that a correct driver should pass to verify its compliance with the specification.</p>
+<p><br></br></p>
+<p>The specification should document and explain the following system calls:</p>
+<ul>
+<li><p>Open</p></li>
+<li><p>Read</p></li>
+<li><p>Write</p></li>
+<li><p>Close</p></li>
+<li><p>At least one of ioctl / lseek</p></li>
+</ul>
+<p>The test program should exercise the behavior of all of the system calls in the specification to ensure the correctness of the driver.</p>
+<p>However, since you won’t have a completed driver yet, you won’t be able to fully run the test program and have the tests pass. We recommend using strace or another similar program to ensure that your test program is at least making the right system calls with the intended arguments.</p>
+<p><br></br></p>
+<p>What to submit:</p>
+<ul>
+<li><p>A patch to the assignment directory containing your directory named firstname_lastname.</p>
+<ul>
+<li>The first patch should create this directory and add your specification.</li>
+</ul></li>
+<li><p>The second patch should include your test program and a Makefile to build it..</p>
+<ul>
+<li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
+</ul></li>
+<li><p>Don’t forget a cover letter.</p></li>
+</ul>
+<p><a href="submission_guidelines.html">Submission Guidelines</a></p>

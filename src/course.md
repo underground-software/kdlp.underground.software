@@ -29,6 +29,6 @@ The second half of the semester consists of two midpoint assignments, a final pr
 
 [A(-1)](course_application.html) | [A0](A0.html) | [A1](A1.html) | [A2](A2.html) | [A3](A3.html) | [A4](A4.html) | [A5](A5.html)
 
-[Mid1](mid1.html) | [Mid2](mid2.html) | [Final](final.html)
+[Fin1](fin1.html) | [Fin2](fin2.html)
 
 [Presentation Guidelines](presentation_guidelines.html)
