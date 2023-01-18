@@ -30,6 +30,8 @@ Students will:
 
 ### Course Schedule
 
+**All assignment due dates are in EST(UTC-5) time**
+
 |#| week starting|S|M|T|W|R|F|S|Assignments Due Monday 23:59|Lectures|
 |--|--|--|--|--|--|--|--|--|--|--|
 |0| 15 Jan||||0||||[A0](A0.html) due Thursday 23:59|L0|
