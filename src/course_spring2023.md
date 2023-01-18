@@ -30,7 +30,7 @@ Students will:
 
 ### Course Schedule
 
-|#| week starting|S|M|T|W|R|F|S|Assignment Due Monday 23:59|Lectures|
+|#| week starting|S|M|T|W|R|F|S|Assignments Due Monday 23:59|Lectures|
 |--|--|--|--|--|--|--|--|--|--|--|
 |0| 15 Jan||||0||||[A0](A0.html) due Thursday 23:59|L0|
 |1| 22 Jan||1||2|||||L1, L2|
