@@ -32,24 +32,24 @@ Students will:
 
 **All assignment due dates are in EST(UTC-5) time**
 
-|#| week starting|S|M|T|W|R|F|S|Assignments Due Monday 23:59|Lectures|
-|--|--|--|--|--|--|--|--|--|--|--|
-|0| 15 Jan||||0||||[A0](A0.html) due Thursday 23:59|L0|
-|1| 22 Jan||1||2|||||L1, L2|
-|2| 29 Jan||3||4||||[A1](A1.html), [A2](A2.html)|L3, L4|
-|3| 5 Feb||5||6||||[A3](A3.html)|L5, L6|
-|4| 12 Feb||7||8|||||L7, L8|
-|5| 17 Feb|||9|10||||[A4](A4.html) due Tuesday 23:59|L9, L10|
-|6| 26 Feb||11||12|||||L11, L12|
-|7| 5 Mar||13||14||||[A5](A5.html)|L13, L14|
+|#| week starting|S|M|T|W|R|F|S|Assignments Due Monday 23:59|
+|--|--|--|--|--|--|--|--|--|--|
+|0| 15 Jan||||[L0](spring23_notes.html)||||[A0](A0.html) due Thursday 23:59|
+|1| 22 Jan||L1||L2|||||
+|2| 29 Jan||L3||L4||||[A1](A1.html), [A2](A2.html)|
+|3| 5 Feb||L5||L6||||[A3](A3.html)|
+|4| 12 Feb||L7||L8|||||
+|5| 17 Feb|||L9|L10||||[A4](A4.html) due Tuesday 23:59|
+|6| 26 Feb||L11||L12|||||
+|7| 5 Mar||L13||L14||||[A5](A5.html)|
 |8| 12 Mar||||||||||
-|9| 19 Mar||15||16|||||L15, L16|
-|10| 26 Mar||17||18|||||L17, L18|
-|11| 2 Apr||19||20||||[A6](A6.html)|L19, L20|
-|12| 9 Apr||21||22|||||L21, L22|
-|13| 16 Apr||23||24||||[Fin1](fin1.html)|L23, L24|
-|14| 23 Apr||25||26|||||L25, L26|
-|15| 30 Apr|F|I|N|A|L|S|!|[Fin2](fin2.html)||
+|9| 19 Mar||L15||L16|||||
+|10| 26 Mar||L17||L18|||||
+|11| 2 Apr||L19||L20||||[A6](A6.html)|
+|12| 9 Apr||L21||L22|||||
+|13| 16 Apr||L23||L24||||[Fin1](fin1.html)|
+|14| 23 Apr||L25||L26|||||
+|15| 30 Apr|F|I|N|A|L|S|!|[Fin2](fin2.html)|
 
 
 ### Course policies

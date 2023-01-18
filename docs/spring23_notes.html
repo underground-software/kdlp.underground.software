@@ -1,0 +1,201 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<p><strong>L0 - 18 January 2023</strong></p>
+
+<p>Notes on first class:</p>
+
+<ul>
+<li>Do this right now: https://kdlp.underground.software/course_application.html
+
+<ul>
+<li>To get in discord server</li>
+</ul>
+</li>
+<li>Online Syllabus: https://kdlp.underground.software/course_spring2023.html</li>
+<li>This is not like other classes!!!
+
+<ul>
+<li>The course attempts to encapsulate the ethos of open source development in a classroom environment</li>
+<li>Introduce the tools, techniques and etiquette of submitting code to the kernel and provide practice with them</li>
+<li>Practical C coding, and plenty of it!</li>
+<li>Practical research</li>
+</ul>
+</li>
+<li>This means:
+
+<ul>
+<li>Public submissions</li>
+<li>Peer review</li>
+<li>Emphasis on presenting your work and explaining the process vs just getting the right answer</li>
+</ul>
+</li>
+<li>Why should you care? Why is the grind worth it?
+
+<ul>
+<li>This class will let you practice key skills for your career in a lower stakes environment:
+
+<ul>
+<li>Practice communication skills that are absolutely invaluable in the tech industry</li>
+<li>Wisdom from people who already have careers in CS</li>
+<li>Experience with C programming on a large codebase</li>
+<li>Experience with git and other linux utilities</li>
+</ul>
+</li>
+<li>And, if you are considering a career in kernel development:
+
+<ul>
+<li>Instructors are the real deal</li>
+<li>Guest lectures from senior developers at Red Hat</li>
+<li>Linux Foundation Certificate</li>
+<li>Familiar with kernel code base / functions</li>
+<li>Familiar with mailing list workflow</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Requirements to be able to complete the class successfully (do, or have done this by add drop or you should drop the class):
+
+<ul>
+<li>A Linux environment that you have root access to
+
+<ul>
+<li>The following are not adequate:
+
+<ul>
+<li>The UML CS servers (you do not have root access)</li>
+<li>WSL (need to be able to compile custom kernel)</li>
+</ul>
+</li>
+<li>Recommended:
+
+<ul>
+<li>Run Linux in a virtual machine</li>
+</ul>
+</li>
+<li>Possible, but not recommended:
+
+<ul>
+<li>Dual boot</li>
+</ul>
+</li>
+<li>Ideal, but expensive (don’t go buying hardware for this class)
+
+<ul>
+<li>Second machine</li>
+</ul>
+</li>
+<li>Even if you use linux as a daily driver, you might still consider a VM or dual booting to protect your main install (e.g. from downtime or data loss in case you mess something up since we are working on the kernel)</li>
+</ul>
+</li>
+<li>Setup VM ASAP!
+
+<ul>
+<li>If you are on Windows or an intel (x64) mac use Virtual box</li>
+<li>If you are on linux, use QEMU</li>
+<li>If you are on an M1 (aarch64) mac use UTM</li>
+</ul>
+</li>
+<li>We recommend installing Fedora Linux since it is a fully open source distro that upstream pretty closely
+
+<ul>
+<li>Download the iso file for the right architecture (x86_64 for windows and intel mac, aarch64 for M1 mac)</li>
+<li>Setup vm with appropriate amount of resources</li>
+<li>Ensure you can connect to it using ssh from your host machine</li>
+<li>Shut it down and set it to headless mode (no window). Start and stop as needed for your course work</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Go over course policies: https://kdlp.underground.software/course_policies.html</li>
+<li>Introductory assignments
+
+<ul>
+<li>Fill out the form on the website. A(-1), due end of day today!</li>
+<li>Git and git patches. A0, due tomorrow!</li>
+<li>Setting up git send email, A0</li>
+<li>Shell. A1 due 11:59pm Jan 29</li>
+<li>Compiling kernel. A2 due 11:59pm Jan 29</li>
+<li>We will provide as much help and guidance as we can
+
+<ul>
+<li>The lectures until Jan 30 will be reserved for questions about the assignments. If there are no questions, we will proceed with the scheduled lecture material.</li>
+</ul>
+</li>
+<li>If you can’t handle the heat, get out of the kitchen…</li>
+</ul>
+</li>
+<li>In conclusion
+
+<ul>
+<li>This class is relatively frontloaded!</li>
+<li>If you can make it past A2, you will probably be fine.</li>
+<li>NO EXAMS! 😀</li>
+</ul>
+</li>
+<li>Do this right now if you have not
+
+<ul>
+<li><a href="https://kdlp.underground.software/course_application.html">COURSE APPLICATION</a></li>
+<li>Send to kdlp-application@googlegroups.com</li>
+</ul>
+</li>
+<li>Mailing lists for A0:
+
+<ul>
+<li>For UML students: kdlp-spring23-uml@googlegroups.com</li>
+<li>For LFX mentees: kdlp-spring23-lfx@googlegroups.com</li>
+</ul>
+</li>
+</ul>
+
