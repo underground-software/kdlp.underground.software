@@ -30,25 +30,25 @@ Students will:
 
 ### Course Schedule
 
-|#| week starting|S|M|T|W|R|F|S|Assignment Due|Lectutures|
+|#| week starting|S|M|T|W|R|F|S|Assignment Due Monday 23:59|Lectures|
 |--|--|--|--|--|--|--|--|--|--|--|
-|0| 15 Jan||||0||||[A0](A0.html)|L0|
+|0| 15 Jan||||0||||[A0](A0.html) due Thursday 23:59|L0|
 |1| 22 Jan||1||2|||||L1, L2|
 |2| 29 Jan||3||4||||[A1](A1.html), [A2](A2.html)|L3, L4|
-|3| 5 Feb||5||6|||||L5, L6|
-|4| 8 Feb||7||8||||[A3](A3.html)|L7, L8|
-|5| 12 Feb||9||10|||||L9, L10|
-|6| 19 Feb|||11|12||||[A4](A4.html)|L11, L12|
+|3| 5 Feb||5||6||||[A3](A3.html)|L5, L6|
+|4| 8 Feb||7||8|||||L7, L8|
+|5| 12 Feb||9||10||||[A4](A4.html)|L9, L10|
+|6| 19 Feb|||11|12|||||L11, L12|
 |7| 26 Feb||13||14||||[A5](A5.html)|L13, L14|
 |8| 5 Mar||||||||||
 |9| 12 Mar||15||16|||||L15, L16|
-|10| 19 Mar||17||18||||[A6](A6.html)|L17, L18|
-|11| 26 Mar||19||20|||||L19, L20|
-|12| 2 Apr||21||22||||[Fin1](fin1.html)|L21, L22|
-|13| 9 Apr||23||24|||||L23, L24|
-|14| 16 Apr||25||26||||[Fin2](fin2.html)|L25, L26|
+|10| 19 Mar||17||18|||||L17, L18|
+|11| 26 Mar||19||20||||[A6](A6.html)|L19, L20|
+|12| 2 Apr||21||22|||||L21, L22|
+|13| 9 Apr||23||24||||[Fin1](fin1.html)|L23, L24|
+|14| 16 Apr||25||26|||||L25, L26|
 |15| 23 Apr||27||28|||||L27, L28|
-|16| 30 Apr|F|I|N|A|L|S|!|||
+|16| 30 Apr|F|I|N|A|L|S|!|[Fin2](fin2.html)||
 
 
 ### Course policies
