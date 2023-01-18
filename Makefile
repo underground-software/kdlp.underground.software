@@ -21,11 +21,11 @@ SRCDIR  = src
 DOCDIR  = docs
 SLDIR	= slides
 DOCS 	= $(patsubst $(SRCDIR)/%.md, %.html, $(shell find $(SRCDIR) -wholename '*.md'))
+SLIDES	= $(patsubst $(SLDIR)/%.md, $(DOCDIR)/%.html, $(shell find $(SLDIR) -wholename '*.md'))
 
 
-all: $(DOCDIR) $(DOCS)
-	@echo Generating $(DOCS)...
-	make sl
+all: $(DOCDIR) $(DOCS) $(SLIDES)
+	@echo Generating Website...
 
 %.html: $(SRCDIR)/%.md
 	$(shell $(CC) $^ | $(LD) $(HEADER) $(LDFLAGS) > $(patsubst %.html, $(DOCDIR)/%.html, $@))
@@ -33,10 +33,11 @@ all: $(DOCDIR) $(DOCS)
 $(DOCDIR):
 	mkdir $(DOCDIR)
 
-sl:
-	marp --input-dir=./$(SLDIR) --output=./$(DOCDIR)
+$(DOCDIR)/%.html: $(SLDIR)/%.md
+	
+	marp $^ --output=./$@
 
-.phoney: all sl clean cleandir dist
+.PHONY: all sl clean cleandir dist
 
 clean:
 	rm -rf $(patsubst %, $(DOCDIR)/%, $(DOCS))

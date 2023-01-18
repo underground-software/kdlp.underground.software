@@ -51,7 +51,7 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3>A4 - Scavenger Hunt 🤪</h3>
+<h3>A4 - Scavenger Hunt 🔎</h3>
 
 <p>We will assign you a syscall and give you our specially designed program.</p>
 
@@ -60,50 +60,74 @@ ga('send', 'pageview');
 <ul>
 <li>Learn basic Linux kernel tracing</li>
 <li>Get a basic understanding of BPF via <code>bpftrace</code></li>
-<li></li>
+<li>Strengthen understanding of the interaction between the kernel and userspace</li>
 </ul>
 
 
 <h4>Procedure:</h4>
 
 <ol>
-<li><p><code>strace</code> our program</p></li>
-<li><p>Locate the lines corresponding to call(s) to your syscall in the output and put them into assignment.md</p></li>
-<li><p>Answer question 0 in assignment.md</p></li>
-<li><p>Suggested: make use of the system’s manual pages</p></li>
-<li><p>Find the syscall definition within the kernel source</p></li>
+<li><p>Run <code>strace</code> on the provided program</p>
+
+<ul>
+<li>Locate the lines corresponding to call(s) to your syscall in the output and put them into assignment.md</li>
+</ul>
+</li>
+<li><p>Answer question 0 in assignment.md</p>
+
+<ul>
+<li>Suggested: make use of the system’s manual pages</li>
+</ul>
+</li>
+<li><p>Find the syscall definition within the kernel source</p>
+
+<ul>
 <li><p>Put the location into assignment.md</p></li>
 <li><p>Suggested: make use of <a href="https://elixir.bootlin.com/">elixir</a> or <a href="http://cscope.sourceforge.net/">cscope</a></p></li>
-<li><p>Answer question 1 in the assignment.md file</p></li>
-<li><p>Who last modified your syscall’s code? What were they trying to do</p></li>
-<li><p>Write a bpftrace snippet to insert a probe that will print the syscall args and kernel stack in real time as the syscall is invoked</p></li>
+</ul>
+</li>
+<li><p>Answer question 1 in the assignment.md file</p>
+
+<ul>
+<li>Who last modified your syscall’s code? What were they trying to do</li>
+</ul>
+</li>
+<li><p>Write a bpftrace snippet to insert a probe that will print the syscall args and kernel stack in real time as the syscall is invoked</p>
+
+<ul>
 <li><p>Ensure that the bpf probe is only triggered when our specific command is run</p></li>
 <li><p>Suggested: <a href="https://github.com/iovisor/bpftrace/blob/master/docs/reference_guide.md#5-str-strings">bpftrace/reference_guide.md at master</a></p></li>
 <li><p>Hint: The first line of an executable bpftrace file must be “#!/usr/bin/env bpftrace”</p></li>
 <li><p>Hint: A script file must be marked as executable to be run</p></li>
-<li><p>Re-run the program with the bpf probe inserted via your bpftrace code</p></li>
-<li><p>Save the results into assignment.md</p></li>
+</ul>
+</li>
+<li><p>Re-run the program with the bpf probe inserted via your bpftrace code</p>
+
+<ul>
+<li>Save the results into assignment.md</li>
+</ul>
+</li>
 <li><p>Document your process in the cover letter as always</p></li>
 </ol>
 
 
 <p><br></br></p>
 
-<p>Tools of interest</p>
+<p><strong>Tools of interest</strong></p>
 
 <ul>
-<li><p>strace</p></li>
-<li><p>man</p></li>
-<li><p>cscope</p></li>
-<li><p>git-blame</p></li>
-<li><p>grep (-rnw)</p></li>
-<li><p>bpftrace</p></li>
+<li><p><code>strace</code></p></li>
+<li><p><code>man</code></p></li>
+<li><p><code>cscope</code></p></li>
+<li><p><code>git-blame</code></p></li>
+<li><p><code>git-grep \[ -n \]</code></p></li>
+<li><p><code>bpftrace</code> and other BPF tooling</p></li>
 </ul>
 
 
 <p><br></br></p>
 
-<p>What to submit (the patches should be numbered in the order they are listed):</p>
+<h4>What to submit</h4>
 
 <ul>
 <li><p>A cover letter following the assignment submission guidelines (as always)</p></li>
