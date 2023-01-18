@@ -2,9 +2,9 @@
 
 Notes on first class:
 
-* Do this right now: https://kdlp.underground.software/course_application.html
+* Do this right now: <https://kdlp.underground.software/course_application.html>
   * To get in discord server
-* Online Syllabus: https://kdlp.underground.software/course_spring2023.html
+* Online Syllabus: <https://kdlp.underground.software/course_spring2023.html>
 * This is not like other classes!!!
   * The course attempts to encapsulate the ethos of open source development in a classroom environment
   * Introduce the tools, techniques and etiquette of submitting code to the kernel and provide practice with them
@@ -42,12 +42,12 @@ Notes on first class:
     * If you are on Windows or an intel (x64) mac use Virtual box
     * If you are on linux, use QEMU
     * If you are on an M1 (aarch64) mac use UTM
-  * We recommend installing Fedora Linux since it is a fully open source distro that upstream pretty closely 
+  * We recommend installing [Fedora Linux](https://getfedora.org/en/server/download/) since it is a fully open source distro that upstream pretty closely 
     * Download the iso file for the right architecture (x86_64 for windows and intel mac, aarch64 for M1 mac)
     * Setup vm with appropriate amount of resources
     * Ensure you can connect to it using ssh from your host machine
     * Shut it down and set it to headless mode (no window). Start and stop as needed for your course work
-* Go over course policies: https://kdlp.underground.software/course_policies.html
+* Go over course policies: <https://kdlp.underground.software/course_policies.html>
 * Introductory assignments
   * Fill out the form on the website. A(-1), due end of day today!
   * Git and git patches. A0, due tomorrow!
