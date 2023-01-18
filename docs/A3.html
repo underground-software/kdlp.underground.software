@@ -119,7 +119,7 @@ ga('send', 'pageview');
 
 <ul>
 <li>The first patch should create this directory and add your Makefile.</li>
-<li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
+<li>Make sure to have compiler warnings enabled (at least <code>-Wall</code> but ideally <code>-Wextra</code> and <code>-Wpedantic</code> too, or even <code>-Weverything</code> if you use clang) and that your code doesn’t have any warnings or errors.</li>
 </ul>
 </li>
 <li>The second patch should add your kernel patches <em>as patches to our repo</em>. Generate a patch from your commit to the Linux kernel, and then take this file, put it in your named directory, and add <em>the email patch itself</em> to the staged git files and commit this. Then, generate a patch from this commit. This is the second patch of the assignment.</li>
