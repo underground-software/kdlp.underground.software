@@ -51,83 +51,105 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3 id="a2---the-big-upgrade">A2 - The Big Upgrade 🎢</h3>
+<h3>A2 - The Big Upgrade 🎢</h3>
+
 <p>Build, install, and boot the latest Linux kernel fresh off Linus Torvalds’ tree.</p>
-<h4 id="outcomes">Outcomes:</h4>
+
+<h4>Outcomes:</h4>
+
 <ul>
 <li>Set up a kernel development environment.</li>
 <li>Get comfortable with building the kernel.</li>
 </ul>
-<h4 id="procedure">Procedure:</h4>
+
+
+<h4>Procedure:</h4>
+
 <ul>
-<li>Get access to a Linux system on which you have root permissions.</li>
-<li>Install dependencies:</li>
+<li><p>Get access to a Linux system on which you have root permissions.</p></li>
+<li><p>Install dependencies:</p>
+
+<ul>
+<li>On Fedora, you can use:
+    <code>sudo dnf builddep kernel</code></li>
+<li><p>This roughly equivalent to:</p>
+
+<p><code>sudo dnf -y install gcc flex make bison openssl openssl-devel elfutils-libelf-devel ncurses-devel bc git tar dwarves</code></p></li>
 </ul>
-<pre><code>        sudo dnf -y install gcc flex make bison openssl openssl-devel elfutils-libelf-devel ncurses-devel bc git tar dwarves</code></pre>
-<ul>
-<li>Clone the latest Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git" class="uri">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</a>.</li>
-<li>Compile the kernel with a custom version tag.</li>
-</ul>
-<pre><code>        # clone the kernel tree
+</li>
+<li><p>Install ccache to speed up subsequent kernel builds:</p>
 
-        git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+<p>  <code>sudo dnf -y install ccache</code></p>
 
-        # change the current directory to the kernel tree
+<p><em>Be sure to restart your terminal after installing ccache so that it gets added to your path</em></p></li>
+<li><p>Clone the latest Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</a>.</p></li>
+<li><p>Compile the kernel with a custom version tag.</p>
 
-        cd linux
+<pre><code>  # clone the kernel tree
 
-        # change the current directory to the kernel tree
+  git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 
-        cp /boot/config-$(uname -r)* .config
+  # change the current directory to the kernel tree
 
-        # set any new config options to the defaults
+  cd linux
 
-        make olddefconfig
+  # change the current directory to the kernel tree
 
-        # to add label to the new kernel version string,
+  cp /boot/config-$(uname -r)* .config
 
-        # edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable
+  # set any new config options to the defaults
 
-        # you can print the new version string to test it by:
+  make olddefconfig
 
-        make kernelversion
+  # to add label to the new kernel version string,
 
-        # build the kernel
+  # edit ‘Makefile” and add something cool to the ‘EXTRAVERSION’ variable
 
-        # -j species the number of threads
+  # you can print the new version string to test it by:
 
-        # nproc finds the correct number for your machine
+  make kernelversion
 
-        make -j $(nproc)
+  # build the kernel
 
-        # install the modules
+  # -j species the number of threads
 
-        # you need to be root for this step so use sudo
+  # nproc finds the correct number for your machine
 
-        sudo make modules_install -j $(nproc)
+  make -j $(nproc)
 
-        # install the new kernel
+  # install the modules
 
-        sudo make install
+  # you need to be root for this step so use sudo
 
-        # reboot – hopefully the new kernel is set as the default :)
+  sudo make modules_install -j $(nproc)
 
-        reboot
+  # install the new kernel
 
-        ...
+  sudo make install
 
-        uname -a
+  # reboot – hopefully the new kernel is set as the default :)
 
-        dmesg | head
+  reboot
 
-        whoami</code></pre>
-<ul>
+  ...
+
+  uname -a
+
+  dmesg | head
+
+  whoami
+</code></pre></li>
 <li>Seems easy enough right? 😉</li>
 <li>Expect the compilation to take a little while Make sure you have 5-10 GB of free space on the partition where you are storing the kernel tree and a bit of extra space on whatever partition /boot resides in to store the new kernel image and initramfs.</li>
 </ul>
-<h4 id="what-to-submit">What to submit:</h4>
+
+
+<h4>What to submit:</h4>
+
 <ul>
 <li><p>The output of <code>uname -a</code> and <code>dmesg | head</code> and <code>whoami</code> on the system running your newly compiled Linux kernel. Rename template.md in the assignment directory to firstname_lastname.md and submit it as a patch.</p></li>
 <li><p>Don’t forget a cover letter.</p></li>
 </ul>
+
+
 <p><a href="submission_guidelines.html">Submission Guidelines</a></p>

@@ -51,36 +51,53 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3 id="a5---building-character">A5 - Building Character 💪</h3>
-<p>It’s time to add and use some syscalls!</p>
-<h4 id="outcomes">Outcomes:</h4>
+<h3>A5 - Building Character 💪</h3>
+
+<p>It&rsquo;s time to add and use some syscalls!</p>
+
+<h4>Outcomes:</h4>
+
 <ul>
 <li>Get familiar with defining system calls in a character device.</li>
 <li>Get familiar with how to call syscalls from userspace and how to move strings to and from userspace.</li>
 </ul>
-<h4 id="procedure">Procedure:</h4>
+
+
+<h4>Procedure:</h4>
+
 <ul>
 <li>You will be assigned a random sequence of operations.</li>
 <li>Add the <code>ioctl</code> and <code>llseek</code> syscalls to the driver provided in the <a href="https://github.com/underground-software/KDLP_assignments">assignment repo</a>.
+
 <ul>
 <li>Your implementations should be based on the implementations of the read and write operations.</li>
-</ul></li>
+</ul>
+</li>
 <li>Write a userspace program to interact with the character driver from class.
+
 <ul>
 <li>The userspace program will call the syscalls available through the driver in order of the sequence assigned to you. The userspace program should produce a matching output to what is assigned to you.</li>
 <li>Your program should check for system call errors.</li>
-</ul></li>
 </ul>
-<h4 id="what-to-submit">What to submit:</h4>
+</li>
+</ul>
+
+
+<h4>What to submit:</h4>
+
 <ul>
 <li>A patch which adds a directory named firstname_lastname to the assignment repo.
+
 <ul>
 <li>The first patch should create this directory and add your Makefile.</li>
 <li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
-</ul></li>
+</ul>
+</li>
 <li>The second patch should contain the modified driver with your implementation of <code>ioclt</code> and <code>llseek</code>.</li>
 <li>The third patch should add your userspace program that implements the assignment.</li>
 <li>The fourth patch should add a file containing the dmesg log from the driver upon a successful run of your program.</li>
-<li>Don’t forget the cover letter.</li>
+<li>Don&rsquo;t forget the cover letter.</li>
 </ul>
+
+
 <p><a href="submission_guidelines.html">Submission Guidelines</a></p>

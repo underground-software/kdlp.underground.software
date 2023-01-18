@@ -10,6 +10,7 @@
   * The instructors will provide detailed guidelines for automated checking of these requirements, and will gladly explain them upon request to any interested student
     * Therefore the instructors reserve the right to refuse to grade any submission that does not conform to these standards.
   * Students will participate in peer review for these assignments, as explained in the section below.
+  * Any code submission that fails to compile with zero warnings and zero errors will receive a zero.
 
 * Presentation Assignments:
   * Students will be required to complete two (2) presentations throughout the course

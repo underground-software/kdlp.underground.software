@@ -22,7 +22,7 @@ $ # generates patches from the three most recent commits (change -3 to whatever 
 
 All of the patches must follow the patch guidelines [1]. Those generated from a commit should follow the commit guidelines [2] and the cover letter must follow the cover letter guidelines [3].
 
-You will recieve an automatic zero on the assignment if any of the patches in your patchset are corrupt. This shouldn't be possible if you generate your patches with `git format-patch`, but if you edit the files manually they might get corrupted. You have been warned! The correct way to edit the patches is to edit the underlying commits (see `man git-rebase` and the `--ammend` option from `man git-commit`) and then regenerate the patches. 
+You will recieve an automatic zero on the assignment if any of the patches in your patchset are corrupt. This shouldn't be possible if you generate your patches with `git format-patch`, but if you edit the files manually they might get corrupted. You have been warned! The correct way to edit the patches is to edit the underlying commits (see `man git-rebase` and the `--amend` option from `man git-commit`) and then regenerate the patches. 
 
 #### [1] Patch Guidelines
 
@@ -52,7 +52,7 @@ When you author a commit the first line(s) you type into your editor will become
 
 Your commits should have a title that is a short summary of the changes in this commit and you should include any further details in the commit message.
 
-You should make sure that the changes you are including in your commits are tidy. This means that code should follow the [kernel code style guidelines](https://www.kernel.org/doc/html/v4.10/process/coding-style.html), (tabs for indentation, tab width of 8, no lines exceeding 80 columns, etc).
+You should make sure that the changes you are including in your commits are tidy. This means that code should follow the [kernel code style guidelines](https://www.kernel.org/doc/html/latest/process/coding-style.html), (tabs for indentation, tab width of 8, no lines exceeding 80 columns, etc).
 
 You must also avoid whitespace errors. These include whitespace at the end of a line, lines with only whitespace on them, extra blank lines at the end of a file, forgetting the newline on the last line of the file, etc. A good editor will highlight and/or automatically fix these for you, but git will also detect these when formatting and applying patches.
 

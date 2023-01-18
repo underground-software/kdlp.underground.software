@@ -51,11 +51,80 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3 id="a3---add-a-new-syscall">A3 - Add a new syscall</h3>
-<p>COMING SOON…</p>
-<h4 id="outcomes">Outcomes:</h4>
-<p>…</p>
-<h4 id="procedure">Procedure:</h4>
-<p>…</p>
-<h4 id="what-to-submit">What to submit:</h4>
-<p>…</p>
+<h3>A3 - Add a new syscall</h3>
+
+<p>Add a new system call to the kernel</p>
+
+<h4>Outcomes:</h4>
+
+<ul>
+<li>Get comfortable with the concept of a syscall from both kernelspace and userspace
+
+<ul>
+<li>Learn how userspace programs make systemcalls</li>
+<li>Learn how those calls are handled by the kernel</li>
+</ul>
+</li>
+<li>Understand how C relates to assembly languge
+
+<ul>
+<li>Write a C program to call your systemcall</li>
+<li>Write the same program in the assembly language of your platform</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Procedure:</h4>
+
+<ol>
+<li><p>Using the appropriate SYSCALL_DEFINE* macro, define a function that behaves as follows:</p>
+
+<p> a) The function takes two arguments, a userspace pointer to a buffer of type <code>char *</code>, an integer specifying the size of the buffer of type <code>size_t</code>.</p>
+
+<p> b) The function copies a string into the userspace buffer containing the student&rsquo;s name and the name of the executable binary that is running.</p>
+
+<p> c) The function returns 0 upon sucess. If there is an issue with the size of the provided buffer, checked by proxy of the <code>size_t</code> argument, then the function returns <code>-EFAULT</code> to the user.</p>
+
+<p> d) The function should take care to prevent any possibility of a buffer overflow.</p></li>
+<li><p>Add an <code>asmlinkage</code> declaration of your syscall in <code>include/linux/syscalls.h</code>. There are numerous examples of other syscalls in that file for ample student inspiration.</p></li>
+<li><p>Add an entry to the syscall table for your architecture. On x86_64, this is <code>arch/x86/entry/syscalls/syscall_64.tbl</code> and on aarch64 this is <code>arch/arm/tools/syscall.tbl</code>. Take inspiration from the other syscalls.</p></li>
+<li><p>Write an assembly language program that invokes your syscall and prints the string that is placed in the buffer by the kernel to standard output.</p></li>
+<li><p>Write a C program that does exactly the same thing as the previous step.</p></li>
+<li><p>Compile and reboot into the newly modified kernel. Make sure your C and assembly language programs work correctly. Include the output in your cover letter.</p></li>
+</ol>
+
+
+<p>The following pages will be of interest to a student:</p>
+
+<ul>
+<li><a href="https://elixir.bootlin.com/linux/latest/ident/get_task_comm">https://elixir.bootlin.com/linux/latest/ident/get_task_comm</a></li>
+</ul>
+
+
+<p>Conventions:</p>
+
+<ol>
+<li><p>Assembly files that must be pre-processed use the extension *.S</p></li>
+<li><p>Assembly files that are ready to be assembled use the extension *.s</p></li>
+</ol>
+
+
+<p>Refer to the <a href="https://www.kernel.org/doc/html/latest/process/adding-syscalls.html">Linux kernel documentation</a> for further guidance.</p>
+
+<h4>What to submit:</h4>
+
+<ul>
+<li>A patch which adds a directory named firstname_lastname to the assignment repo.
+
+<ul>
+<li>The first patch should create this directory and add your Makefile.</li>
+<li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
+</ul>
+</li>
+<li>The second patch should add your kernel patches <em>as patches to our repo</em>. Generate a patch from your commit to the Linux kernel, and then take this file, put it in your named directory, and add <em>the email patch itself</em> to the staged git files and commit this. Then, generate a patch from this commit. This is the second patch of the assignment.</li>
+<li>The third patch adds your assembly program to your named directory.</li>
+<li>The fourth patch adds your C program to your named directory.</li>
+<li>Don&rsquo;t forget a cover letter.</li>
+</ul>
+

@@ -30,12 +30,12 @@ Students will:
 
 ### Course Schedule
 
-|#| week starting|S|M|T|W|R|F|S|
-|--|--|--|--|--|--|--|--|--|
-|0| 15 Jan||||0|||
-|1| 22 Jan||1||2|||
-|2| 29 Sept||3||4|||
-|3| 5 Feb||5||6||
+|#| week starting|S|M|T|W|R|F|S|Assignment Due|
+|--|--|--|--|--|--|--|--|--|--|
+|0| 15 Jan||||0||||[A0](A0.html)|
+|1| 22 Jan||1||2|||||
+|2| 29 Jan||3||4||||[A1](A1.html), [A2](A2.html)|
+|3| 5 Feb||5||6|||||
 |4| 8 Feb||7||8||
 |5| 12 Feb||9||10||
 |6| 19 Feb|||11|12||
