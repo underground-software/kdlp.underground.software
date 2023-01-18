@@ -5,7 +5,7 @@
 * Coding Assignments:
   * Assignments must be submitted in the format of plaintext unless explicitly specified.
   * Assignments must be submitted in the form of email code patches, and furthermore:
-    * Submissions must onform to all Linux kernel coding standards that are sane in a particular context.
+    * Submissions must conform to all Linux kernel coding standards that are sane in a particular context.
     * Submissions must not contain whitespace errors
   * The instructors will provide detailed guidelines for automated checking of these requirements, and will gladly explain them upon request to any interested student
     * Therefore the instructors reserve the right to refuse to grade any submission that does not conform to these standards.
