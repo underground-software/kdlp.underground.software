@@ -33,7 +33,7 @@
     * A student is given two other student names (call them student A and student B)
     * The student is assigned to review student A's and student B's submissions 
     * If the student approves of a submission, then the student will reply to the approved email with what we call an "ack"
-      * This consists of a single line containing the following: Acked-by: Firstname Lastname <email@domain.tld\>
+      * An "ack" consists of a single line containing the following: Acked-by: Firstname Lastname <email@domain.tld\>
     * If the student sees problems with a submission, the the student will reply to the problematic email with their feedback
     * In parallel, other students have been assigned the student's submission and the student should recieve feedback from two other students.
     * This review is due one day past initial submission.
