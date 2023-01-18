@@ -51,149 +51,105 @@ ga('send', 'pageview');
 | <a href="course.html">Course</a>
 </p>
 <hr>
-<h3>A1 - Build a Shell 🐚</h3>
-
+<h3 id="a1---build-a-shell">A1 - Build a Shell 🐚</h3>
 <p>The objective of this assignment is to build a UNIX style shell.</p>
-
-<h4>Outcomes:</h4>
-
+<h4 id="outcomes">Outcomes:</h4>
 <ul>
 <li>Demonstrate your knowledge of C, specifically working with strings.</li>
 <li>Get an introduction to system calls.</li>
 <li>Make sure the course is a good fit for you.</li>
 </ul>
-
-
-<h4>Procedure:</h4>
-
+<h4 id="procedure">Procedure:</h4>
 <ul>
 <li>This assignment will guide you through the process of building a shell by iteratively improving your code and adding more features, starting with a very simple program. At the end you should have a shell that mostly works.</li>
 <li>You must make at least one commit per level completed, and label clearly at which commit you think you completed a particular level.</li>
 <li>You must pass all ten levels listed below. If you want to go further for an extra challange, see the list of ideas at the bottom.</li>
 </ul>
-
-
-<h4>Levels:</h4>
-
+<h4 id="levels">Levels:</h4>
 <ul>
 <li><strong>lvl 0</strong>:
-
 <ul>
-<li>The shell prints a prompt, informing the user about which absolute path they are currently in (see <code>man 3 getcwd</code>) followed by a $ and a space (e.g. <code>/your/current/directory$</code>).</li>
+<li>The shell prints a prompt, informing the user about which absolute path they are currently in (see <code>man 3 getcwd</code>) followed by a $ and a space (e.g. <code>/your/current/directory$</code>).</li>
 <li>The shell then prints a new line and exits without any user interaction.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>lvl 1:</strong>
-
 <ul>
-<li>The shell reads lines of user input, but doesn&rsquo;t need to do anything with them. It just prints a new prompt before each line.</li>
+<li>The shell reads lines of user input, but doesn’t need to do anything with them. It just prints a new prompt before each line.</li>
 <li>The shell loops until it gets EOF from user input (ctrl+d).</li>
 <li>The shell exits with code 0.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>lvl 2:</strong>
-
 <ul>
-<li>If the user types any text, the shell prints &ldquo;Unrecognized command&rdquo; (but does not exit the loop).</li>
+<li>If the user types any text, the shell prints “Unrecognized command” (but does not exit the loop).</li>
 <li>However, if the user just hits enter without typing anything, no error message is printed.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>lvl 3:</strong>
-
 <ul>
 <li>The shell splits the line of input into pieces delimited by whitespace characters (see <code>man 3 isspace</code>).</li>
-<li>Instead of just printing &ldquo;Unrecognized commmand&rdquo; the shell shall include the name of the program in the error message (e.g. if the user types <code>cat shell.c</code>, the shell prints &ldquo;Unrecognized commmand: cat&rdquo;).</li>
-</ul>
-</li>
+<li>Instead of just printing “Unrecognized commmand” the shell shall include the name of the program in the error message (e.g. if the user types <code>cat shell.c</code>, the shell prints “Unrecognized commmand: cat”).</li>
+</ul></li>
 <li><strong>lvl 4:</strong>
-
 <ul>
-<li>the shell supports a few builtin commands (exit, cd and exec). If the first piece of the input is not &ldquo;exit&rdquo; or &ldquo;cd&rdquo; or &ldquo;exec&rdquo; it will still print the unrecognized command message, otherwise:
-
+<li>the shell supports a few builtin commands (exit, cd and exec). If the first piece of the input is not “exit” or “cd” or “exec” it will still print the unrecognized command message, otherwise:
 <ul>
 <li>exit: takes no arguments (prints error if they are provided) and closes the shell (return value of 0)</li>
 <li>cd: takes exactly one argument (otherwise it prints usage info) and changes the working directory of the shell process (see <code>man 2 chdir</code>). If chdir does not accept the path provided, an error message including a description of the errno is printed. The new working directory is reflected in the prompt.</li>
 <li>exec: takes at least one argument (maybe more) and replaces the shell with an instance of the command specified (see <code>man 3 execv</code>). If execution fails, an error message is printed including a description of the errno, and the shell continues. Otherwise, having been replaced, the shell does not return.</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 <li><strong>lvl 5:</strong>
-
 <ul>
-<li>The shell supports running executable files as commands within child processes. If the first piece of the input looks like a path (starts with . or /) a child process is created (see <code>man 2 fork</code>) and the command specified by the first argument is executed within the child using the provided arguments (see <code>man 3 execv</code>) similar to the exec builtin. If executing the command fails, the child process prints an error message including a description of the errno (don&rsquo;t forget to exit the child process). The shell waits for the child to finish running before printing the next prompt (see <code>man 2 waitpid</code>).</li>
-</ul>
-</li>
+<li>The shell supports running executable files as commands within child processes. If the first piece of the input looks like a path (starts with . or /) a child process is created (see <code>man 2 fork</code>) and the command specified by the first argument is executed within the child using the provided arguments (see <code>man 3 execv</code>) similar to the exec builtin. If executing the command fails, the child process prints an error message including a description of the errno (don’t forget to exit the child process). The shell waits for the child to finish running before printing the next prompt (see <code>man 2 waitpid</code>).</li>
+</ul></li>
 <li><strong>lvl 6:</strong>
-
 <ul>
-<li>In the case that the user types something that isn&rsquo;t a path or a builtin, before printing the unrecognized command error, the shell checks whether a file with that name exists in each of the directories listed in the <code>PATH</code> environment variable in order (see <code>man 3 getenv</code> and <code>man 2 stat</code>). If a file, with that name is found, the search can stop and that file is executed with arguments in a child process. Only if no file is found in any of the directories, should the unrecognized command error be printed (NOTE: you must do the path searching manually, and cannot rely on a member of the exec family that does path searching automatically e.g. <code>execvp</code>).</li>
-</ul>
-</li>
+<li>In the case that the user types something that isn’t a path or a builtin, before printing the unrecognized command error, the shell checks whether a file with that name exists in each of the directories listed in the <code>PATH</code> environment variable in order (see <code>man 3 getenv</code> and <code>man 2 stat</code>). If a file, with that name is found, the search can stop and that file is executed with arguments in a child process. Only if no file is found in any of the directories, should the unrecognized command error be printed (NOTE: you must do the path searching manually, and cannot rely on a member of the exec family that does path searching automatically e.g. <code>execvp</code>).</li>
+</ul></li>
 <li><strong>lvl 7:</strong>
-
 <ul>
 <li>Before processing the entered commands, the shell performs home directory substitution on the pieces (command name or arguments) that start with a <code>~</code>.
-
 <ul>
 <li>The shell determines a username string by taking a substring of the piece after the <code>~</code> until the end of the string or the first <code>/</code>, whichever comes first.</li>
 <li>If the username string is empty, then the <code>~</code> is replaced with the value of the <code>HOME</code> environment variable (see <code>man 3 getenv</code>).</li>
 <li>If the username string is not empty, the shell attempts to locate the the user with that username and, if successful, replaces the <code>~</code> and the username substring with their home directory (see <code>man 3 getpwnam</code>).</li>
 <li>If <code>getpwnam</code> does not locate such a user, the shell leaves the piece unmodified.</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 <li><strong>lvl 8:</strong>
-
 <ul>
 <li>As the shell is processing the commands and arguments, if it finds a <code>&lt;</code> or <code>&gt;</code>, it skips any whitespace characters and attempts to treat the next piece of the input as a filename for redirection. If there is no filename before the end of the string, an error message is printed.</li>
 <li>A command can have more than one redirection (even more than one of the same type). If there are multiple of the same redirections, then the right-most one takes precedence.</li>
 <li>A redirection beginning with <code>&lt;</code> causes the shell to open the corresponding file and replace the stdin of the child process with the file descriptor of the open file (see <code>man 2 dup</code>).</li>
 <li>A redirection beginning with <code>&gt;</code> behaves similarly, but it replaces the stdout of the process.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>lvl 9:</strong>
-
 <ul>
 <li>The shell supports the <code>|</code> (pipe) operator to chain multiple commands and their inputs and outputs.</li>
 <li>Each command seperated by a <code>|</code> is spawned as its own child process. The shell can handle more than one pipe.</li>
 <li>The shell creates a unidirectional pipe (see <code>man 2 pipe</code>) for each <code>|</code> and redirects the stdout from the left command to the writing end of the pipe and redirects the stdin of the right command to the reading end of the pipe.</li>
 <li>Any file redirections specified by the user take precedence over any implied redirections of the <code>|</code>.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-
-
-<h4>Bonus</h4>
-
+<h4 id="bonus">Bonus</h4>
 <p>If you were inspired by completing all ten required level and you want to go further (for fun and bragging rights), feel free to add some or all of these features.</p>
-
 <ul>
 <li>Add support for <code>;</code> to put multiple commands on one line and the <code>#</code> for comments.</li>
 <li>Add support for the <code>&amp;&amp;</code> and <code>||</code> operators to chain commands based on their return codes.</li>
 <li>Add support for special variables like <code>$?</code>, <code>$#</code>, <code>$*</code>, <code>$$</code>.</li>
-<li>Add support for reading environment variables using <code>$NAME</code> (i.e. that would be replaced with <code>getenv("NAME")</code>).</li>
+<li>Add support for reading environment variables using <code>$NAME</code> (i.e. that would be replaced with <code>getenv("NAME")</code>).</li>
 <li>Add support for modifying environment variables using an <code>export</code> builtin.</li>
 <li>Add support for background jobs (<code>jobs</code>, <code>fg</code>, <code>bg</code> builtins), and <code>&amp;</code> for spawning a job in the background.</li>
 <li>Add support for the <code>source</code> builtin to run commands from a file.</li>
-<li>Add support for control flow operators (e.g. loops, conditionals, selection statements).</li>
+<li>Add support for control flow operators (e.g. loops, conditionals, selection statements).</li>
 </ul>
-
-
-<h4>What to submit:</h4>
-
+<h4 id="what-to-submit">What to submit:</h4>
 <ul>
 <li>A patch which adds a directory named firstname_lastname to the assignment repo.
-
 <ul>
 <li>The first patch should create this directory and add your Makefile.</li>
 <li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
+</ul></li>
+<li>The subsequent patches should add your shell. Each patch that completes a lvl should indicate that fact clearly. You can use as many patches as you’d like, just be sure to describe the purpose of each patch. Your program should compile after each patch is individually applied (you can use <code>git commit --amend</code> to fix mistakes).</li>
+<li>Don’t forget a cover letter.</li>
 </ul>
-</li>
-<li>The subsequent patches should add your shell. Each patch that completes a lvl should indicate that fact clearly. You can use as many patches as you&rsquo;d like, just be sure to describe the purpose of each patch. Your program should compile after each patch is individually applied (you can use <code>git commit --amend</code> to fix mistakes).</li>
-<li>Don&rsquo;t forget a cover letter.</li>
-</ul>
-
-
 <p><a href="submission_guidelines.html">Submission Guidelines</a></p>
