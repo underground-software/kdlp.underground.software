@@ -53,7 +53,7 @@ ga('send', 'pageview');
 <hr>
 <h3>A5 - Building Character 💪</h3>
 
-<p>It&rsquo;s time to add and use some syscalls!</p>
+<p>It&rsquo;s time to write some kernel code!</p>
 
 <h4>Outcomes:</h4>
 
@@ -93,7 +93,7 @@ ga('send', 'pageview');
 <li>Make sure to have compiler warnings enabled (at least -Wall but ideally -Wextra -Wpedantic or even -Weverything if you use clang) and that your code doesn’t have any warnings or errors.</li>
 </ul>
 </li>
-<li>The second patch should contain the modified driver with your implementation of <code>ioclt</code> and <code>llseek</code>.</li>
+<li>The second patch should contain the modified driver with your implementation of <code>ioctl(2)</code> and <code>llseek</code>.</li>
 <li>The third patch should add your userspace program that implements the assignment.</li>
 <li>The fourth patch should add a file containing the dmesg log from the driver upon a successful run of your program.</li>
 <li>Don&rsquo;t forget the cover letter.</li>

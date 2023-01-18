@@ -89,19 +89,19 @@ ga('send', 'pageview');
 <li><p>Answer question 1 in the assignment.md file</p>
 
 <ul>
-<li>Who last modified your syscall’s code? What were they trying to do</li>
+<li>Who last modified your syscall’s code? What were they trying to do?</li>
 </ul>
 </li>
-<li><p>Write a bpftrace snippet to insert a probe that will print the syscall args and kernel stack in real time as the syscall is invoked</p>
+<li><p>Write a <code>bpftrace</code> snippet to insert a probe that will print the syscall args and kernel stack in real time as the syscall is invoked</p>
 
 <ul>
 <li><p>Ensure that the bpf probe is only triggered when our specific command is run</p></li>
 <li><p>Suggested: <a href="https://github.com/iovisor/bpftrace/blob/master/docs/reference_guide.md#5-str-strings">bpftrace/reference_guide.md at master</a></p></li>
-<li><p>Hint: The first line of an executable bpftrace file must be “#!/usr/bin/env bpftrace”</p></li>
 <li><p>Hint: A script file must be marked as executable to be run</p></li>
+<li><p>Hint: The first line of an executable <code>bpftrace</code> file must be &ldquo;<code>#!/usr/bin/env bpftrace</code>&rdquo;</p></li>
 </ul>
 </li>
-<li><p>Re-run the program with the bpf probe inserted via your bpftrace code</p>
+<li><p>Re-run the program with the bpf probe inserted via your <code>bpftrace</code> code</p>
 
 <ul>
 <li>Save the results into assignment.md</li>
@@ -111,30 +111,26 @@ ga('send', 'pageview');
 </ol>
 
 
-<p><br></br></p>
-
-<p><strong>Tools of interest</strong></p>
+<h4>Tools of interest</h4>
 
 <ul>
 <li><p><code>strace</code></p></li>
 <li><p><code>man</code></p></li>
 <li><p><code>cscope</code></p></li>
 <li><p><code>git-blame</code></p></li>
-<li><p><code>git-grep \[ -n \]</code></p></li>
+<li><p><code>git-grep [ -n ]</code></p></li>
 <li><p><code>bpftrace</code> and other BPF tooling</p></li>
 </ul>
 
-
-<p><br></br></p>
 
 <h4>What to submit</h4>
 
 <ul>
 <li><p>A cover letter following the assignment submission guidelines (as always)</p></li>
-<li><p>A patch that includes your changes to assignment.md</p></li>
+<li><p>A patch that includes your changes to <code>assignment.md</code></p></li>
 <li><p>A patch that includes the new entries in log.txt from all the times you ran the program</p></li>
-<li><p>A patch that includes two full logs from strace from running the program. Once as your regular user and once as running as root using sudo. Make sure you label which is which</p></li>
-<li><p>A patch that adds your .bp bpftrace program</p></li>
+<li><p>A patch that includes two full logs from strace from running the program. Once as your regular user and once as running as root using <code>sudo</code>. Make sure you label which is which</p></li>
+<li><p>A patch that adds your <code>*.bp</code> <code>bpftrace</code> program</p></li>
 </ul>
 
 
