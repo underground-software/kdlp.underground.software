@@ -34,7 +34,7 @@ Students will:
 
 |#| week starting|S|M|T|W|R|F|S|Assignments Due Monday 23:59|
 |--|--|--|--|--|--|--|--|--|--|
-|0| 15 Jan||||[L0](spring23_notes_L0.html)||||[A0](A0.html) due Thursday 23:59|
+|0| 15 Jan||||[L0](course_spring23_L0.html)||||[A0](A0.html) due Thursday 23:59|
 |1| 22 Jan||L1||L2|||||
 |2| 29 Jan||L3||L4||||[A1](A1.html), [A2](A2.html)|
 |3| 5 Feb||L5||L6||||[A3](A3.html)|
