@@ -1,5 +1,7 @@
 **L0 - 18 January 2023**
 
+[Lecture Recording](https://youtu.be/43FekcQlmN4)
+
 Notes on first class:
 
 * Do this right now: <https://kdlp.underground.software/course_application.html>
