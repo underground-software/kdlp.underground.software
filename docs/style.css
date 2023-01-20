@@ -21,6 +21,18 @@ img {
 	height: auto;
 }
 
+#confusion {
+	margin: 0 auto;
+}
+
+#confusion > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	height: auto;
+}
+
 hr {
 	background: #e83d2a;
 	height: 2px;

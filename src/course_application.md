@@ -26,9 +26,9 @@ f) The email must contain your discord username that you will use to complete st
 
 g) If you prefer to use a different email to send and recieve email patches on our mailing list than the one you are using to send this message, you should specify this address. KDLP will provide instructions on the usage of gmail with our systems, but it is not required that all students use gmail.
 
-h) Include a line certifying the [Developer Certificate of Origin](https://bssw.io/items/the-developer-certificate-of-origin)
+h) Include your time zone.
 
-i) Include your time zone.
+i) Include a line certifying the [Developer Certificate of Origin](https://bssw.io/items/the-developer-certificate-of-origin)
 
 By submitting this email, you acknowledge that you have read and agree to the course policies listed [here](course_policies.html)
 

@@ -1,0 +1,160 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<h3>How to set up your VM and Linux environment</h3>
+
+<p>Start downloading the standard ISO image for Fedora for your architechture (most likely it would be x86_64, unless you have an M1 Mac or you are running Linux on ARM in which case you want the aarch64 ISO): <a href="https://getfedora.org/en/server/download/">https://getfedora.org/en/server/download/</a>. This may take a while, depending on your connection, so get this started first.</p>
+
+<h4>Get the appropriate software</h4>
+
+<ul>
+<li>Windows - <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>:
+
+<ul>
+<li>Click the download link for Windows hosts.</li>
+</ul>
+</li>
+<li>MacOS - <a href="https://mac.getutm.app/">UTM</a>:
+
+<ul>
+<li>You don&rsquo;t need to buy it from the Apple Store for $10, there is a free download that is identical (press the download button at the above link).</li>
+</ul>
+</li>
+<li>Linux - <a href="https://virt-manager.org/">virt-manager</a>:
+
+<ul>
+<li>You can most likely get it from your system&rsquo;s package manager.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Figure out how many resources to give your VM</h4>
+
+<ul>
+<li>Depending on how powerful your machine is, you can give it more or less.
+
+<ul>
+<li>Generally, leave at least half of the cores and RAM for your host system.
+
+<ul>
+<li>The more you can give the Vm the better.</li>
+</ul>
+</li>
+<li>For the class you would need at least 25-30G of hard-disk space to hold the VM.</li>
+</ul>
+</li>
+<li>Balance it how you want. Feel free to reach out for specific advice, depending on the specs of your machine.</li>
+</ul>
+
+
+<h4>Set up the VM</h4>
+
+<ul>
+<li>Once the ISO image has finished downloading, you can begin the VM set-up process.</li>
+<li>Depending on the software you downloaded, the exact procedure will vary. But you want to create a new machine with the recourses you decided to allocate and you most likely just follow the set-up wizard of your software. Make sure to create a virtual hard drive for the machine (at least 25G is suggested).</li>
+<li>Attach the ISO image to the machine, this will allow it to boot into the Fedora installer.</li>
+<li>Start the VM for the first time and boot into the Fedora image.</li>
+</ul>
+
+
+<h4>Install Fedora to your virtual machine</h4>
+
+<ul>
+<li>Mostly follow the on-screen instructions, but there are some confusing steps. There are numerous tutorials online on how to proceed based on the VM you are using.</li>
+<li>This particular step, depicted below, might be especially confusing. Just click on &ldquo;Installation Destination&rdquo; and click &ldquo;Done&rdquo;, you don&rsquo;t need to change anything you just need to confirm what was already selected by default.</li>
+</ul>
+
+
+<div id="confusion">
+<img alt="fedora confusion image" src="images/fedora_confusion.png">
+</img>
+</div>
+
+
+<ul>
+<li>Once the installation has finished, Fedora will tell you to reboot. Shut down the machine and remove the ISO image from where you attached it to the VM (once this is done and you confirmed the installation was successful, you can remove the ISO image from your host machine to free up disk space).</li>
+<li>Boot the VM and you should be greeted with a Fedora login prompt, use the username &ldquo;root&rdquo; and then enter the root password you selected during installation (it won&rsquo;t look like you are typing the password, but that is just a security measure).</li>
+<li>If you logged in correctly, you should be greeted with a command prompt that looks something like:
+<code>
+[root@localhost ~]# _
+</code>
+If you see this, you have installed Fedora correctly. Congrats!</li>
+</ul>
+
+
+<h4>Optional steps</h4>
+
+<ul>
+<li>Create yourself a non-root account with sudo permissions.
+
+<ul>
+<li>Login as root.</li>
+<li>Pick a username for your account.</li>
+<li>Run the command <code>useradd username</code> where <em>username</em> is the username you picked.</li>
+<li>Run the command <code>usermod -aG wheel username</code>.</li>
+<li>Run <code>passwd username</code> and select a password.</li>
+<li>Log out of root (type <code>exit</code> or hit <code>ctrl+d</code>).</li>
+<li>Try logging in as your new user with the username and password you selected.</li>
+<li>Verify that you have root access via <code>sudo echo hello</code>, you should be prompted with your password and when you enter the <code>echo</code> command should execute.</li>
+</ul>
+</li>
+<li>Set up SSH access:
+
+<ul>
+<li>Run the command <code>ip -br a | grep UP</code>, read the ip address listed there.</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
