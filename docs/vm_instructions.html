@@ -116,11 +116,10 @@ ga('send', 'pageview');
 </ul>
 
 
-<div id="confusion">
-<img alt="fedora confusion image" src="images/fedora_confusion.png">
-</img>
-</div>
+<div id="confusion"><img alt="fedora confusion image" src="images/fedora_confusion.png"></img></div>
 
+
+<p><br></p>
 
 <ul>
 <li>Once the installation has finished, Fedora will tell you to reboot. Shut down the machine and remove the ISO image from where you attached it to the VM (once this is done and you confirmed the installation was successful, you can remove the ISO image from your host machine to free up disk space).</li>
@@ -136,24 +135,69 @@ If you see this, you have installed Fedora correctly. Congrats!</li>
 <h4>Optional steps</h4>
 
 <ul>
+<li>Run a software update:
+
+<ul>
+<li>Login with your root account.</li>
+<li>Run the command <code>dnf update</code>, this may take a while to complete.</li>
+<li>While you are waiting you can switch to a different console and continue following the steps.
+
+<ul>
+<li>Press <code>ctrl+alt+f2</code> (on some keyboards you might need a function key to press f2).</li>
+<li>You can check back on the update any time by pressing <code>ctrl+alt+f1</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Create yourself a non-root account with sudo permissions.
 
 <ul>
 <li>Login as root.</li>
 <li>Pick a username for your account.</li>
 <li>Run the command <code>useradd username</code> where <em>username</em> is the username you picked.</li>
-<li>Run the command <code>usermod -aG wheel username</code>.</li>
+<li>Run the command <code>usermod -aG wheel username</code> to give the new user sudo permissions.</li>
 <li>Run <code>passwd username</code> and select a password.</li>
 <li>Log out of root (type <code>exit</code> or hit <code>ctrl+d</code>).</li>
 <li>Try logging in as your new user with the username and password you selected.</li>
-<li>Verify that you have root access via <code>sudo echo hello</code>, you should be prompted with your password and when you enter the <code>echo</code> command should execute.</li>
+<li>Verify that you have root access via <code>sudo echo hello</code>, you should be prompted for a password and when you enter your password the <code>echo</code> command should execute.</li>
 </ul>
 </li>
 <li>Set up SSH access:
 
 <ul>
 <li>Run the command <code>ip -br a | grep UP</code>, read the ip address listed there.</li>
-<li></li>
+<li>On your host machine, open a terminal and try running <code>ssh username@ip-address</code> where <em>username</em> is the username you picked earlier and the <em>ip-address</em> is the one you just found.</li>
+<li>You should be prompted for your password, after you enter it you will be able to access your vm from your host machine.</li>
+<li>If you want to obviate the need to enter the password every time you log in, you can set up SSH-keys.
+
+<ul>
+<li>If you have never set up SSH-keys:
+
+<ul>
+<li>Run the command <code>ssh-keygen</code> in a terminal on your host machine and accept the default values.</li>
+</ul>
+</li>
+<li>If you already have SSH-keys or you just created them using the step above:
+
+<ul>
+<li>If you are not on Windows, run <code>ssh-copy-id username@ip-address</code> to copy your keys to the VM.</li>
+<li>If you are on Windows, run <code>type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@ip-address "cat &gt;&gt; .ssh/authorized_keys"</code></li>
+<li>You will be prompted for your password, enter it, and the command should finish.</li>
+<li>Try logging in with <code>ssh username@ip-address</code> and you should not need to enter your password again.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Make the VM headless:
+
+<ul>
+<li>Check back on the updates from the first step. Wait for them to finish.</li>
+<li>Once the updates are finished, run <code>shutdown now</code>. The VM should shut down and exit.</li>
+<li>Open the VM Settings and disable the graphics, the exact settings depends on the VM software you are using.</li>
+<li>Most of the time you will be able to keep the graphics off, since you already set up SSH access.</li>
+<li>This will lighten the load on your computer since it won&rsquo;t have to render the GUI and will make the VM run faster.</li>
 </ul>
 </li>
 </ul>

@@ -71,9 +71,23 @@ ga('send', 'pageview');
 
 <ul>
 <li><a href="vm_instructions.html">Set up your VM and Linux environment</a>.</li>
-<li>Configure your <code>.gitconfig</code>, which lives in <code>~/.gitconfig</code>, to be able to send email patches using <code>git send-email</code>. If you are planning to use your gmail address, the following link will help you get set up: <a href="https://stackoverflow.com/questions/68238912/how-to-configure-and-use-git-send-email-to-work-with-gmail-to-email-patches-to">https://stackoverflow.com/questions/68238912/how-to-configure-and-use-git-send-email-to-work-with-gmail-to-email-patches-to</a>. Otherwise, you can find similar instructions online.</li>
-<li>Clone the class git repository: <a href="https://github.com/underground-software/KDLP_assignments">https://github.com/underground-software/KDLP_assignments</a>. Change directory into <code>A0/</code>.</li>
+<li>Install <code>git</code> and <code>git-email</code>. Run <code>sudo dnf install -y git git-email</code>.</li>
+<li>Configure your <code>.gitconfig</code>, which lives in <code>~/.gitconfig</code>, using a text editor (e.g. <code>nano ~/.gitconfig</code> or <code>vi ~/.gitconfig</code>).
+
+<ul>
+<li>You can pick your default editor by adding: <pre><code>[core]
+    editor = nano # Or which ever editor you prefer
+</code></pre></li>
+<li>You can set your identity information by adding: <pre><code>[user]
+    email = youremail@host.tld
+    name = Firstname Lastname
+</code></pre></li>
+<li>You can add settings for sending email patches using <code>git send-email</code>. If you are planning to use your gmail address, the following link will help you get set up: <a href="https://stackoverflow.com/questions/68238912/how-to-configure-and-use-git-send-email-to-work-with-gmail-to-email-patches-to">https://stackoverflow.com/questions/68238912/how-to-configure-and-use-git-send-email-to-work-with-gmail-to-email-patches-to</a>. Otherwise, you can find similar instructions online.</li>
+</ul>
+</li>
+<li>Clone the class git repository: <a href="https://github.com/underground-software/KDLP_assignments">https://github.com/underground-software/KDLP_assignments</a>. Run <code>git clone git@github.com:underground-software/KDLP_assignments.git</code>. Change directory into <code>A0/</code> within the class repo.</li>
 <li>Add a file named <code>firstname_lastname.md</code> (e.g. <code>joel_savitz.md</code>), containing an introduction about yourself. The content can be whatever you want, whether it be why you are taking this class, your favorite ice cream flavor, or some random fact about yourself.</li>
+<li>Run <code>uname -a &gt; proof_of_linux.txt</code>.</li>
 <li>Make a commit out of your changes.</li>
 </ul>
 
