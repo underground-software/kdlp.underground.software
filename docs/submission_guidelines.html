@@ -113,7 +113,33 @@ ga('send', 'pageview');
 
 <p>When you format a patch, if you forgot the newline at the end of the file git will put this line at the end of the diff \ No newline at end of file. If you see this, you should adjust the file contents and fix your patch. You can check for the other whitespace errors by running git am to try and apply your patch. If git am prints a warning like this when you apply the patch: warning: 2 lines add whitespace errors. You should adjust the indicated lines and fix your patch.</p>
 
-<p>Your patches also must apply cleanly to the current commit in the master branch of the upstream repository. You can verify this by checking out that branch and trying to apply your patches.</p>
+<p>Your patches also must apply cleanly to HEAD commit on the master branch of the upstream repository. You can verify this by checking out that branch and trying to apply your patches. We should NOT need to apply your previous versions of the patch in order for the latest version of your patchset to apply.</p>
+
+<p>Sample workflow to check that your patchset applies cleanly:</p>
+
+<ul>
+<li>Generate your patches and put them in a known location and take note of the filenames</li>
+<li>Make sure your git tree is up to date. You should do this each time you begin work within any git repository.
+
+<ul>
+<li>Use <code>git remote update</code> to update all of your local copies of remote trees.</li>
+</ul>
+</li>
+<li>Create and checkout a local branch based on the upstream <code>origin/master</code> branch by using:
+
+<ul>
+<li><code>git checkout -b &lt;branch name&gt; origin/master</code> (branch name can be anything convenient)</li>
+</ul>
+</li>
+<li>Apply your patchset to this branch using <code>git am &lt;patch1&gt; &lt;patch2&gt; ... &lt;patchN&gt;</code></li>
+<li>If there are no errors that appear, congratulations, your patchset applies cleanly!
+
+<ul>
+<li>If there are whitespace errors or corrupt patches, revise as needed by amending or rebasing your commits.</li>
+</ul>
+</li>
+</ul>
+
 
 <h4>[3] Cover Letter Guidelines</h4>
 

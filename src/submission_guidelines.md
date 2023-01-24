@@ -58,7 +58,18 @@ You must also avoid whitespace errors. These include whitespace at the end of a 
 
 When you format a patch, if you forgot the newline at the end of the file git will put this line at the end of the diff \ No newline at end of file. If you see this, you should adjust the file contents and fix your patch. You can check for the other whitespace errors by running git am to try and apply your patch. If git am prints a warning like this when you apply the patch: warning: 2 lines add whitespace errors. You should adjust the indicated lines and fix your patch.
 
-Your patches also must apply cleanly to the current commit in the master branch of the upstream repository. You can verify this by checking out that branch and trying to apply your patches.
+Your patches also must apply cleanly to HEAD commit on the master branch of the upstream repository. You can verify this by checking out that branch and trying to apply your patches. We should NOT need to apply your previous versions of the patch in order for the latest version of your patchset to apply.
+
+Sample workflow to check that your patchset applies cleanly:
+
+* Generate your patches and put them in a known location and take note of the filenames
+* Make sure your git tree is up to date. You should do this each time you begin work within any git repository.
+  * Use `git remote update` to update all of your local copies of remote trees.
+* Create and checkout a local branch based on the upstream `origin/master` branch by using:
+  * `git checkout -b <branch name> origin/master` (branch name can be anything convenient)
+* Apply your patchset to this branch using `git am <patch1> <patch2> ... <patchN>`
+* If there are no errors that appear, congratulations, your patchset applies cleanly!
+  * If there are whitespace errors or corrupt patches, revise as needed by amending or rebasing your commits.
 
 #### [3] Cover Letter Guidelines
 
