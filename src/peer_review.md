@@ -1,4 +1,4 @@
-# How to submit a code review
+### How to submit a code review
 
 * You will be assigned two students to peer review shortly after you complete your own initial submission.
 * For each student, which you are assigned, you will do the following:
