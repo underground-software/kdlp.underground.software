@@ -17,15 +17,13 @@
 
 [Interrupts](interrupts.html) | [Timing and Scheduling](timing_scheduling.html) | [Memory Mapping and DMA](mm_dma.html) | [Hardware I/O](hardware_io.html) | [Block Drivers](block_drivers.html)
 
-#### The latest course assignments, subject to rapid change for a few weeks
+#### The latest course assignments and guidelines
 
-The first half of the semester has weekly assignments for six weeks.
+The first half of the semester has weekly assignments for six weeks, followed by a midpoint presentation from each student.
 
-Then there is a midpoint presentation from each student.
+The second half of the semester consists of two final assignments and a final presentation.
 
-The second half of the semester consists of two midpoint assignments, a final project assignment, and a final presentation.
-
-[Submission Guidelines](submission_guidelines.html) | [Peer Review Process](peer_review.html)
+[Course Policies](course_policies.html) | [Submission Guidelines](submission_guidelines.html) | [Peer Review Process](peer_review.html)
 
 [A(-1)](course_application.html) | [A0](A0.html) | [A1](A1.html) | [A2](A2.html) | [A3](A3.html) | [A4](A4.html) | [A5](A5.html) | [A6](A6.html)
 
