@@ -25,32 +25,37 @@
 
 * Students must participate in the class mailing list for submissions by giving other students feedback on their work.
 * This is a part of each assignment grade and the tripartite scheme is as follows:
-  * The review process spans 2 days
+  * The review process spans 2 days.
   * Part 1: Initial submission
-    * The student makes their submission to mailing list using git-send-email.
-    * This submission is due on the listed assignment "due date".
+    * The student makes their submission to the mailing list using git-send-email.
+    * This submission is due on the listed assignment "due date", see the [course schedule](course_spring2023.html).
+    * If the initial submission is late, the student will get a zero on the entire assignment.
   * Part 2: Peer review
-    * A student is given two other student names (call them student A and student B)
-    * The student is assigned to review student A's and student B's submissions 
-    * If the student approves of a submission, then the student will reply to the approved email with what we call an "ack"
-      * An "ack" consists of a single line containing the following: Acked-by: Firstname Lastname <email@domain.tld\>
-    * If the student sees problems with a submission, the the student will reply to the problematic email with their feedback
+    * A student is given two other student names (call them student A and student B).
+    * The student is assigned to review student A's and student B's submissions.
+    * If the student approves of a submission, then the student will reply to the approved email with what we call an "ack".
+      * An "ack" consists of a single line containing the following: Acked-by: Firstname Lastname <email@domain.tld\>.
+    * If the student sees problems with a submission, the student will reply to the problematic email with their feedback.
     * In parallel, other students have been assigned the student's submission and the student should recieve feedback from two other students.
-    * This review is due one day past initial submission.
+    * These reviews are due one day past the initial submission, a late or no submission results in a zero for the review section of the assignment.
+    * Reviews are graded based on how many issues a student missed.
+      * The student receives 20% off for each unique issue not spotted with max penalty of 100%.
   * Part 3: Final submission
-    * The student, if canny, will act on the feedback from the received reviews and make a second, final submission
+    * The student, if canny, will act on the feedback from the received reviews.
+    * Regardless of whether the student made changes to their initial submission, they must make a final submission.
     * This is due two days after the initial submission, and due one day after receiving the reviews.
-  * The student is graded only on the student's final submission
-  * Reviews are graded based on how many issues a student missed
-    * The student receives 20% off for each unique issue not spotted with max penalty of 100%
-    * Each review given is worth 10% of the grade per assignment with the actual submission being 80%
+  * Overall assignment grading scheme (percentages are relative to the total assignment grade):
+    * The initial submission is purely for the peer-review process. It is crucial that the initial submission is made on time, otherwise, as stated above, the student will recieve a zero on the entire assignment.
+    * Review 1: 10%
+    * Review 2: 10%
+    * Final Submission: 80%
 
 **Late Work Policy:**
 
 * There is no late work!
-  * Students receive a zero for assignments not submitted on time
+  * Students receive a zero for assignments not submitted on time.
 * One exception (a once per semester get out of jail free card):
-  * Students may choose to opt out of the peer review process
+  * Students may choose to opt out of the peer review process.
   * By bypassing the ack requirement (both giving and receiving) students receive the two days that would be used for that process as an extension before they make their first and only final submission.
   * This means that you do you not get a chance to receive early feedback from your peers and so you get what you get for a final grade.
 
@@ -75,7 +80,7 @@
 
 * Automatic Course Failure (Grade of F)
   * In the case that a student fails to complete a task by a deadline with no prior notice, an instructor will reach out to you via email and/or direct message. If the student fails to respond to this message within seven (7) days of it’s receipt, the instructors reserve the right to give the student a failing grade (F) for the course.
-  * Attendance is... required
+  * Attendance is... required.
 
 **UMass Lowell Grading Policy:**
 
