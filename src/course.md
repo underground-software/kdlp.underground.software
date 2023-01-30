@@ -2,7 +2,7 @@
 
 |Semester|Notes|
 |---|---|
-|[Spring 2023](course_spring2023.html)|Forthcoming at [UMass Lowell](https://uml.edu) and [LFX](https://mentorship.lfx.linuxfoundation.org/)|
+|[Spring 2023](course_spring2023.html)|Ongoing at [UMass Lowell](https://uml.edu) and [LFX](https://mentorship.lfx.linuxfoundation.org/)|
 |[Fall 2022](course_fall2022.html)|Recordings available soon|
 |[Spring 2022](course_spring2022.html)|Second iteration|
 |Fall 2021|First iteration|
