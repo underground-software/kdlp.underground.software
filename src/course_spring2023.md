@@ -36,7 +36,7 @@ Students will:
 |--|--|--|--|--|--|--|--|--|--|--|--|
 |0| 15 Jan||||[L0](course_spring23_L0.html)||||[A0](A0.html) due Thursday|A0 due Friday|A0 due Saturday|
 |1| 22 Jan||[L1](course_spring23_L1.html)||[L2](course_spring23_L2.html)|||||||
-|2| 29 Jan||L3||L4||||[A1](A1.html), [A2](A2.html)|A1, A2|A1, A2|
+|2| 29 Jan||[L3](course_spring23_L3.html)||L4||||[A1](A1.html), [A2](A2.html)|A1, A2|A1, A2|
 |3| 5 Feb||L5||L6||||[A3](A3.html)|A3|A3|
 |4| 12 Feb||L7||L8|||||||
 |5| 17 Feb|||L9|L10||||[A4](A4.html) due Tuesday|A4 due Wednesday|A4 due Thursday|
