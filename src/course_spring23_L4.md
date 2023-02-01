@@ -1,6 +1,6 @@
 **L4 - 1 February 2023**
 
-Lecture Recording - coming soon...
+[Lecture Recording](https://youtu.be/Gm2yIg8bvAs)
 
 Class Notes:
 
