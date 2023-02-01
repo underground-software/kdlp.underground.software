@@ -9,7 +9,7 @@ Class Notes:
   * If you haven’t started A1/A2 you should drop
   * Let us know ASAP if you are dropping
   * Brief: UML students:
-    * Sign up on LFX
+    * Sign up on LFX: <https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957>
     * <https://events.linuxfoundation.org/lf-live-mentorship-series/>
     * <https://events.linuxfoundation.org/lfx-mentorship-showcase/>
     * <https://www.linuxfoundation.org/about/diversity-inclusivity>
