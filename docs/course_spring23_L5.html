@@ -1,0 +1,78 @@
+<!--
+
+    A template for near-instantaneous deployment of websites
+    Copyright (C) 2019 Joel Savitz and Chris Odom
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+<script>
+(function(b, o, i, l, e, r) {
+b.GoogleAnalyticsObject = l;
+b[l] || (b[l] =
+    function() {
+	(b[l].q = b[l].q || []).push(arguments)
+    });
+b[l].l = +new Date;
+e = o.createElement(i);
+r = o.getElementsByTagName(i)[0];
+e.src = 'https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e, r)
+}(window, document, 'script', 'ga'));
+ga('create', 'UA-136417829-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div style="display:inline-flex;">
+<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<h1>Kernel Development Learning Pipeline</h1>
+</div>
+
+<hr>
+<p><a href="index.html">Home</a>
+| <a href="https://github.com/orgs/underground-software">GitHub</a>
+| <a href="https://underground.software">Underground</a>
+| <a href="info.html">Info</a>
+| <a href="who.html">Who</a>
+| <a href="course.html">Course</a>
+</p>
+<hr>
+<p><strong>L5 - 6 February 2023</strong></p>
+
+<p><a href="https://youtu.be/X9lzh4oUw20">Lecture Recording</a></p>
+
+<p>Apply on <a href="https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957">LFX</a>, if you have not yet.</p>
+
+<p>Class Notes:</p>
+
+<ul>
+<li>A3 demo continued</li>
+<li>get_task_comm src</li>
+<li><a href="https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L1988">https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L1988</a></li>
+<li>Showed “Hello World” assembly example on aarch64</li>
+<li>Showed C equivalent ~00:30:00</li>
+<li>Pop quiz:
+
+<ul>
+<li>Is <code>sizeof</code> a function or an operator?</li>
+<li>What is the type of <code>prompt</code>? (declared <code>static char prompt[] = “What is your name? “</code>)</li>
+</ul>
+</li>
+<li>Showed strace ~00:48:00</li>
+<li>Showed how to define syscall ~01:31:00</li>
+</ul>
+
