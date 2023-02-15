@@ -84,12 +84,12 @@ ga('send', 'pageview');
 
 <p> b) The function copies a string into the userspace buffer containing the student&rsquo;s name and the name of the executable binary that is running.</p>
 
-<p> c) The function returns 0 upon sucess. If there is an issue with the size of the provided buffer, checked by proxy of the <code>size_t</code> argument, then the function returns <code>-EFAULT</code> to the user.</p>
+<p> c) The function returns the length of the string copied upon sucess. If there is an issue with the size of the provided buffer, checked by proxy of the <code>size_t</code> argument, then the function returns <code>-EFAULT</code> to the user.</p>
 
 <p> d) The function should take care to prevent any possibility of a buffer overflow.</p></li>
 <li><p>Add an <code>asmlinkage</code> declaration of your syscall in <code>include/linux/syscalls.h</code>. There are numerous examples of other syscalls in that file for ample student inspiration.</p></li>
-<li><p>Add an entry to the syscall table for your architecture. On x86_64, this is <code>arch/x86/entry/syscalls/syscall_64.tbl</code> and on aarch64 this is <code>arch/arm/tools/syscall.tbl</code>. Take inspiration from the other syscalls.</p></li>
-<li><p>Write an assembly language program that invokes your syscall and prints the string that is placed in the buffer by the kernel to standard output.</p></li>
+<li><p>Add an entry to the syscall table for your architecture. On x86_64, this is <code>arch/x86/entry/syscalls/syscall_64.tbl</code> and on aarch64 this is <code>include/uapi/asm-generic/unistd.h</code>. Take inspiration from the other syscalls.</p></li>
+<li><p>Write an assembly language program that invokes your syscall and prints the string that is placed in the buffer by the kernel to standard output using the write syscall.</p></li>
 <li><p>Write a C program that does exactly the same thing as the previous step.</p></li>
 <li><p>Compile and reboot into the newly modified kernel. Make sure your C and assembly language programs work correctly. Include the output in your cover letter.</p></li>
 </ol>
@@ -122,7 +122,7 @@ ga('send', 'pageview');
 <li>Make sure to have compiler warnings enabled (at least <code>-Wall</code> but ideally <code>-Wextra</code> and <code>-Wpedantic</code> too, or even <code>-Weverything</code> if you use clang) and that your code doesn’t have any warnings or errors.</li>
 </ul>
 </li>
-<li>The second patch should add your kernel patches <em>as patches to our repo</em>. Generate a patch from your commit to the Linux kernel, and then take this file, put it in your named directory, and add <em>the email patch itself</em> to the staged git files and commit this. Then, generate a patch from this commit. This is the second patch of the assignment.</li>
+<li>The second patch should add your kernel patches <em>as patches to our repo</em>. Generate a patch from your commit to the Linux kernel (make sure to use <code>--base=HEAD^</code> on git format patch so we can tell what commit your work was based on), and then take this file, put it in your named directory, and add <em>the email patch itself</em> to the staged git files and commit this. Then, generate a patch from this commit. This is the second patch of the assignment.</li>
 <li>The third patch adds your assembly program to your named directory.</li>
 <li>The fourth patch adds your C program to your named directory.</li>
 <li>Don&rsquo;t forget a cover letter.</li>
