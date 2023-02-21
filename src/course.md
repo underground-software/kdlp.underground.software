@@ -25,7 +25,7 @@ The second half of the semester consists of two final assignments and a final pr
 
 [Course Policies](course_policies.html) | [Submission Guidelines](submission_guidelines.html) | [Peer Review Process](peer_review.html)
 
-[A(-1)](course_application.html) | [A0](A0.html) | [A1](A1.html) | [A2](A2.html) | [A3](A3.html) | [A4](A4.html) | [A5](A5.html) | [A6](A6.html)
+[A(-1)](course_application.html) | [A0](A0.html) | [A1](A1.html) | [A2](A2.html) | [A3](A3.html) | [A4](A4.html) | [Midpoint Presentation](mid_pres_guide.html) | [A5](A5.html) | [A6](A6.html)
 
 [Fin1](fin1.html) | [Fin2](fin2.html)
 
