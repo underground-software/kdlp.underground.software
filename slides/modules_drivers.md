@@ -48,7 +48,7 @@ theme: white
 - Less error surface
 - Easier to develop
 - Can add hardware at runtime
-  - (if you know it’s address)
+  - (if you know its address)
 
 ---
 
