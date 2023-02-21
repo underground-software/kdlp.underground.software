@@ -8,39 +8,10 @@ theme: white
 
 ---
 
-# What?
-![slide 2](images/Modules_Drivers/modules_drivers_slide2.png)
-
-[http://haifux.org/lectures/86-sil/kernel-modules-drivers/kernel-modules-drivers.html](http://haifux.org/lectures/86-sil/kernel-modules-drivers/kernel-modules-drivers.html)
-
----
-
-![slide 3](images/Modules_Drivers/modules_drivers_slide3.png)
-
-[http://www.science.unitn.it/~fiorella/guidelinux/tlk/node125.html](http://www.science.unitn.it/~fiorella/guidelinux/tlk/node125.html)
-[https://www.researchgate.net/figure/Initialization-of-a-kernel-module_fig8_261599172](https://www.researchgate.net/figure/Initialization-of-a-kernel-module_fig8_261599172)
-
----
-
-![slide 4](images/Modules_Drivers/modules_drivers_slide4.png)
-
-[https://en.wikipedia.org/wiki/File:Linux_kernel_diagram.svg](https://en.wikipedia.org/wiki/File:Linux_kernel_diagram.svg)
-[https://ritcsec.wordpress.com/2017/05/17/modern-linux-rootkits/](https://ritcsec.wordpress.com/2017/05/17/modern-linux-rootkits/)
-[https://www.linux.it/~rubini/docs/ksys/](https://www.linux.it/~rubini/docs/ksys/)
-[https://www.servercake.blog/list-loaded-modules-kernel/](https://www.servercake.blog/list-loaded-modules-kernel/)
-[https://en.wikipedia.org/wiki/Linux_kernel_interfaces](https://en.wikipedia.org/wiki/Linux_kernel_interfaces)
-[https://stackoverflow.com/questions/7578582/who-calls-the-probe-of-driver](https://stackoverflow.com/questions/7578582/who-calls-the-probe-of-driver)
-
----
-
-# Have no fear
-![slide 5](images/Modules_Drivers/modules_drivers_slide5.png)
-
----
-
-# Potential areas of confusion
-- How does this all together?
-- What is called when?
+# Questions to answer
+- What are devices and drivers?
+- What are Linux kernel modules?
+- What are key differences between kernelspace and userspace?
 
 ---
 
@@ -100,6 +71,7 @@ theme: white
 ---
 
 # Reentrant code
+- Potential confusion: What is called when?
 - Kernel code must be able to run in more than one context
 - Mutexes mandatory
 ![reentrant code](images/Modules_Drivers/modules_drivers_slide14.png)
