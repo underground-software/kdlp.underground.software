@@ -36,7 +36,7 @@ $(DOCDIR):
 
 $(DOCDIR)/%.html: $(SLDIR)/%.md
 	
-	marp $^ --output=./$@
+	marp $^ --output=./$@ --template=bare
 
 clean:
 	rm -rf $(patsubst %, $(DOCDIR)/%, $(DOCS))
