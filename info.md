@@ -7,3 +7,5 @@ Throughout the industry, we have observed a shortage of qualified entry-level so
 We have come to understand the invaluable and non-quantifiable nature of the tribal knowledge that exists distributed among the great engineers of our industry, and we believe that we must act quickly to enable them to pass on the torch, to strengthen the next link of the great chain of our relatively young but quickly maturing industry.
 
 With this understanding, we have created the Kernel Development Learning Pipeline, a program to bridge the gaps between academia and industry, between the novice and the legend, between the past and the future.
+
+

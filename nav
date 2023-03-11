@@ -1,14 +1,12 @@
 <div style="display:inline-flex;">
-<img src="kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
+<img src="/images/kdlp_logo.png" style="width:8em;height:8em;padding-right:5px;" alt="[KDLP] logo" />
 <h1>Kernel Development Learning Pipeline</h1>
 </div>
 
 <hr>
-<p><a href="index.html">Home</a>
-| <a href="https://github.com/orgs/underground-software">GitHub</a>
-| <a href="https://underground.software">Underground</a>
-| <a href="info.html">Info</a>
-| <a href="who.html">Who</a>
-| <a href="course.html">Course</a>
+<p><a href="/index.md">Home</a>
+| <a href="/course/index.md">Course</a>
+| <a href="/who.md">Who</a>
+| <a href="/info.md">Info</a>
 </p>
 <hr>

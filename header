@@ -35,5 +35,5 @@ ga('create', 'UA-136417829-2', 'auto');
 ga('send', 'pageview');
 </script>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="/style.css" />
 

@@ -28,7 +28,6 @@ Q: Who is behind this program?
 
 A: [These people](who.html)
 
-
 ### Fun fact
 
 You can view this website in a CLI browser (such as [lynx](https://lynx.invisible-island.net/lynx2.8.9/index.html))

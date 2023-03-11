@@ -34,30 +34,21 @@ Students will:
 
 |#| week starting|S|M|T|W|R|F|S|Initial Submissions due @ 23:59 (Mondays unless stated otherwise)|Reviews due @ 23:59 (Tuesdays unless stated otherwise)|Final Submissions due @ 23:59 (Wednesdays unless stated otherwise)|
 |--|--|--|--|--|--|--|--|--|--|--|--|
-|0| 15 Jan||||[L0](course_spring23_L0.html)||||[A0](A0.html) due Thursday|A0 due Friday|A0 due Saturday|
-|1| 22 Jan||[L1](course_spring23_L1.html)||[L2](course_spring23_L2.html)|||||||
-|2| 29 Jan||[L3](course_spring23_L3.html)||[L4](course_spring23_L4.html)||||[A1](A1.html), [A2](A2.html)|A1, A2|A1, A2|
-|3| 5 Feb||[L5](course_spring23_L5.html)||[L6](course_spring23_L6.html)|||||||
-|4| 12 Feb||[L7](course_spring23_L7.html)||[L8](course_spring23_L8.html)||||[A3](A3.html)|A3|A3|
-|5| 19 Feb|||[L9](course_spring23_L9.html)|[L10](course_spring23_L10.html)||||[A4](A4.html) due Tuesday|A4 due Wednesday|A4 due Thursday|
-|6| 26 Feb||[L11](course_spring23_L11.html)||[L12](course_spring23_L12.html)||||[Choose Mid Pres Topic](mid_pres_guide.html)|||
+|0| 15 Jan||||[L0](lectures/L0.md)||||[A0](/course/assignments/A0.md) due Thursday|A0 due Friday|A0 due Saturday|
+|1| 22 Jan||[L1](lectures/L1.md)||[L2](lectures/L2.md)|||||||
+|2| 29 Jan||[L3](lectures/L3.md)||[L4](lectures/L4.md)||||[A1](/course/assignments/A1.md), [A2](/course/assignments/A2.md)|A1, A2|A1, A2|
+|3| 5 Feb||[L5](lectures/L5.md)||[L6](lectures/L6.md)|||||||
+|4| 12 Feb||[L7](lectures/L7.md)||[L8](lectures/L8.md)||||[A3](/course/assignments/A3.md)|A3|A3|
+|5| 19 Feb|||[L9](lectures/L9.md)|[L10](lectures/L10.md)||||[A4](/course/assignments/A4.md) due Tuesday|A4 due Wednesday|A4 due Thursday|
+|6| 26 Feb||[L11](lectures/L11.md)||[L12](lectures/L12.md)||||[Choose Mid Pres Topic](/course/assignments/P0.md)|||
 |7| 5 Mar||||||||BREAK|BREAK|BREAK|
 |8| 12 Mar||[L13](course_spring23_L13.html)||[L14](course_spring23_L14.html)||||[Mid Pres Recording](mid_pres_guide.html)|||
 |9| 19 Mar||[L15](course_spring23_L15.html)||L16||||[A5](A5.html)|A5|A5|
 |10| 26 Mar||L17||L18|||||||
-|11| 2 Apr||L19||L20||||[A6](A6.html)|A6|A6|
+|11| 2 Apr||L19||L20||||[A6](/course/assignments/A6.md)|A6|A6|
 |12| 9 Apr||L21||L22|||||||
-|13| 16 Apr||L23||L24||||[Fin1](fin1.html)|Fin1|Fin1|
+|13| 16 Apr||L23||L24||||[Fin1](/course/assignments/fin1.md)|Fin1|Fin1|
 |14| 23 Apr||L25||L26|||||||
-|15| 30 Apr||||||||[Fin2](fin2.html)|Fin2|Fin2|
+|15| 30 Apr||||||||[Fin2](/course/assignments/fin2/md)|Fin2|Fin2|
 
-[Course Policies](course_policies.html) | [Submission Guidelines](submission_guidelines.html) | [Peer Review Process](peer_review.html)
-
-
-### Course policies
-
-Available [here](course_policies.html).
-
-### Course application
-
-Available [here](course_application.html).
+[Course Policies](/course/policies/course_policies.md) | [Submission Guidelines](/course/policies/submission_guidelines.md) | [Peer Review Process](/course/policies/peer_review.md)
