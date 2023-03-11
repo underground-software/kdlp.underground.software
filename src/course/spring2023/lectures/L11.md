@@ -1,0 +1,9 @@
+**L11 - 27 February 2023**
+
+[Lecture Recording](https://youtu.be/qK0jzmyhdts)
+
+Class Notes:
+
+* Char dev demo
+* Misc devices, major and minor numbers
+* <https://kdlp.underground.software/writing_character_drivers.html>
