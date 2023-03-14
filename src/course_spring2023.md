@@ -42,7 +42,7 @@ Students will:
 |5| 19 Feb|||[L9](course_spring23_L9.html)|[L10](course_spring23_L10.html)||||[A4](A4.html) due Tuesday|A4 due Wednesday|A4 due Thursday|
 |6| 26 Feb||[L11](course_spring23_L11.html)||[L12](course_spring23_L12.html)||||[Choose Mid Pres Topic](mid_pres_guide.html)|||
 |7| 5 Mar||||||||BREAK|BREAK|BREAK|
-|8| 12 Mar||L13||L14||||[Mid Pres Recording](mid_pres_guide.html)|||
+|8| 12 Mar||[L13](course_spring23_L13.html)||L14||||[Mid Pres Recording](mid_pres_guide.html)|||
 |9| 19 Mar||L15||L16||||[A5](A5.html)|A5|A5|
 |10| 26 Mar||L17||L18|||||||
 |11| 2 Apr||L19||L20||||[A6](A6.html)|A6|A6|
