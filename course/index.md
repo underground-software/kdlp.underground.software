@@ -11,3 +11,7 @@
 [Course Assignments](assignments/index.md) [Course Slides](slides/index.md) [Course Polcies](policies/index.md)
 
 [KDLP Git](/cgit) [Course Assignments Repository](/cgit/KDLP_assignments.git)
+
+## Login
+
+[here](/auth/index.md)

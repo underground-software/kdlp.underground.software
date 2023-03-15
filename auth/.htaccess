@@ -1,0 +1,5 @@
+AuthName "Restricted Area"
+AuthType Basic
+AuthBasicProvider file
+AuthUserFile /var/www/html/kdlp.underground.software/auth/.htpasswd
+Require user admin
