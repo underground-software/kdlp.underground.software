@@ -68,7 +68,8 @@ ga('send', 'pageview');
 
 <ul>
 <li>You will be assigned a random sequence of operations.</li>
-<li>Add the <code>ioctl</code> and <code>llseek</code> syscalls to your copy of the driver provided in the <a href="https://github.com/underground-software/KDLP_assignments">assignment repo</a>.
+<li>Get the code for a character driver that logs the operations preformed on it that was shown in class working on your machine</li>
+<li>Add the <code>ioctl</code> and <code>llseek</code> syscalls to your driver (make sure to make a commit of the driver for your second patch before you add them)
 
 <ul>
 <li>Your implementations should be based on the implementations of the read and write operations.</li>
@@ -87,15 +88,16 @@ ga('send', 'pageview');
 <h4>What to submit:</h4>
 
 <ul>
-<li>A patch which adds a directory named <code>firstname_lastname/</code> to the assignment repo containing a copy of the provided driver and Makefile.</li>
-<li>The second patch should add the <code>ioctl</code> and <code>llseek</code> operations to the existing driver.</li>
-<li>The third patch should add your userspace program that implements the assignment and should add to the existing Makefile.
+<li>A patch which adds a directory named <code>firstname_lastname/</code> to the assignment repo containing a copy of your sequence from the sequence folder.</li>
+<li>The second patch should add your version of the character driver from class</li>
+<li>The third patch should add the <code>ioctl</code> and <code>llseek</code> operations to the existing driver.</li>
+<li>The fourth patch should add your userspace program that implements the assignment and should add the ability to compile it to the existing Makefile.
 
 <ul>
 <li>Make sure to have compiler warnings enabled (at least <code>-Wall</code> but ideally <code>-Wextra</code> and <code>-Wpedantic</code> too, or even <code>-Weverything</code> if you use clang) and that your code doesn’t have any warnings or errors.</li>
 </ul>
 </li>
-<li>The fourth patch should add a file containing the dmesg log from the driver upon a successful run of your program.</li>
+<li>The fifth patch should add a file containing the dmesg log from the driver upon a successful run of your program.</li>
 <li>Don&rsquo;t forget the cover letter.</li>
 </ul>
 
