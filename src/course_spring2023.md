@@ -43,7 +43,7 @@ Students will:
 |6| 26 Feb||[L11](course_spring23_L11.html)||[L12](course_spring23_L12.html)||||[Choose Mid Pres Topic](mid_pres_guide.html)|||
 |7| 5 Mar||||||||BREAK|BREAK|BREAK|
 |8| 12 Mar||[L13](course_spring23_L13.html)||[L14](course_spring23_L14.html)||||[Mid Pres Recording](mid_pres_guide.html)|||
-|9| 19 Mar||L15||L16||||[A5](A5.html)|A5|A5|
+|9| 19 Mar||[L15](course_spring23_L15.html)||L16||||[A5](A5.html)|A5|A5|
 |10| 26 Mar||L17||L18|||||||
 |11| 2 Apr||L19||L20||||[A6](A6.html)|A6|A6|
 |12| 9 Apr||L21||L22|||||||
