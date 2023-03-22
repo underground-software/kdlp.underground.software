@@ -1,0 +1,823 @@
+/*
+A template for near-instantaneous deployment of websites
+Copyright (C) 2019 Joel Savitz and Chris Odom
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+img {
+	width: 8em;
+	height: auto;
+}
+
+h1.title {
+	margin: auto;
+}
+
+#confusion {
+	/*padding-top: 0;
+	margin-top: 0;
+	margin-bottom: 0;*/
+	margin: 0 auto;
+}
+
+#confusion > img {
+	/*padding-top: 0;
+	margin-top: 0;
+        margin-bottom: 0;*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: auto;
+}
+
+hr {
+	background: #e83d2a;
+	height: 2px;
+	margin: 1px;
+}
+
+body {
+	padding-top: 10px;
+	display: block;
+	margin: auto;
+	width: 45vw;
+	/* max-width: 600px; */
+	min-width: 60vw;
+	font-family: courier;
+}
+
+a {
+	color: #2db8d4;
+}
+
+a:visited {
+	color: #005d70;
+}
+
+p {
+	font-size: 11pt;
+}
+
+h5 {
+	font-size: 14pt;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid;
+	padding: 0.5em;
+}
+
+div#cgit div.content table {
+	font-size: small;
+}
+
+
+div#cgit div.content {
+	margin-top: 1em;
+} 
+
+div#cgit span.deletions {
+    color: #800;
+}
+
+div#cgit span.insertions {
+    color: #080;
+}
+
+div#cgit table.diff td div.add {
+    color: green;
+}
+
+div#cgit table.diff td div.del {
+    color: red;
+}
+pre {
+	white-space: pre-wrap;
+}
+
+code {
+	background-color: #eeeeee;
+}
+
+form.login input {
+	width: 30em;
+	height: 2em;
+}
+
+table.tabs {
+	border: 1px solid black;
+	border-top: 0;
+}
+
+table.tabs input {
+	width: 10em;
+	height: 100%;
+	font-size: small;
+}
+
+table.tabs input[type="submit"] {
+	height: 100%;
+	width: 5em;
+}
+
+table.tabs form {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+input {
+	border: none;
+	border-bottom: 2px solid #e83d2a;
+	border-radius: 0;
+	background-color: #ffffcc;
+	font-size: 1.3em;
+	font-family: courier;
+}
+
+input.form {
+	float: right;
+}
+
+div#cgit a.branch-deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #88ff88;
+    border: solid 1px #007700;
+}
+
+div#cgit a.deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #ff8888;
+    border: solid 1px #770000;
+}
+
+label {
+	font-size: 1.5em;
+	font-family: courier;
+	margin: 0.5em;
+	display: flex;
+}
+
+button.login.logout[type="submit"] {
+	width:  4.5em;
+	height: 1.8em;
+	font-size: 1.5em;
+}
+
+table#header input {
+	font-size: 0.6em;
+	width: 6em;
+}
+
+button[type="submit"] {
+	margin: 0.5em;
+	border: 2px solid #e83d2a;
+	border-radius: 0;
+	background-color: #eeeeee;
+	font-family: courier;
+}
+
+select {
+	border: none;
+	border-bottom: 2px solid #e83d2a;
+	border-radius: 0;
+	background-color: #ffffcc;
+	font-family: courier;
+}
+
+div {
+	overflow: auto;
+	display: block;
+}
+
+div.logout_left {
+	width: 60%;
+	height: auto;
+	float: left;
+}
+
+div.logout_left td {
+	/*max-width: 500px;*/
+	max-width: 310px;
+	word-wrap: break-word;
+}
+
+div.logout_right {
+	width: 40%;
+	max-width: 300px;
+	float: left;
+	border: 1px solid black;
+}
+div.logout_right_inner {
+	margin: 5px;
+}
+
+div#login {
+	height: 13em;
+}
+
+
+button.logout {
+	float: left;
+}
+
+div.logout_buttons {
+	display: inline-block;
+}
+
+form#renew {
+	margin: 0;
+	display: inline-block;
+	overflow: auto;
+}
+
+form#logout {
+	margin: 0;
+	display: inline-block;
+	overflow: auto;
+
+}
+
+div.game_input {
+	display: flex;
+}
+
+form.multi_game_input, form.fast_game_input {
+	border: 1px red solid;
+
+	display: inline-block;
+	flex: 48%;
+	margin: 1%;
+
+	overflow: auto;
+}
+
+div.multi_game_input, div.fast_game_input {
+	padding: 0;
+	width: 100%;
+}
+
+div.logout_info {
+	margin: 5px;
+}
+
+form.multi_game_input label, form.fast_game_input label{
+}
+
+
+input.fast_game_input {
+	width: 90%;
+	margin: 0.5em;
+	margin-bottom: 2em;
+}
+
+textarea.game_output {
+	width: 100%;
+	height: 40%;
+	resize: none;
+}
+
+textarea.multi_game_input {
+	width: 90%;
+	height: 6em;
+	resize: none;
+	margin: 0.5em;
+}
+
+table {
+	min-width: 100%;
+}
+table.tabs a {
+	font-size: 100%;
+	margin-left: 1em;
+}
+
+table.tabs a.active {
+	background-color: lightgrey;
+}
+
+
+table.tabs td {
+	padding: 0;
+	width: 40%;
+	border: 0;
+	height: 100%;
+}
+
+table.tabs td:nth-child(2) {
+	width: 50%;
+}
+
+body {
+	border-collapse: collapse;
+}
+
+table.tabs tr { 
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	/* align-content: stretch; */
+	justify-content: space-between;
+	vertical-align: middle;
+	align-items: center;
+}
+
+div#cgit div.footer {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 80%;
+    color: #ccc;
+}
+
+td form {
+	text-align: center;
+}
+
+td form input, td form select, td form button {
+	margin: 3px;
+}
+
+div#cgit {
+	width: 100%;
+}
+
+table#header tr {
+	display: flex;
+	flex-direction: row;
+	align-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 7.9em;
+}
+
+table#header tr:nth-child(2) {
+	padding-top: 10px 0;
+	border-top: 1px solid black;
+	vertical-align: baseline;
+	height: 3em;
+}
+
+h1, td.main {
+	display: block;
+	font-size: 2em;
+   	font-weight: bold;
+}
+
+
+
+table {
+	border-collapse: collapse;
+}
+
+table#header td.logo {
+	margin: 0;
+	padding: 0;
+	width: 19%;
+	border: 0;
+}
+table#header td.main {
+	font-size: 1.5em;
+	flex-flow: column;
+	width: 100%;
+	border: 0;
+}
+
+table#header td.form {
+	font-size: 1.5em;
+	height: 90%;
+	display: flex;
+	flex-flow: column;
+	width: 20%;
+	justify-content: center;
+	border: 0;
+}
+
+table#header td.form select {
+	height: 1.5em;
+	width: 6em;
+}
+
+table#header td.form input {
+	height: 1.5;
+	width: 6em;
+}
+
+table#header td.sub {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	border: 0;
+}
+table#header td.sub.right {
+	flex-flow: column;
+	width: 10%;
+	font-style: italic;
+	color: #555555;
+}
+
+ul.pager {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	text-align: center;
+}
+
+table a {
+	text-align: center;
+}
+
+ul.pager li {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+div.cgit-panel {
+	border: 1px solid black;
+	margin-left: -1px;
+	float: right;
+	min-width: 0;
+	width: 20.1%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+div.cgit-panel table {
+	border: 0;
+	padding: 2px;
+}
+
+div.cgit-panel form {
+	padding: 2px;
+}
+
+div.cgit-panel b {
+	padding: 2px;
+}
+
+div.cgit-panel td {
+	padding: 0;
+	border: 0;
+}
+
+div.cgit-panel td.label {
+	text-align: right;
+	padding: 2px;
+}
+
+div.cgit-panel td.ctrl {
+}
+
+div.cgit-panel td.ctrl select {
+	width: 100%;
+}
+
+
+table.commit-info {
+	min-width: 0;
+	width: 80%;
+}
+
+div.commit-subject,
+div.commit-msg,
+div.diffstat-header,
+div.diffstat-summary,
+div.path,
+table.diffstat,
+table.diffstat-summary {
+	border: 1px solid black;
+	border-bottom: 0;
+	border-top: 0;
+	box-sizing: border-box;
+	width: 80%;
+}
+
+div.commit-subject {
+	margin-top: 1em;
+	border: 0;
+	padding: 2px;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+td.logmsg {
+	padding
+	white-space: break-spaces;
+	padding: 2px;
+	text-align: left;
+}
+div.commit-msg {
+	padding: 2px;
+	background-color: #eeeeee;
+	white-space: break-spaces;
+	text-align: left;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+div.diffstat-header {
+	padding-top: 1em;
+	border: 0;
+}
+
+div.diffstat-header:nth-child(2) {
+	padding-top: 0;
+}
+
+div#cgit table.diffstat {
+	text-align: center;
+	min-width: 0;
+	overflow-x: visible;
+	overflow-wrap: break-word;
+}
+
+div#cgit table.diffstat td.mode {
+	width: 15%;
+}
+
+div#cgit table.diffstat td.graph {
+	width: 20%;
+}
+
+div#cgit table.diffstat td.graph td {
+	padding: 0px;
+	border: 0px;
+	height: 7pt;
+}
+
+div#cgit table.diffstat td.right {
+	width: 6%;
+}
+
+div#cgit table.diffstat td.graph td.add {
+	background-color: #5c5;
+}
+
+div#cgit table.diffstat td.graph td.rem {
+	background-color: #c55;
+}
+
+div.diffstat-summary {
+	padding-top: 1em;
+	border: 0;
+	font-style: italic;
+}
+
+div.path {
+
+}
+
+div#cgit table.list {
+	text-align: center;
+}
+
+div#cgit a.button {
+	padding: 2px;
+}
+
+table tr.nohover td {
+	min-height: 0;
+	border: 0;
+	height: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+
+@media only screen and (max-width: 1150px) {
+	table#header td.form select {
+		height: 1.5em;
+		width: 6em;
+	}
+	div#cgit table.tabs form {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin: 0;
+		padding: 0;
+	}
+	div#cgit table.tabs td.form form.right > * {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 150%;
+		width: 70%;
+		border: 1px solid black;
+		border: 1px solid black;
+		margin-left: -1px;
+		margin-bottom: -1px;
+		box-sizing: border-box;
+		border-bottom: 2px solid #e83d2a;
+	}
+	
+}
+/* overrides for mobile: keep at bottom */
+@media only screen and (max-width: 980px) {
+	html {
+	}
+	body {
+		width: 90vw;
+		margin: 0 auto;
+		min-width: 0px;
+		word-wrap: break-word;
+	}
+	p, li, td, th, pre, code {
+		font-size: 24pt;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	h3 {
+		font-size: 1.7em;
+	}
+	h4 {
+		font-size: 1.5em;
+	}
+	div#cgit img {
+		width: 4em;
+	}
+
+	div#cgit table#header td.main {
+		font-size: 2em;
+		overflow:scroll;
+	}
+
+	div#cgit table#header tr {
+		height: 7.5em;
+	}
+
+	div#cgit table#header tr:last-child {
+		height: 5em;
+	}
+
+	div#cgit table#header tr:last-child td {
+		font-size: 1.2em;
+	}
+
+	div#cgit table.tabs td {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		align-items: stretch;
+		width: 50%;
+	}
+
+
+	div#cgit table.tabs form {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+	}
+
+	div#cgit table.tabs form select,
+	div#cgit table.tabs form input.txt,
+	div#cgit table.tabs form input[type="submit"]{
+		margin: 0;
+	}
+
+	div#cgit table.tabs tr {
+		flex-wrap: wrap;
+	}
+
+	div#cgit table.tabs a {
+		margin-top: -1px;
+	}
+
+	div#cgit table.tabs a,
+	div#cgit table.tabs td.form form > * {
+		text-align: center;
+		font-size: 150%;
+		width: 100%;
+		border: 1px solid black;
+		margin: 0;
+		margin-left: -1px;
+		margin-bottom: -1px;
+		box-sizing: border-box;
+		padding: 0;
+	}
+
+	div#cgit table.tabs td.form form > input[type="submit"],
+	div#cgit table.tabs td.form form > button,
+	div#cgit table#header td.form form > {
+		background: #eee;
+		border: 1px solid #e83d2a;
+	}
+
+	div#cgit table.tabs td.form form.right > * {
+		width: 100%;
+	}
+
+	div#cgit table.tabs td.form form > * {
+		border-bottom: 2px solid #e83d2a;
+	}
+
+	div#cgit table.tabs a::after {
+		content: '\a';
+		white-space: pre;
+	}	
+	
+	div#cgit {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	div#cgit table#header td.form {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+
+	div#cgit table#header form {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+		margin: 0;
+		padding: 0;
+		justify-content: center
+	}
+
+	div#cgit table#header select,
+	div#cgit table#header input {
+		border: 1px solid black;
+		border-bottom: 2px solid #e83d2a;
+		font-size: 1.5em;
+		width: 4.88em;
+		margin: 0;
+		padding: 0;
+	}
+
+	div#cgit table.commit-info {
+		margin-top: 1em;
+	}
+
+	div#cgit table.diffstat tr td {
+		font-size: 1.25em;
+	}
+
+	div#cgit table.diffstat tr td:first-child {
+		min-width: 100px;
+	}
+
+	div#cgit div.cgit-panel {
+		float: none;
+		width: 100%;
+		border-left: 1px solid black;
+		border-bottom: 1px solid black;
+		margin: 0;
+	}
+
+	div#cgit div.cgit-panel form {
+		font-size: 1em;
+
+	}
+	div#cgit div.cgit-panel form td.label {
+		font-size: 2em;
+	}
+	div#cgit div.cgit-panel form select {
+		font-size: 1em;
+		height: 2em;
+		width: 10em;
+	}
+
+	div#cgit div.contentl
+	/* this fixes everything
+ 	 * don't worry about it haha
+ 	 */
+	td.sha1 {
+	    max-width: 642px;
+	}
+	div.cgit-panel b {
+		padding: 2px;
+		font-size: 2em;
+	}
+}

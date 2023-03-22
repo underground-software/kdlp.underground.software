@@ -1,6 +1,5 @@
 ### Who is behind this program?
 
-
 |Name|Role|Contact|
 |--|--|--|
 |Joel Savitz|Software Engineer & Program Lead| [Joel's Website](https://joelsavitz.com)|

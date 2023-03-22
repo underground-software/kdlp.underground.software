@@ -26,7 +26,7 @@ A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join)
 
 Q: Who is behind this program?
 
-A: [These people](who.html)
+A: [These people](who.md)
 
 
 ### Fun fact

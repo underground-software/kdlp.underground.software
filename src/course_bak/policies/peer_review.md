@@ -12,4 +12,4 @@
   * If there are any problems with the submission, document said issues and report them in your email reply to the student who you are reviewing.
   * If you determine that there are no issues with the submission, inform the recipient.
     * If it turns out that there were issues with the submission that you missed, points will be deducted from your overall assignment grade.
-  * Refer [here](course_policies.md) for the grading policy regarding peer reviewing.
+  * Refer [here](course_policies.html) for the grading policy regarding peer reviewing.
