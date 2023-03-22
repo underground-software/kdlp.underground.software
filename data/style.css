@@ -456,14 +456,14 @@ ul.pager li {
 
 div.cgit-panel {
 	border: 1px solid black;
-	margin-left: -1px;
 	float: right;
 	min-width: 0;
-	width: 20.1%;
+	width: 19.0%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	box-sizing: border-box;
+	margin-left: -1px;
 }
 
 div.cgit-panel table {
@@ -540,7 +540,8 @@ div.commit-msg {
 }
 
 div.diffstat-header {
-	padding-top: 1em;
+	margin-top: 1em;
+	width: 80%;
 	border: 0;
 }
 
@@ -553,6 +554,7 @@ div#cgit table.diffstat {
 	min-width: 0;
 	overflow-x: visible;
 	overflow-wrap: break-word;
+	max-width: 80%
 }
 
 div#cgit table.diffstat td.mode {
@@ -588,7 +590,10 @@ div.diffstat-summary {
 }
 
 div.path {
-
+	margin-top: 1em;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100%
 }
 
 div#cgit table.list {
@@ -634,6 +639,27 @@ table tr.nohover td {
 		margin-bottom: -1px;
 		box-sizing: border-box;
 		border-bottom: 2px solid #e83d2a;
+	}
+
+	div#cgit div.cgit-panel {
+		float: none;
+		width: 100%;
+		border-left: 1px solid black;
+		border-bottom: 1px solid black;
+		margin: 0;
+	}
+
+	div#cgit div.cgit-panel form {
+		font-size: 1em;
+
+	}
+	div#cgit div.cgit-panel form td.label {
+		font-size: 2em;
+	}
+	div#cgit div.cgit-panel form select {
+		font-size: 1em;
+		height: 2em;
+		width: 10em;
 	}
 	
 }
@@ -770,7 +796,7 @@ table tr.nohover td {
 	div#cgit table#header input {
 		border: 1px solid black;
 		border-bottom: 2px solid #e83d2a;
-		font-size: 1.5em;
+		font-size: 1em;
 		width: 4.88em;
 		margin: 0;
 		padding: 0;
@@ -786,27 +812,6 @@ table tr.nohover td {
 
 	div#cgit table.diffstat tr td:first-child {
 		min-width: 100px;
-	}
-
-	div#cgit div.cgit-panel {
-		float: none;
-		width: 100%;
-		border-left: 1px solid black;
-		border-bottom: 1px solid black;
-		margin: 0;
-	}
-
-	div#cgit div.cgit-panel form {
-		font-size: 1em;
-
-	}
-	div#cgit div.cgit-panel form td.label {
-		font-size: 2em;
-	}
-	div#cgit div.cgit-panel form select {
-		font-size: 1em;
-		height: 2em;
-		width: 10em;
 	}
 
 	div#cgit div.contentl
