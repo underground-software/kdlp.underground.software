@@ -95,20 +95,22 @@ div#cgit div.content {
 } 
 
 div#cgit span.deletions {
-    color: #800;
+	color: #800;
 }
 
 div#cgit span.insertions {
-    color: #080;
+	color: #080;
 }
 
 div#cgit table.diff td div.add {
-    color: green;
+	color: green;
 }
 
 div#cgit table.diff td div.del {
-    color: red;
+	color: red;
 }
+ 
+
 pre {
 	white-space: pre-wrap;
 }
@@ -612,6 +614,36 @@ table tr.nohover td {
 	text-align: center;
 	line-height: 1.5em;
 }
+
+div#cgit span.age-mins {
+	font-weight: bold;
+	color: #080;
+}
+
+div#cgit span.age-hours {
+	color: #080;
+}
+
+div#cgit span.age-days {
+	color: #040;
+}
+
+div#cgit span.age-weeks {
+	color: #444;
+}
+
+div#cgit span.age-months {
+	color: #888;
+}
+
+div#cgit span.age-years {
+	color: #bbb;
+}
+
+div#cgit table.diff td div.hunk {
+	color: #009;
+}
+
 
 
 @media only screen and (max-width: 1150px) {
