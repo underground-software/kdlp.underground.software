@@ -25,6 +25,11 @@ h1.title {
 	margin: auto;
 }
 
+
+#course_links {
+	text-align: center;
+}
+
 #confusion {
 	/*padding-top: 0;
 	margin-top: 0;
@@ -46,7 +51,7 @@ h1.title {
 hr {
 	background: #e83d2a;
 	height: 2px;
-	margin: 1px;
+	margin: 0;
 }
 
 body {
@@ -83,6 +88,10 @@ table {
 table, th, td {
 	border: 1px solid;
 	padding: 0.5em;
+}
+
+div#cgit div {
+	overflow: auto;
 }
 
 div#cgit div.content table {
@@ -209,13 +218,7 @@ select {
 	font-family: courier;
 }
 
-div {
-	overflow: auto;
-	display: block;
-}
-
 div.logout_left {
-	width: 60%;
 	height: auto;
 	float: left;
 }
@@ -264,25 +267,91 @@ form#logout {
 
 div.game_input {
 	display: flex;
+	
+	align-items: stretch;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+div.fast_game_input {
+	display:inline;
 }
 
 form.multi_game_input, form.fast_game_input {
-	border: 1px red solid;
+	/*border: 1px red solid;*/
+	border: 1px solid #e83d2a;
 
 	display: inline-block;
 	flex: 48%;
-	margin: 1%;
 
 	overflow: auto;
+}
+
+form.fast_game_input {
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+form.multi_game_input textarea:focus, form.fast_game_input input:focus {
+	outline: 2px solid #e83d2a;
+
+}
+
+textarea {
+	border-radius: 0;
+}
+
+div.game_output {
+	background: black;
+	color: #008F11;
+}
+
+textarea.game_output {
+	padding: 2px;
+	border: 1px solid #008F11;
+	background: black;
+	color: #008F11;
+	
+}
+
+/* source for .game_output color scheme
+ * https://www.schemecolor.com/matrix-code-green.php
+ */
+textarea.game_output::-webkit-scrollbar {
+	background-color: #003B00;
+}
+
+textarea.game_output::-webkit-scrollbar-button {
+	background-color: #00FF41;
+}
+
+textarea.game_output::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+textarea.game_output::-webkit-scrollbar-thumb {
+	background-color: #00FF41;
+	outline: 1px solid black;
+}
+
+textarea.game_output:focus {
+	outline: none;
 }
 
 div.multi_game_input, div.fast_game_input {
 	padding: 0;
 	width: 100%;
+	display: flex;
+}
+
+form.game_output {
+	margin-bottom: none;
+	display: inline;
 }
 
 div.logout_info {
 	margin: 5px;
+	display: flex;
 }
 
 form.multi_game_input label, form.fast_game_input label{
@@ -292,7 +361,6 @@ form.multi_game_input label, form.fast_game_input label{
 input.fast_game_input {
 	width: 90%;
 	margin: 0.5em;
-	margin-bottom: 2em;
 }
 
 textarea.game_output {
@@ -372,7 +440,7 @@ table#header tr {
 	align-content: flex-start;
 	align-items: center;
 	width: 100%;
-	height: 7.9em;
+	height: 8.1em;
 }
 
 table#header tr:nth-child(2) {
@@ -398,6 +466,7 @@ table#header td.logo {
 	margin: 0;
 	padding: 0;
 	width: 19%;
+	height: 100%;
 	border: 0;
 }
 table#header td.main {
@@ -644,7 +713,27 @@ div#cgit table.diff td div.hunk {
 	color: #009;
 }
 
+div.nav {
+	display: flex;
+	text-align: center;
+	box-sizing: border-box;
+} 
 
+
+a.nav {
+	padding: 0.5em;
+	font-size: 1em;
+	border-left: 1px solid black;
+	background-color: #eeeeee;
+}
+
+a.nav:first-child  {
+	border-left: 0;
+}
+
+a.nav:last-child  {
+	border-right: 0;
+}
 
 @media only screen and (max-width: 1150px) {
 	table#header td.form select {
@@ -718,7 +807,7 @@ div#cgit table.diff td div.hunk {
 		font-size: 1.5em;
 	}
 	div#cgit img {
-		width: 4em;
+		width: 3.9em;
 	}
 
 	div#cgit table#header td.main {
@@ -727,7 +816,7 @@ div#cgit table.diff td div.hunk {
 	}
 
 	div#cgit table#header tr {
-		height: 7.5em;
+		height: 8em;
 	}
 
 	div#cgit table#header tr:last-child {
@@ -763,11 +852,9 @@ div#cgit table.diff td div.hunk {
 
 	div#cgit table.tabs tr {
 		flex-wrap: wrap;
+		align-items: stretch;
 	}
 
-	div#cgit table.tabs a {
-		margin-top: -1px;
-	}
 
 	div#cgit table.tabs a,
 	div#cgit table.tabs td.form form > * {
@@ -782,6 +869,8 @@ div#cgit table.diff td div.hunk {
 		padding: 0;
 	}
 
+	div#cgit table.tabs td a {
+	}
 	div#cgit table.tabs td.form form > input[type="submit"],
 	div#cgit table.tabs td.form form > button,
 	div#cgit table#header td.form form > {
@@ -851,10 +940,35 @@ div#cgit table.diff td div.hunk {
  	 * don't worry about it haha
  	 */
 	td.sha1 {
-	    max-width: 642px;
+		max-width: 642px;
 	}
 	div.cgit-panel b {
 		padding: 2px;
 		font-size: 2em;
 	}
+
+	div.nav {
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+		flex-wrap: wrap;
+		flex-direction: row;
+		text-align: center;
+		box-sizing: border-box;
+	} 
+
+	a.nav {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		font-size: 3em;
+	}
+}
+
+/* for clicker */
+
+div#clicker {
+	display: flex;
+	justify-content: center;
+	collapse-border: border-collapse;
+	box-sizing: border-box;
 }
