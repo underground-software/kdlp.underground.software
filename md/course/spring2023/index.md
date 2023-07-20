@@ -40,9 +40,9 @@ Students will:
 |3| 5 Feb||[L5](lectures/L5.md)||[L6](lectures/L6.md)|||||||
 |4| 12 Feb||[L7](lectures/L7.md)||[L8](lectures/L8.md)||||[A3](assignments/A3.md)|A3|A3|
 |5| 19 Feb|||[L9](lectures/L9.md)|[L10](lectures/L10.md)||||[A4](assignments/A4.md) due Tuesday|A4 due Wednesday|A4 due Thursday|
-|6| 26 Feb||[L11](lectures/L11.md)||[L12](lectures/L12.md)||||[Choose Mid Pres Topic](assignments/mid_pres_guidelines.md)|||
+|6| 26 Feb||[L11](lectures/L11.md)||[L12](lectures/L12.md)||||[Choose Mid Pres Topic](assignments/mid_pres_guide.md)|||
 |7| 5 Mar||||||||BREAK|BREAK|BREAK|
-|8| 12 Mar||[L13](lectures/L13.md)||[L14](lectures/L14.md)||||[Mid Pres Recording](assignments/mid_pres_guidelines.md)|||
+|8| 12 Mar||[L13](lectures/L13.md)||[L14](lectures/L14.md)||||[Mid Pres Recording](assignments/mid_pres_guide.md)|||
 |9| 19 Mar||[L15](lectures/L15.md)||[L16](lectures/L16.md)||||[A5](assignments/A5.md)|A5|A5|
 |10| 26 Mar||[L17](lectures/L17.md)||[L18](lectures/L18.md)|||||||
 |11| 2 Apr||[L19](lectures/L19.md)||[L20](lectures/L20.md)||||[A6](assignments/A6.md)|A6|A6|
