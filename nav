@@ -4,10 +4,11 @@
 </div>
 
 <hr>
-<p><a href="/index.md">Home</a>
-| <a href="/course/index.md">Course</a>
-| <a href="/who.md">Who</a>
-| <a href="/info.md">Info</a>
-| <a href="/cgit">Git</a>
-</p>
+<div class="nav">
+	<a class="nav" href="/index.md">Home</a>
+	<a class="nav" href="/course/index.md">Course</a>
+	<a class="nav" href="/who.md">Who</a>
+	<a class="nav" href="/info.md">Info</a>
+	<a class="nav" href="/cgit">Git</a>
+</div>
 <hr>

@@ -4,8 +4,11 @@
 </div>
 
 <hr>
-<p><a href="/US">Home</a>
-| <a href="/index.md">KDLP</a>
-| <a href="/game">Game</a>
-</p>
+<div class="nav">
+<a class="nav" href="/US">Home</a>
+<a class="nav" href="/index.md">KDLP</a>
+<a class="nav" href="/terminal">Terminal</a>
+<a class="nav" href="/clicker">Clicker</a>
+<a class="nav" href="/login">Auth</a>
+</div>
 <hr>
