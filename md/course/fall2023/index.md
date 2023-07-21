@@ -34,32 +34,23 @@ Students will:
 
 |#| week starting (Sunday date) |S|M|T|W|R|F|S|Initial Submissions due @ 23:59 (Mondays unless stated otherwise)|Reviews due @ 23:59 (Tuesdays unless stated otherwise)|Final Submissions due @ 23:59 (Wednesdays unless stated otherwise)|
 |--|--|--|--|--|--|--|--|--|--|--|--|
-|0| 03 Sep||||[L0](lectures/L0.md)||||[A0](A0.html) due Thursday|A0 due Friday|A0 due Saturday|
+|0| 03 Sep||||[L0](lectures/L0.md)||||[A0](assignments/A0.md) due Thursday|A0 due Friday|A0 due Saturday|
 |1| 10 Sep||[L1](lectures/L1.md)||[L2](lectures/L2.md)|||||||
-|2| 17 Sep||[L3](lectures/L3.md)||[L4](lectures/L4.md)||||[A1](A1.html), [A2](A2.html)|A1, A2|A1, A2|
+|2| 17 Sep||[L3](lectures/L3.md)||[L4](lectures/L4.md)||||[A1](assignments/A1.md), [A2](assignments/A2.md)|A1, A2|A1, A2|
 |3| 24 Sep||[L5](lectures/L5.md)||[L6](lectures/L6.md)|||||||
-|4| 01 Oct||[L7](lectures/L7.md)||[L8](lectures/L8.md)||||[A3](A3.html)|A3|A3|
-|5| 08 Oct||||[L9](lectures/L9.md)||||[A4](A4.html) due Tuesday|A4 due Wednesday|A4 due Thursday|
-|6| 15 Oct||[L10](lectures/L10.md)||[L11](lectures/L11.md)||||[Choose Mid Pres Topic](mid_pres_guide.html)|||
-|7| 22 Oct||[L12](lectures/L12.md)||[L13](lectures/L13.md)||||[Mid Pres Recording](mid_pres_guide.html)|||
-|8| 29 Oct||[L14](lectures/L14.md)||[L15](lectures/L15.md)||||[A5](A5.html)|A5|A5|
+|4| 01 Oct||[L7](lectures/L7.md)||[L8](lectures/L8.md)||||[A3](assignments/A3.md)|A3|A3|
+|5| 08 Oct||||[L9](lectures/L9.md)||||[A4](assignments/A4.md) due Tuesday|A4 due Wednesday|A4 due Thursday|
+|6| 15 Oct||[L10](lectures/L10.md)||[L11](lectures/L11.md)||||[Choose Mid Pres Topic](assignments/mid_pres_guide.md)|||
+|7| 22 Oct||[L12](lectures/L12.md)||[L13](lectures/L13.md)||||[Mid Pres Recording](assignments/mid_pres_guide.md)|||
+|8| 29 Oct||[L14](lectures/L14.md)||[L15](lectures/L15.md)||||[A5](assignments/A5.md)|A5|A5|
 |9| 05 Nov||[L16](lectures/L16.md)||[L17](lectures/L17.md)|||||||
-|10| 12 Nov||[L18](lectures/L18.md)||[L19](lectures/L19.md)||||[A6](A6.html)|A6|A6|
+|10| 12 Nov||[L18](lectures/L18.md)||[L19](lectures/L19.md)||||[A6](assignments/A6.md)|A6|A6|
 |11| 19 Nov||[L20](lectures/L20.md)|||||||||
-|12| 26 Nov||[L21](lectures/L21.md)||[L22](lectures/L23.md)||||[Fin1](fin1.html)|Fin1|Fin1|
+|12| 26 Nov||[L21](lectures/L21.md)||[L22](lectures/L23.md)||||[Fin1](assignments/fin1.md)|Fin1|Fin1|
 |13| 03 Dec||[L23](lectures/L23.md)||[L24](lectures/L24.md)|||||||
 |14| 10 Dec||[F0](lectures/F0.md)||[F1](lectures/F2.md)|||||||
-|15| 17 Dec||[F2](lectures/F1.md)||||||[Fin2](fin2.html) *final* submission due Monday\* |||
+|15| 17 Dec||[F2](lectures/F1.md)||||||[Fin2](assignments/fin2.md) *final* submission due Monday\* |||
 
 \**For Fin2, submit only the final submission on Monday. We are not asking students/mentees to make an initial submission and do peer reivews for the terminal assignment.*
 
-[Course Policies](course_policies.html) | [Submission Guidelines](submission_guidelines.html) | [Peer Review Process](peer_review.html)
-
-
-### Course policies
-
-Available [here](course_policies.html).
-
-### Course application
-
-Available [here](course_application.html).
+[Course Policies](policies/course_policies.md) | [Submission Guidelines](policies/submission_guidelines.md) | [Peer Review Process](policies/peer_review.md)
