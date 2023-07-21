@@ -26,7 +26,7 @@ Start downloading the standard ISO image for Fedora for your architechture (most
 * Mostly follow the on-screen instructions, but there are some confusing steps. There are numerous tutorials online on how to proceed based on the VM you are using.
 * This particular step, depicted below, might be especially confusing. Just click on "Installation Destination" and click "Done", you don't need to change anything you just need to confirm what was already selected by default.
 
-<div id="confusion"><img alt="fedora confusion image" src="images/fedora_confusion.png"></img></div>
+<div id="confusion"><img alt="fedora confusion image" src="/images/fedora_confusion.png"></img></div>
 
 <br>
 
