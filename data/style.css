@@ -972,3 +972,33 @@ div#clicker {
 	collapse-border: border-collapse;
 	box-sizing: border-box;
 }
+
+
+/* @counter-style hex { */
+/*     system: alphabetic; */
+/*     symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F'; */
+/*     prefix: '0x'; */
+/*     suffix: ' '; */
+/* } */
+
+/* ol { */
+/*     list-style-type: hex; */
+/*     counter-reset: hex 17; */
+/* } */
+
+@counter-style hex {
+    system: alphabetic;
+    symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
+}
+
+ol {
+    counter-reset: count 16;
+}
+
+ol > li {
+    counter-increment: count;
+}
+
+ol > li::marker {
+    content: '0x' counter(count, hex) ': ';
+}
