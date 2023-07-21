@@ -34,7 +34,7 @@ Students will:
 
 |#| week starting (Sunday date) |S|M|T|W|R|F|S|Initial Submissions due @ 23:59 (Mondays unless stated otherwise)|Reviews due @ 23:59 (Tuesdays unless stated otherwise)|Final Submissions due @ 23:59 (Wednesdays unless stated otherwise)|
 |--|--|--|--|--|--|--|--|--|--|--|--|
-|0| 03 Sep||||[L0](lectures/L0.md)||||[A0](assignments/A0.md) due Thursday|A0 due Friday|A0 due Saturday|
+|0| 03 Sep||||[L0](lectures/L0.md)||||[setup](assignments/setup.md) due Thursday|no peer review||
 |1| 10 Sep||[L1](lectures/L1.md)||[L2](lectures/L2.md)|||||||
 |2| 17 Sep||[L3](lectures/L3.md)||[L4](lectures/L4.md)||||[A1](assignments/A1.md), [A2](assignments/A2.md)|A1, A2|A1, A2|
 |3| 24 Sep||[L5](lectures/L5.md)||[L6](lectures/L6.md)|||||||
