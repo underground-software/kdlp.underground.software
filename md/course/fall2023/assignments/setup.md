@@ -1,4 +1,4 @@
-## Setup- Git comfortable 🥲
+## Setup - Git comfortable 🥲
 
 Welcome to the class! Setting up a Linux environment is required for the course, use this assignment to get that set up and get your feet wet with the submission process we will use for this class.
 
