@@ -36,15 +36,15 @@ Students will:
 |--|--|--|--|--|--|--|--|--|--|--|--|
 |0| 03 Sep||||[L0](lectures/L0.md)||||[setup](assignments/setup.md) due Thursday|no peer review||
 |1| 10 Sep||[L1](lectures/L1.md)||[L2](lectures/L2.md)|||||||
-|2| 17 Sep||[L3](lectures/L3.md)||[L4](lectures/L4.md)||||[A1](assignments/A1.md), [A2](assignments/A2.md)|A1, A2|A1, A2|
+|2| 17 Sep||[L3](lectures/L3.md)||[L4](lectures/L4.md)||||[P0](assignments/P0.md), [E0](assignments/E0.md)|P0, E0|P0, E0|
 |3| 24 Sep||[L5](lectures/L5.md)||[L6](lectures/L6.md)|||||||
-|4| 01 Oct||[L7](lectures/L7.md)||[L8](lectures/L8.md)||||[A3](assignments/A3.md)|A3|A3|
-|5| 08 Oct||||[L9](lectures/L9.md)||||[A4](assignments/A4.md) due Tuesday|A4 due Wednesday|A4 due Thursday|
+|4| 01 Oct||[L7](lectures/L7.md)||[L8](lectures/L8.md)||||[P1](assignments/P1.md)|P1|P1|
+|5| 08 Oct||||[L9](lectures/L9.md)||||[E1](assignments/E1.md) due Tuesday|E1 due Wednesday|E1 due Thursday|
 |6| 15 Oct||[L10](lectures/L10.md)||[L11](lectures/L11.md)||||[Choose Mid Pres Topic](assignments/mid_pres_guide.md)|||
 |7| 22 Oct||[L12](lectures/L12.md)||[L13](lectures/L13.md)||||[Mid Pres Recording](assignments/mid_pres_guide.md)|||
-|8| 29 Oct||[L14](lectures/L14.md)||[L15](lectures/L15.md)||||[A5](assignments/A5.md)|A5|A5|
+|8| 29 Oct||[L14](lectures/L14.md)||[L15](lectures/L15.md)||||[P2](assignments/P2.md)|P2|P2|
 |9| 05 Nov||[L16](lectures/L16.md)||[L17](lectures/L17.md)|||||||
-|10| 12 Nov||[L18](lectures/L18.md)||[L19](lectures/L19.md)||||[A6](assignments/A6.md)|A6|A6|
+|10| 12 Nov||[L18](lectures/L18.md)||[L19](lectures/L19.md)||||[E2](assignments/E2.md)|E2|E2|
 |11| 19 Nov||[L20](lectures/L20.md)|||||||||
 |12| 26 Nov||[L21](lectures/L21.md)||[L22](lectures/L23.md)||||[Fin1](assignments/fin1.md)|Fin1|Fin1|
 |13| 03 Dec||[L23](lectures/L23.md)||[L24](lectures/L24.md)|||||||
