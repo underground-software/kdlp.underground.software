@@ -24,13 +24,11 @@ Students will:
 
 ### Required Materials
 
-1. A Linux environment to which you have root access and ideally physical access.
+* A computer that can run a virtual machine to give you access to a Linux environment.
 
-2. Patience, determination, and an ability to focus on a frustrating task for sustained periods of time.
+* Patience, determination, and an ability to focus on a potentially frustrating task for sustained periods of time.
 
 ### Course Schedule
-
-**All assignment due dates are in EST(UTC-5)**
 
 |#| week starting (Sunday date) |S|M|T|W|R|F|S|Assignment Due|
 |--|--|--|--|--|--|--|--|--|--|
