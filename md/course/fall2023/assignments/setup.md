@@ -31,7 +31,7 @@ Please introduce yourself and learn how to submit email patches :)
 
 ##### Set up the VM
 * Once the ISO image has finished downloading, you can begin the VM set-up process.
-* Depending on the software you downloaded, the exact procedure will vary. But you want to create a new machine with the recourses you decided to allocate and you most likely just follow the set-up wizard of your software. Make sure to create a virtual hard drive for the machine (at least 25G is suggested).
+* Depending on the software you downloaded, the exact procedure will vary. But you want to create a new machine with the resources you decided to allocate and you most likely just follow the set-up wizard of your software. Make sure to create a virtual hard drive for the machine (at least 25G is suggested).
 * Attach the ISO image to the machine, this will allow it to boot into the Fedora installer.
 * Start the VM for the first time and boot into the Fedora image.
 
