@@ -10,6 +10,9 @@
 <div class="nav">
 	<a class="nav" href="/index.md">Home</a>
 	<a class="nav" href="/course/index.md">Course</a>
+	<a class="nav" href="/login">Login</a>
+	<a class="nav" href="/register">Register</a>
+	<a class="nav" href="/dashboard">Dashboard</a>
 	<a class="nav" href="/who.md">Who</a>
 	<a class="nav" href="/info.md">Info</a>
 	<a class="nav" href="/cgit">Git</a>
