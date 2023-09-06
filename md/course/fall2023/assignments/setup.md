@@ -90,17 +90,26 @@ If you see this, you have installed Fedora correctly. Congrats!
 
 * Install `git` and `git-email`. Run `sudo dnf install -y git git-email`.
 * Configure your `.gitconfig`, which lives in `~/.gitconfig`, using a text editor (e.g. `nano ~/.gitconfig` or `vi ~/.gitconfig`).
-  * You can pick your default editor by adding: <pre><code>[core]
+    * You can pick your default editor by adding: <pre><code>[core]
         editor = nano # Or which ever editor you prefer
 </code></pre>
-  * You can set your identity information by adding: <pre><code>[user]
-        email = youremail@host.tld
-        name = Firstname Lastname
+    * Set your identity information by adding: <pre><code>[user]
+	name = Your Name Here
+	email = YOUR_USERNAME@kdlp.underground.software
+[sendemail]
+	smtpUser = YOUR_USERNAME
+	smtpPass = YOUR_PASSWORD
+	smtpserver = kdlp.underground.software
+	smtpserverport = 465
+	smtpencryption = ssl
 </code></pre>
-  * You can add settings for sending email patches using `git send-email`. If you are planning to use your gmail address, the following link will help you get set up: <https://stackoverflow.com/questions/68238912/how-to-configure-and-use-git-send-email-to-work-with-gmail-to-email-patches-to>. Otherwise, you can find similar instructions online.
-* Clone the class git repository: <https://github.com/underground-software/KDLP_assignments>. Run `git clone https://github.com/underground-software/KDLP_assignments.git`. Change directory into `A0/` within the class repo.
-* Add a file named `firstname_lastname.md` (e.g. `joel_savitz.md`), containing an introduction about yourself. The content can be whatever you want, whether it be why you are taking this class, your favorite ice cream flavor, or some random fact about yourself.
-* Run `uname -a >> firstname_lastname.md` to append the details of your OS to your introduction file.
+    * Make sure to fill in the fields with your username and password (the ones you use to log into the website)
+* Clone [the assignment git repository](https://kdlp.underground.software/cgit/ILKD_assignments/): Run `git clone https://kdlp.underground.software/cgit/ILKD_assignments/`.
+* Change directory into `introductions/` within the class repo.
+* There are already introductions from the instructors in there, read them to see an example of what to do.
+* Add a file named `firstname_lastname.txt` (e.g. `joel_savitz.txt`), containing an introduction about yourself
+    * The content can be whatever you want, whether it be why you are taking this class, your favorite ice cream flavor, or some random fact about yourself.
+* Run `uname -a >> firstname_lastname.txt` to append a line with information about the VM environment you set up to the end of your introduction file.
 * Make a commit out of your changes.
 
 ### Outcomes:
@@ -112,6 +121,6 @@ If you see this, you have installed Fedora correctly. Congrats!
 
 ### What to submit:
 * Generate a patchset from your commit and cover letter.
-* Send the patchset to the mailing list.
+* Send the patchset to introductions@kdlp.underground.software.
 
 [Submission Guidelines](../policies/submission_guidelines.md)
