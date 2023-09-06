@@ -48,8 +48,8 @@ Students will:
 |11| 19 Nov||[L20](lectures/L20.md)|||||||||
 |12| 26 Nov||[L21](lectures/L21.md)||[L22](lectures/L23.md)||||[Fin1](assignments/F1.md)|Fin1|Fin1|
 |13| 03 Dec||[L23](lectures/L23.md)||[L24](lectures/L24.md)|||||||
-|14| 10 Dec||[L25](lectures/F0.md)||[L26](lectures/F2.md)|||||||
-|15| 17 Dec||[L27](lectures/F1.md)||||||[F2](assignments/F1.md) *final* submission due Monday\* |||
+|14| 10 Dec||[L25](lectures/F0.md)||[L26](lectures/F1.md)|||||||
+|15| 17 Dec||[L27](lectures/F2.md)||||||[F2](assignments/F1.md) *final* submission due Monday\* |||
 
 \**For Fin2, submit only the final submission on Monday. We are not asking students/mentees to make an initial submission and do peer reivews for the terminal assignment.*
 
