@@ -63,34 +63,19 @@
 
 * Students and mentees will be given the status of “Graduated” if we determine that their performance has been suitable to the degree that we would recommend as a strong candidate for an internship doing basic Linux kernel engineering work.
 
-<details>
-<summary>
-**Additional policies specific to LFX mentees:**
-</summary>
-
-* Removal from the course
-  * In the case that a student fails to complete a task by a deadline with no prior notice, an instructor will reach out to you via email and/or direct message. If the student fails to respond to this message within seven (7) days of it’s receipt, the instructors reserve the right to remove the student from the program.
-  * Attendance is not required (because of timezones) but students should watch the recorded videos of class sessions
-</details>
-
-<details>
-<summary>
-**Additional policies specific to UMass Lowell students:**
-</summary>
+**Grading Policies:**
 
 * Automatic Course Failure (Grade of F)
   * In the case that a student fails to complete a task by a deadline with no prior notice, an instructor will reach out to you via email and/or direct message. If the student fails to respond to this message within seven (7) days of it’s receipt, the instructors reserve the right to give the student a failing grade (F) for the course.
-  * Attendance is... required.
-
-**UMass Lowell Grading Policy:**
-
-Student grades will be weighted according to the following scheme:
+* Attendance is... required.
+* Student grades will be weighted according to the following scheme:
 
 | Category | Percentage |
 |--|--|
-| Assignments | 40% |
-| Presentation 1 | 25% |
-| Presentation 2 | 30% |
+| Programs | 30% |
+| Exercises | 20% |
+| Midpoint Presentation | 15% |
+| Final Assignment + Final Presentation | 30% |
 | Participation | 5% |
 
 
@@ -111,4 +96,3 @@ Students will be given a letter grade according to the following this scheme:
 |F                              |below 40|
 
 ######A (4.0), A- (3.7), B+ (3.3), B (3.0), B- (2.7), C+ (2.3), C (2.0), C- (1.7), D+ (1.3), D (1.0), F (0.0)
-</details>
