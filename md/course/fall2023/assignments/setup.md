@@ -76,14 +76,14 @@ If you see this, you have installed Fedora correctly. Congrats!
         editor = nano # Or which ever editor you prefer
 </code></pre>
     * Set your identity information by adding: <pre><code>[user]
-	name = Your Name Here
-	email = YOUR_USERNAME@kdlp.underground.software
+		name = Your Name Here
+		email = YOUR_USERNAME@kdlp.underground.software
 [sendemail]
-	smtpUser = YOUR_USERNAME
-	smtpPass = YOUR_PASSWORD
-	smtpserver = kdlp.underground.software
-	smtpserverport = 465
-	smtpencryption = ssl
+		smtpUser = YOUR_USERNAME
+		smtpPass = YOUR_PASSWORD
+		smtpserver = kdlp.underground.software
+		smtpserverport = 465
+		smtpencryption = ssl
 </code></pre>
     * Make sure to fill in the fields with your username and password (the ones you use to log into the website)
 * Clone [the assignment git repository](https://kdlp.underground.software/cgit/ILKD_assignments/): Run `git clone https://kdlp.underground.software/cgit/ILKD_assignments/`.
