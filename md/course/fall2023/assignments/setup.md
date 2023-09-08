@@ -99,23 +99,19 @@ If you see this, you have completed the basic installation of Fedora correctly. 
 * Login as your non root user account
 * Install `git` and `git-email`. Run `sudo dnf install -y git git-email`.
 * Configure your `.gitconfig`, which lives in `~/.gitconfig`, using a text editor (e.g. `nano ~/.gitconfig` or `vi ~/.gitconfig`).
-  * You can pick your default editor by adding:
-```
-[core]
+    * You can pick your default editor by adding: <pre><code>[core]
         editor = nano # Or which ever editor you prefer
-```
-  * Set your identity information by adding:
-```
-[user]
-	name = Your Name Here
-	email = YOUR_USERNAME@kdlp.underground.software
+</code></pre>
+    * Set your identity information by adding: <pre><code>[user]
+		name = Your Name Here
+		email = YOUR_USERNAME@kdlp.underground.software
 [sendemail]
-	smtpUser = YOUR_USERNAME
-	smtpPass = YOUR_PASSWORD
-	smtpserver = kdlp.underground.software
-	smtpserverport = 465
-	smtpencryption = ssl
-```
+		smtpUser = YOUR_USERNAME
+		smtpPass = YOUR_PASSWORD
+		smtpserver = kdlp.underground.software
+		smtpserverport = 465
+		smtpencryption = ssl
+</code></pre>
     * Make sure to fill in the fields with your username and password (the ones you use to log into the website)
 * Clone [the assignment git repository](https://kdlp.underground.software/cgit/ILKD_assignments/): Run `git clone https://kdlp.underground.software/cgit/ILKD_assignments/`.
 * Change directory into the `introductions` folder within the repository.
