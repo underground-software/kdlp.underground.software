@@ -51,7 +51,7 @@ Please introduce yourself and learn how to submit email patches :)
 ``` 
 If you see this, you have installed Fedora correctly. Congrats!
 
-##### Optional steps
+##### Post Install Setup
 * Run a software update:
   * Login with your root account.
   * Run the command `dnf update`, this may take a while to complete.
