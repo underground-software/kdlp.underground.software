@@ -67,24 +67,6 @@ If you see this, you have installed Fedora correctly. Congrats!
   * Log out of root (type `exit` or hit `ctrl+d`).
   * Try logging in as your new user with the username and password you selected.
   * Verify that you have root access via `sudo echo hello`, you should be prompted for a password and when you enter your password the `echo` command should execute.
-* Set up SSH access:
-  * Run the command `ip -br a | grep UP`, read the ip address listed there.
-  * On your host machine, open a terminal and try running `ssh username@ip-address` where *username* is the username you picked earlier and the *ip-address* is the one you just found.
-  * You should be prompted for your password, after you enter it you will be able to access your vm from your host machine.
-  * If you want to obviate the need to enter the password every time you log in, you can set up SSH-keys.
-    * If you have never set up SSH-keys: 
-      * Run the command `ssh-keygen` in a terminal on your host machine and accept the default values.
-    * If you already have SSH-keys or you just created them using the step above:
-      * If you are not on Windows, run `ssh-copy-id username@ip-address` to copy your keys to the VM.
-      * If you are on Windows, run `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@ip-address "cat >> .ssh/authorized_keys"`
-      * You will be prompted for your password, enter it, and the command should finish.
-      * Try logging in with `ssh username@ip-address` and you should not need to enter your password again.
-* Make the VM headless:
-  * Check back on the updates from the first step. Wait for them to finish.
-  * Once the updates are finished, run `shutdown now`. The VM should shut down and exit.
-  * Open the VM Settings and disable the graphics, the exact settings depends on the VM software you are using.
-  * Most of the time you will be able to keep the graphics off, since you already set up SSH access.
-  * This will lighten the load on your computer since it won't have to render the GUI and will make the VM run faster.
 
 #### Configure your system and send your first email patches
 
@@ -111,6 +93,27 @@ If you see this, you have installed Fedora correctly. Congrats!
     * The content can be whatever you want, whether it be why you are taking this class, your favorite ice cream flavor, or some random fact about yourself.
 * Run `uname -a >> firstname_lastname.txt` to append a line with information about the VM environment you set up to the end of your introduction file.
 * Make a commit out of your changes.
+
+#### Optional VM Configuration
+* Set up SSH access:
+  * Run the command `ip -br a | grep UP`, read the ip address listed there.
+  * On your host machine, open a terminal and try running `ssh username@ip-address` where *username* is the username you picked earlier and the *ip-address* is the one you just found.
+  * You should be prompted for your password, after you enter it you will be able to access your vm from your host machine.
+  * If you want to obviate the need to enter the password every time you log in, you can set up SSH-keys.
+    * If you have never set up SSH-keys: 
+      * Run the command `ssh-keygen` in a terminal on your host machine and accept the default values.
+    * If you already have SSH-keys or you just created them using the step above:
+      * If you are not on Windows, run `ssh-copy-id username@ip-address` to copy your keys to the VM.
+      * If you are on Windows, run `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@ip-address "cat >> .ssh/authorized_keys"`
+      * You will be prompted for your password, enter it, and the command should finish.
+      * Try logging in with `ssh username@ip-address` and you should not need to enter your password again.
+* Make the VM headless:
+  * Check back on the updates from the first step. Wait for them to finish.
+  * Once the updates are finished, run `shutdown now`. The VM should shut down and exit.
+  * Open the VM Settings and disable the graphics, the exact settings depends on the VM software you are using.
+  * Most of the time you will be able to keep the graphics off, since you already set up SSH access.
+  * This will lighten the load on your computer since it won't have to render the GUI and will make the VM run faster.
+
 
 ### Outcomes:
 * Set up your Linux environment for the rest of the class.
