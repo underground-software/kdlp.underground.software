@@ -102,7 +102,7 @@ If you see this, you have completed the basic installation of Fedora correctly. 
     * You can pick your default editor by adding: <pre><code>[core]
         editor = nano # Or which ever editor you prefer
 </code></pre>
-    * Set your identity information by adding: <pre><code>[user]
+    * Set your identity and account information by adding: <pre><code>[user]
 		name = Your Name Here
 		email = YOUR_USERNAME@kdlp.underground.software
 [sendemail]
@@ -120,6 +120,29 @@ If you see this, you have completed the basic installation of Fedora correctly. 
     * The content can be whatever you want, whether it be why you are taking this class, your favorite ice cream flavor, or a fun fact about yourself.
 * Run `uname -a >> firstname_lastname.txt` to append a line with information about the VM environment you set up to the end of your introduction file.
 * Make a commit out of your changes.
+
+#### Check your work
+* While Logged in as your non root user account
+* Install `mutt` a terminal program for viewing email. Run `sudo dnf install -y mutt`
+* Configure your `.muttrc` which lives in `~/.muttrc`, using a text editor (e.g. `nano ~/.muttrc` or `vi ~/.muttrc`).
+    * Set your identity and account information by adding: <pre><code>set realname='Your Name Here'
+set my_username="YOUR_USERNAME"
+set my_password="YOUR_PASSWORD"
+</code></pre>
+    * Set some sane defaults, and configure the server addresses by adding: <pre><code>set spoolfile=
+set record=
+set sort=threads
+set from="$my_username@kdlp.underground.software"
+set smtp_url="smtps://$my_username:$my_password@kdlp.underground.software:465"
+push "<change-folder>pops://$my_username:$my_password@kdlp.underground.software:995"\n
+</code></pre>
+* Open the email list by running the `mutt` command. You can quit by pressing `q` or hitting `ctrl+c`
+* You will see a list of email threads navigate up and down with the arrow keys or `j` and `k`
+* You should see a welcome to the email system message at the top and then all subsequent emails in chronological order.
+* Press enter to view the selected message and press `q` to exit back to the main screen.
+* You should see your patch series including your introduction in the list of messages.
+* If you do, congratulations, you successfully completed the setup. You can shut down the VM and go do something else :)
+* If not, feel free to reach out with questions we are happy to help.
 
 #### Optional VM Configuration
 
