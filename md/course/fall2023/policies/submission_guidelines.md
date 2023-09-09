@@ -93,11 +93,9 @@ Failure to specifically provide this information will result in a 0 grade on you
 
 #### [4] Submitting to the Mailing List
 
-Your patches should be sent to the mailing list for your cohort you were given when you joined the class using the git send-email tool. You will need to configure git send email to be able to send patches from your email account, see [this guide](https://stackoverflow.com/questions/68238912/how-to-configure-and-use-git-send-email-to-work-with-gmail-to-email-patches-to) for instructions if you are using a gmail account.
+Your patches should be sent to the address for the specific assignment. Each assignment will list the appropriate email to use.
 
-Once the configuration is correct, you will invoke git send-email to submit them:
-
-$ git send-email --to=your-cohort@googlegroups.com *.patch
+$ git send-email --to=whatever_assignment@kdlp.underground.software *.patch
 
 $ # send the emails to the mailing list. The list of patch files are passed as arguments
 

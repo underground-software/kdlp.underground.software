@@ -79,7 +79,7 @@ If you see this, you have completed the basic installation of Fedora correctly. 
   * Log out and the login prompt will include the new hostname before the word login (e.g. `joels-fedora-vm login: _`
 * Run a software update:
   * Login with your root account.
-  * Run the command `dnf update`, (this may take a while to complete.)
+  * Run the command `dnf update -y`, (this may take a while to complete.)
   * While you are waiting you can switch to a different console and continue following the steps.
     * Press `ctrl+alt+f2` (on some keyboards you might need a function key to press f2).
     * You can check back on the update any time by pressing `ctrl+alt+f1`.
@@ -120,12 +120,40 @@ If you see this, you have completed the basic installation of Fedora correctly. 
     * The content can be whatever you want, whether it be why you are taking this class, your favorite ice cream flavor, or a fun fact about yourself.
 * Run `uname -a >> firstname_lastname.txt` to append a line with information about the VM environment you set up to the end of your introduction file.
 * Make a commit out of your changes.
+    * By default git will not be tracking changes to newly created files. Add your file to the list that git is tracking with `git add firstname_lastname.txt`.
+    * Make a commit to save this version of the repository so it can be shared. Run `git commit -s`.
+        * the `-s` flag makes git include the `Signed-off-by` DCO line for you automatically.
+    * Git will open an instance of your preferred text editor to let you input a message for the commit.
+        * Put a title containing a short summay of what you did on the first line (e.g. `Introductions: Added introduction for so and so`).
+        * Press enter twice and write a more detailed explanation that will act as the body of the commit.
+        * There should already be a signed off by DCO line for your account at the bottom. If not, add one.
+        * Save your changes and exit the editor to finish the commit.
+    * Check to make sure you see the commit and it looks good by running `git log -p`.
+        * Your new commit should be the top most one, and you should see the title, message, DCO, and difference view containing the changes.
+        * If there is more output than can fit on one screen, git will open a scrolling view that you can maneuver up and down within using the arrow keys. Press `q` to go back to the terminal.
+* Create a patch series with a cover letter out of your commit.
+    * Run the command `git format-patch -1 --cover-letter -v1 --rfc`
+        * `-1` means include the most recent 1 commit
+        * `--cover-letter` means generate a cover letter for the whole patch series with a summary
+        * `-v1` means mark this as the first version of this patch set
+        * `--rfc` means mark these patches as a request for comment. This is required for all intial submissions since they will be recieving peer feedback.
+    * Git will generate two `.patch` files for you.
+    * Edit the file `v1-0000-cover-letter.patch` and write your cover letter.
+        * Follow the directions in the assignment submission guidelines
+        * Don't forget to add the DCO `Signed-off-by` line at the end of they body.
+* Send your patches to the class mailing list.
+    * Run the command `git send-email --to introductions@kdlp.underground.software v1*.patch`
+        * Each assignment will have its own special address to send submissions to. In this case it is `introductions@kdlp.underground.software`
+        * the expression `v1*.patch` will be exapanded by the shell into all file names matchin that pattern (any file whose name starts with `v1` and ends with `.patch`)
+    * Git send email will prompt you to ask whether it should send the emails. Type `a` and hit enter to send them all.
+        * If it is successful, the output should end with `Result: 250` which indicates that the server accepted your emails.
+        * If it does not work. Do not hesistate to reach out and we can help with troubleshooting.
 
 #### Check your work
 * While Logged in as your non root user account
 * Install `mutt` a terminal program for viewing email. Run `sudo dnf install -y mutt`
 * Configure your `.muttrc` which lives in `~/.muttrc`, using a text editor (e.g. `nano ~/.muttrc` or `vi ~/.muttrc`).
-    * Set your identity and account information by adding: <pre><code>set realname='Your Name Here'
+    * Set your identity and account information by adding: <pre><code>set realname="Your Name Here"
 set my_username="YOUR_USERNAME"
 set my_password="YOUR_PASSWORD"
 </code></pre>
@@ -134,37 +162,44 @@ set record=
 set sort=threads
 set from="$my_username@kdlp.underground.software"
 set smtp_url="smtps://$my_username:$my_password@kdlp.underground.software:465"
-push "<change-folder>pops://$my_username:$my_password@kdlp.underground.software:995"\n
+push "&lt;change-folder&gt;pops://$my_username:$my_password@kdlp.underground.software:995"\n
 </code></pre>
 * Open the email list by running the `mutt` command. You can quit by pressing `q` or hitting `ctrl+c`
 * You will see a list of email threads navigate up and down with the arrow keys or `j` and `k`
 * You should see a welcome to the email system message at the top and then all subsequent emails in chronological order.
-* Press enter to view the selected message and press `q` to exit back to the main screen.
+* Press enter to view which message you have highlighted and press `q` to exit back to the main screen. Press the spacebar to scroll to the next page within the email.
 * You should see your patch series including your introduction in the list of messages.
-* If you do, congratulations, you successfully completed the setup. You can shut down the VM and go do something else :)
-* If not, feel free to reach out with questions we are happy to help.
+    * If you do, congratulations, you successfully completed the setup. You can shut down the VM and go do something else :)
+    * If not, feel free to reach out with questions we are happy to help.
+* Once you are finished, you can shut down the vm with the command `sudo poweroff`.
+    * Before running it, you should check back in on the updates running in `tty1`. Press `ctrl+alt+f1` and make sure that the update command is done and you are back in a shell.
+    * If it is finished, switch back to tty2 (`ctrl+alt+f2`) and run the poweroff command.
 
 #### Optional VM Configuration
 
 * Set up SSH access:
-  * Run the command `ip -br a | grep UP`, read the ip address listed there.
-  * On your host machine, open a terminal and try running `ssh username@ip-address` where *username* is the username you picked earlier and the *ip-address* is the one you just found.
-  * You should be prompted for your password, after you enter it you will be able to access your vm from your host machine.
-  * If you want to obviate the need to enter the password every time you log in, you can set up SSH-keys.
-  * Open a terminal on your host machine (`cmd.exe` on windows)
-    * If you have never set up SSH-keys (you might have done it already if you use ssh for github or gitlab):
-      * Run the command `ssh-keygen` in a terminal on your host machine and accept the default values.
+    * While logged in to the machine on the tty, run the command `ip -br a | grep UP`, read the ip address listed there.
+    * On your host machine, open a terminal and try running `ssh username@ip-address` where *username* is the username you picked earlier and the *ip-address* is the one you just found.
+        * The first time you connect to a new server via ssh, ssh will not know the server and will say it cannot establish the authenticity of the machine you are connecting to.
+        * It will ask if you are sure you want to continue connecting. Type `yes` and hit enter.
+        * You will be prompted for your password. This is the password for your account on the VM.
+    * After you enter it you will be able to access your vm from your host machine.
+        * You will be accessing a shell exactly like the tty you get by logging in within the vm window.
+        * You can log out by typing `exit` and hitting enter, or pressing `ctrl+d` just like the tty.
+    * If you want to obviate the need to enter the password every time you log in, you can set up SSH-keys.
+          * Open a terminal on your host machine (`cmd.exe` on windows)
+          * If you have never set up SSH-keys (you might have done it already if you use ssh for github or gitlab):
+          * Run the command `ssh-keygen` in a terminal on your host machine and accept the default values.
     * If you already have SSH-keys or you just created them using the step above:
-      * If you are not on Windows, run `ssh-copy-id username@ip-address` to copy your keys to the VM.
-      * If you are on Windows, run `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@ip-address "cat >> .ssh/authorized_keys"`
-      * You will be prompted for your password, enter it, and the command should finish.
-      * Try logging in with `ssh username@ip-address` and you should not need to enter your password again.
+          * If you are not on Windows, run `ssh-copy-id username@ip-address` to copy your keys to the VM.
+          * If you are on Windows, run `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@ip-address "cat >> .ssh/authorized_keys"`
+          * You will be prompted for your vm password one final time, enter it, and the command should finish.
+    * Try logging in with `ssh username@ip-address` and you should not need to enter your password ever again.
 * Make the VM headless:
-  * Check back on the updates from the first step. Wait for them to finish.
-  * Once the updates are finished, run `shutdown now`. The VM should shut down and exit.
-  * Open the VM Settings and disable the graphical output, the exact settings depends on the VM software you are using.
-  * Most of the time you will be able to keep the graphics off, since you already set up SSH access.
-  * This will lighten the load on your computer since it won't have to render the GUI and will make the VM run faster.
+    * Power down the machine with `sudo poweroff`
+    * Open the VM Settings and disable the graphical output, the exact settings depends on the VM software you are using.
+    * Most of the time you will be able to keep the graphics off, since you already set up SSH access.
+    * This will lighten the load on your computer since it won't have to render the GUI and will make the VM run faster.
 
 
 
