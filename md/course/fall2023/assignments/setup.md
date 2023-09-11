@@ -157,6 +157,7 @@ If you see this, you have completed the basic installation of Fedora correctly. 
 set my_username="YOUR_USERNAME"
 set my_password="YOUR_PASSWORD"
 </code></pre>
+    * Fill in your credentials that you use for the website and your full name.
     * Set some sane defaults, and configure the server addresses by adding: <pre><code>set spoolfile=
 set record=
 set sort=threads
@@ -164,6 +165,7 @@ set from="$my_username@kdlp.underground.software"
 set smtp_url="smtps://$my_username:$my_password@kdlp.underground.software:465"
 push "&lt;change-folder&gt;pops://$my_username:$my_password@kdlp.underground.software:995"\n
 </code></pre>
+    * Copy that block in verbatim, mutt will substitute the variables you set in the previous declarations for you.
 * Open the email list by running the `mutt` command. You can quit by pressing `q` or hitting `ctrl+c`
 * You will see a list of email threads navigate up and down with the arrow keys or `j` and `k`
 * You should see a welcome to the email system message at the top and then all subsequent emails in chronological order.
