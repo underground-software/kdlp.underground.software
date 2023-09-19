@@ -93,7 +93,7 @@ Failure to specifically provide this information will result in a 0 grade on you
 
 #### [4] Submitting to the Mailing List
 
-Your patches should be sent to the address for the specific assignment. Each assignment will list the appropriate email to use.
+Your patches should be sent to the address for the specific assignment. Each assignment will list the appropriate email to use, but in general e0 -> exercise0@kdlp.underground.software, p0 -> programming0@kdlp.underground.software f0 -> final0@kdlp.underground.software and likewise for the subsequent numbers.
 
 $ git send-email --to=whatever_assignment@kdlp.underground.software *.patch
 
