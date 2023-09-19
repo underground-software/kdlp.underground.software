@@ -19,8 +19,8 @@ Linux crash course
 - Most embedded systems
 - Android phones
 - Almost all of the computers powering the internet
-- Not many desktop systems
-  - Unless you count chromebooks
+- Not many home computers
+  - Unless you count chromebooks or the steam deck
 - On kernel.org, freely available
 
 ---
@@ -29,7 +29,7 @@ Linux crash course
 - Linus Torvalds
   - Created the Linux Kernel in 1991 while studying CS at the University of Helsinki as a personal project
   - Originally he supported only his own hardware.
-  - “it probably never will support anything other than AT-harddisks, as that's all I have” [[0]](https://www.cs.cmu.edu/~awb/linux.history.html)
+  - "it probably never will support anything other than AT-harddisks, as that's all I have" [[0]](https://www.cs.cmu.edu/~awb/linux.history.html)
   - Also eventually created git to act as the VCS for the kernel
 - Open source community project
   - Thousands of individual contributors
@@ -51,20 +51,34 @@ Linux crash course
 # Modularity
 - An OS made from many interchangeable components
 - Kernel a (relatively) small piece
-- Distro <=~=> Dependency graph
-- Desktop environment
-- Package manager
-- Default Applications
+- Distribution (Distro) comes with choices for some of these pieces
+  - Desktop environment
+  - Package manager
+  - Default Applications
 
 ---
 
 # Distro vs Distro
-- Difference in package naming conventions
+- Differences in package naming conventions
   - libfoo-dev (apt) vs libfoo-devel (dnf)
-- Difference in filesystem layout
-  - Configs in different directories
-  - /boot/efi/config.txt vs /boot/config.txt
-- Difference in philosophy
+- Differences in target audience
+  - Servers vs desktop computers
+  - Gaming vs Software development
+- Differences in philosophy
+  - Easy to use with sane defaults vs configure it all yourself
+  - FOSS only vs access to proprietary software
+
+---
+
+# Exclusively Open Source
+![fedora logo](images/Linux_Crash_Course/Fedora-logo.png)
+[source](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Fedora-logo.svg/2048px-Fedora-logo.svg.png)
+
+---
+
+# Beginner-friendlyish
+![ubuntu logo](images/Linux_Crash_Course/ubuntu_logo.png)
+[source](https://www.xilinx.com/content/xilinx/en/products/design-tools/embedded-software/ubuntu/_jcr_content/root/parsysFullWidth/xilinxflexibleslab/xilinxflexibleslab-parsys/xilinxcolumns_149128/childParsys-2/xilinximage.img.png/1629757312962.png)
 
 ---
 
@@ -80,18 +94,6 @@ Linux crash course
 
 ---
 
-# Beginner-friendlyish
-![ubuntu logo](images/Linux_Crash_Course/ubuntu_logo.png)
-[source](https://www.xilinx.com/content/xilinx/en/products/design-tools/embedded-software/ubuntu/_jcr_content/root/parsysFullWidth/xilinxflexibleslab/xilinxflexibleslab-parsys/xilinxcolumns_149128/childParsys-2/xilinximage.img.png/1629757312962.png)
-
----
-
-# Exclusively Open Source
-![fedora logo](images/Linux_Crash_Course/Fedora-logo.png)
-[source](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Fedora-logo.svg/2048px-Fedora-logo.svg.png)
-
----
-
 # System Stack Overview
 ![system stack diagram](images/Linux_Crash_Course/system_stack_diagram.png)
 
@@ -104,38 +106,85 @@ Linux crash course
 ---
 
 # Kernel
-![interjection](images/Linux_Crash_Course/interjection.png)
+```
+$ cat /home/rms/interjection.txt
+I'd just like to interject for a moment.  What you're referring to as Linux,
+is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux.
+Linux is not an operating system unto itself, but rather another free component
+of a fully functioning GNU system made useful by the GNU corelibs, shell
+utilities and vital system components comprising a full OS as defined by POSIX.
+
+Many computer users run a modified version of the GNU system every day,
+without realizing it.  Through a peculiar turn of events, the version of GNU
+which is widely used today is often called "Linux", and many of its users are
+not aware that it is basically the GNU system, developed by the GNU Project.
+
+There really is a Linux, and these people are using it, but it is just a
+part of the system they use.  Linux is the kernel: the program in the system
+that allocates the machine's resources to the other programs that you run.
+The kernel is an essential part of an operating system, but useless by itself;
+it can only function in the context of a complete operating system.  Linux is
+normally used in combination with the GNU operating system: the whole system
+is basically GNU with Linux added, or GNU/Linux.  All the so-called "Linux"
+distributions are really distributions of GNU/Linux.
+```
 
 ---
 
 # C Standard Library
 - Syscall wrappers
   - man 2 vs man 3
-![slide 15](images/Linux_Crash_Course/slide15.png)
+```
+$ cat /proc/$$/maps
+561fa56c6000-561fa56f5000 r--p 00000000 00:1f 669281                     /usr/bin/bash
+...
+561fa6d44000-561fa705c000 rw-p 00000000 00:00 0                          [heap]
+...
+7f0275133000-7f0275135000 rw-p 001d1000 00:1f 669212                     /usr/lib64/libc.so.6
+...
+7fffe0211000-7fffe0232000 rw-p 00000000 00:00 0                          [stack]
+```
 
 ---
 
 # Shared Libraries
 - Some examples
-![slide 16](images/Linux_Crash_Course/slide16.png)
+```
+$ cat /proc/$$/maps
+...
+7f027513d000-7f027514b000 r--p 00000000 00:1f 669207                     /usr/lib64/libtinfo.so.6.3
+...
+7f02751ba000-7f02751bc000 rw-p 00033000 00:1f 669209                     /usr/lib64/ld-linux-x86-64.so.2
+...
+```
 
 ---
 
 # Storage Layout
-![storage layout](images/Linux_Crash_Course/storage_layout_slide17.png)
+```
+$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0     11:0    1 1024M  0 rom
+zram0  251:0    0  7.7G  0 disk [SWAP]
+vda    252:0    0   10G  0 disk
+├─vda1 252:1    0    1M  0 part
+├─vda2 252:2    0    1G  0 part /boot
+└─vda3 252:3    0    9G  0 part /home
+                                /
+```
 
 ---
 
 # File system layout (See [FHS](https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.pdf))
-- / → root of file system
-- /root → home folder for root account
-- /bin → command binaries
-- /boot → boot loader files e.g kernel, grub
-- /dev → device files e.g sense-hat 
-- /proc → information about running processes
-- /etc → configuration files
-- /home → location of users’ home folders
-- /lib → libraries
+- `/` → root of file system
+- `/root` → home folder for root account
+- `/bin` → command binaries
+- `/boot` → boot loader files
+- `/dev` → device files
+- `/proc` → information about running processes
+- `/etc` → configuration files
+- `/home` → location of users' home folders
+- `/lib` → libraries
 
 ---
 
