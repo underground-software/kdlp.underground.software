@@ -1,4 +1,4 @@
-#Introduction and course setup
+# Introduction and course setup
 
 Welcome to the class! Setting up a Linux environment is required for the course, and that is your first task should you choose to accept it.
 Use this as an opportunity to introduce yourself, get your feet wet with the email patch submission process we will use for this class.
