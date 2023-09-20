@@ -160,6 +160,7 @@ set my_password="YOUR_PASSWORD"
     * Fill in your credentials that you use for the website and your full name.
     * Set some sane defaults, and configure the server addresses by adding: <pre><code>set spoolfile=
 set record=
+set folder=
 set sort=threads
 set from="$my_username@kdlp.underground.software"
 set smtp_url="smtps://$my_username:$my_password@kdlp.underground.software:465"
