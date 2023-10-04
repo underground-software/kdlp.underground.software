@@ -142,7 +142,7 @@ If you see this, you have completed the basic installation of Fedora correctly. 
         * Follow the directions in the assignment submission guidelines
         * Don't forget to add the DCO `Signed-off-by` line at the end of they body.
 * Send your patches to the class mailing list.
-    * Run the command `git send-email --to introductions@kdlp.underground.software v1*.patch`
+    * Run the command `git send-email --to=introductions@kdlp.underground.software v1*.patch`
         * Each assignment will have its own special address to send submissions to. In this case it is `introductions@kdlp.underground.software`
         * the expression `v1*.patch` will be exapanded by the shell into all file names matchin that pattern (any file whose name starts with `v1` and ends with `.patch`)
     * Git send email will prompt you to ask whether it should send the emails. Type `a` and hit enter to send them all.
