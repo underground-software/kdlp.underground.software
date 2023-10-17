@@ -1,4 +1,4 @@
-**KDLP Spring 2023 Midterm Presentation Guidelines**
+**KDLP Fall 2023 Midterm Presentation Guidelines**
 
 * Overview:
   * Short pre-recorded presentation about research into a topic of your choice
@@ -18,10 +18,9 @@
     * etc
   * What does .config do? How does it interact with the build process for the kernel?
   * What is physical and virtual memory? Why is there a distinction between the two?
-  * What are all the ways that a process running on a cpu could be interrupted and switched to running code in the kernel?
   * What is the history of git? How does it fit into the bigger picture of version control software?
   * Or pick your own!
-* Select a topic and send us your proposal with a short outline by 23:59 02/27/2023 EST
+* Select a topic and submit your proposal with a short outline as soon as possible. The hard due date is at 23:59 Eastern on 10/31/2023
 * Presentation requirements:
   * 10 ± 1 minutes long
   * Must include some sort of visual component:
@@ -30,7 +29,6 @@
     * Etc.
   * Must include some sort of live demo in the terminal
     * Must include discussion of some snippet(s) kernel code that is relevant to your topic
-  * Upload a recording somewhere we can access it (e.g. an unlisted video on youtube and send us a link)
-    * You can use free software like OBS to record your screen or just make a meeting on zoom or google meet where you can share your screen and record it. 
-  * Submit a link to your presentation by 23:59 03/13/2023 EST
-
+  * Present live during class time in the class Jitsi
+    * Share your screen for terminal + visual elements
+    * There will be two presentations per day on L16, L17, L18, L19, and L20
