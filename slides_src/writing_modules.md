@@ -4,48 +4,20 @@ theme: white
 
 # How to Write Kernel Modules
 - Kernel documentation
-  - Hacking index
-  - Driver API
-  - Module building
-  - https://elixir.bootlin.com
+    - Hacking index
+    - Driver API
+    - Module building
 - Source analysis & books
-  - e.g. LDD3
-  - The master documentation is the code
+    - https://elixir.bootlin.com
+    - LDD3
+    - The master documentation is the code
 - Practice!
-
----
-
-# Versions & symbols & parameters
-- Module has to be recompiled for each version of the kernel that it is linked to
-- The Kernel symbol table
-  - Contains address of global kernel items (functions and variables)
-  - New modules can use symbols exported by your module
-  - Module stacking
-- Parameters 
-  - Parameters can be assigned to modules at load time 
-  - Passed by insmod or /etc/modprobe.conf 
-  - Declared in module by module_param macro
-  - module_param_array for array parameters
-
----
-
-# Platform independence
-- Module has to be built with same understanding of target processor as kernel
-- Easier to distribute driver for general distribution by contributing to the mainline kernel
-
----
-
-# Why not stick with userspace?
-- Context switches makes response time slower
-- DMA hassles 
-- IO ports only accessible through system calls
-- The most important drivers can’t be handled in user space
 
 ---
 
 # Hello World Kernel Module
 ```console
-[jsavitz@jsavitz hello] cat hello.c
+$ cat hello.c
 #include <linux/init.h>
 #include <linux/module.h>
 
@@ -61,15 +33,73 @@ static void hello_exit(void)
 {
     printk(KERN_ALERT "Goodbye, cruel world\n");
 }
+
 module_init(hello_init);
 module_exit(hello_exit);
 ```
 
 ---
 
+# We are not in Kansas anymore
+- Goodbye main
+- Goodbye C standard library
+- Goodbye IEEE754
+- Hello ring 0 ([x86_64](https://en.wikipedia.org/wiki/Protection_ring)) / EL1 ([aarch64](https://events.static.linuxfound.org/images/stories/pdf/lcna_co2012_marinas.pdf))
+- Hello asynchronous execution
+- Hello kernel API
+
+---
+
+# Kernelspace vs Userspace
+- Small, fixed-size stack
+- Each mode can have it’s own address space
+- Kernel space handles access to hardware
+- Execution is transferred to kernel space after a system call
+
+---
+
+# Reentrant code
+- Potential confusion: What is called when?
+- Kernel code must be able to run in more than one context
+- Mutexes mandatory
+![reentrant code](images/Modules_Drivers/modules_drivers_slide14.png)
+<https://www.cs.mcgill.ca/~cs573/fall2002/notes/lec273/lecture15/re-ent2.GIF>
+
+---
+
+# Why not stick with userspace?
+- Context switches makes response time slower
+- Access to hardware requires priveledged instructions
+    - The most important drivers can’t be handled in user space
+
+---
+
+# Symbols, Versions & Platform dependence
+- Kernel symbol table
+  - Contains address of global kernel items (functions and variables)
+  - Changes every time the kernel is recompiled
+  - Modules can access symbols already exported by other code
+  - Modules can introduce their own exported symbols
+- A Module must be recompiled for each version of the kernel that wants to link with
+  - Module has to be built with same understanding of target processor as kernel
+  - Easier to distribute driver for general distribution by contributing to the mainline kernel
+
+---
+
+# Compiling Modules (out-of-tree)
+- Develop your code in own folder
+- Compile by referencing the kernel makefile
+- If you build your own kernel, the makefile will already be installed
+- To get the makefile for a kernel from fedora run
+```console
+sudo dnf install kernel-devel-`uname -r`
+````
+
+---
+
 # Hello World Kernel Module continued
 ```console
-[jsavitz@jsavitz hello] cat Makefile
+$ cat Makefile
 obj-m += hello.o
 
 .PHONY: build clean load unload
@@ -84,42 +114,32 @@ load:
     sudo insmod hello.ko
 unload:
     -sudo rmmod hello
--------------------------------------------------
-[jsavitz@jsavitz] dmesg | tail -3
-[1070922.342530] hello: loading out-of-tree module taints kernel.
-[1070922.342635] hello: module verification failed: signature and/or required key missing - tainting kernel
-[1070922.343518] Hello, world
 ```
-
----
-
-# Compiling Modules (out-of-tree)
-- Develop your code in own folder
-- Reference kernel headers as needed
-  - You can install them with:
-```console
-sudo dnf install kernel-headers-`uname -r
-```` 
-- Your Makefile should use the kernel makefile
-  - You can install it using:
-```console
-sudo dnf install kernel-devel-`uname -r
-````
 
 ---
 
 # Loading and Unloading Modules
 - Modules can be added/removed at runtime using insmod and rmmod
-- Adding a module calls its init function, and removing it calls its destroy function.
+- Adding a module calls its init function, and removing it calls its exit function.
+```console
+$ make load
+sudo insmod hello.ko
+$ dmesg -t | tail -3
+hello: loading out-of-tree module taints kernel.
+hello: module verification failed: signature and/or required key missing - tainting kernel
+Hello, world
+$ make unload
+sudo rmmod hello
+$ dmesg | tail -1
+Goodbye, cruel world
+```
 
 ---
 
 # Compiling Modules (in-tree)
 - Add your code directly to the kernel, and add them to the Makefile(s)
-  - Don’t forget to add yourself to MAINTAINERS 
-- Create configuration options
-- Enable your module
 - Compile the kernel
+- Init is called at boot
 
 ---
 
