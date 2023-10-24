@@ -40,7 +40,7 @@ Students will:
 |05| 08 Oct|||[L09](lectures/L09.md)||[L10](lectures/L10.md)|||                             |
 |06| 15 Oct|||[L11](lectures/L11.md)||[L12](lectures/L12.md)|||[P1](assignments/P1.md)      |
 |07| 22 Oct|||[L13](lectures/L13.md)||[L14](lectures/L14.md)|||[E2](assignments/E2.md)      |
-|08| 29 Oct|||[L15](lectures/L15.md)||[L16](lectures/L16.md)|||                             |
+|08| 29 Oct|||[L15](lectures/L15.md)||[L16](lectures/L16.md)|||[Midpoint Presentation](assignments/mid_pres_guide.md)                             |
 |09| 05 Nov|||[L17](lectures/L17.md)||[L18](lectures/L18.md)|||[P2](assignments/P2.md)      |
 |10| 12 Nov|||[L19](lectures/L19.md)||[L20](lectures/L20.md)|||                             |
 |11| 19 Nov|||[L21](lectures/L21.md)||                      |||                             |
