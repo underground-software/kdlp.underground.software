@@ -1002,3 +1002,27 @@ ol > li {
 ol > li::marker {
     content: '0x' counter(count, hex) ': ';
 }
+
+blockquote {
+	position: relative;
+}
+
+blockquote::before {
+	position: absolute;
+	content: open-quote;
+	font-size: 4em;
+	margin-left: -0.6em;
+	margin-top: -0.4em;
+}
+blockquote::after {
+	position: absolute;
+	content: close-quote;
+	font-size: 4em;
+	bottom: 0;
+	right: 0;
+	margin-right: -0.6em;
+	margin-bottom: -0.8em;
+}
+blockquote * {
+	display: inline;
+}
