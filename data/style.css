@@ -40,7 +40,7 @@ h1.title {
 #confusion > img {
 	/*padding-top: 0;
 	margin-top: 0;
-        margin-bottom: 0;*/
+	margin-bottom: 0;*/
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -169,19 +169,19 @@ input.form {
 }
 
 div#cgit a.branch-deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #88ff88;
-    border: solid 1px #007700;
+	color: #000;
+	margin: 0px 0.5em;
+	padding: 0px 0.25em;
+	background-color: #88ff88;
+	border: solid 1px #007700;
 }
 
 div#cgit a.deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #ff8888;
-    border: solid 1px #770000;
+	color: #000;
+	margin: 0px 0.5em;
+	padding: 0px 0.25em;
+	background-color: #ff8888;
+	border: solid 1px #770000;
 }
 
 label {
@@ -192,7 +192,7 @@ label {
 }
 
 button.login.logout[type="submit"] {
-	width:  4.5em;
+	width: 4.5em;
 	height: 1.8em;
 	font-size: 1.5em;
 }
@@ -326,7 +326,7 @@ textarea.game_output::-webkit-scrollbar-button {
 }
 
 textarea.game_output::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 textarea.game_output::-webkit-scrollbar-thumb {
@@ -416,10 +416,10 @@ table.tabs tr {
 }
 
 div#cgit div.footer {
-    margin-top: 0.5em;
-    text-align: center;
-    font-size: 80%;
-    color: #ccc;
+	margin-top: 0.5em;
+	text-align: center;
+	font-size: 80%;
+	color: #ccc;
 }
 
 td form {
@@ -453,7 +453,7 @@ table#header tr:nth-child(2) {
 h1, td.main {
 	display: block;
 	font-size: 2em;
-   	font-weight: bold;
+	font-weight: bold;
 }
 
 
@@ -727,11 +727,11 @@ a.nav {
 	background-color: #eeeeee;
 }
 
-a.nav:first-child  {
+a.nav:first-child {
 	border-left: 0;
 }
 
-a.nav:last-child  {
+a.nav:last-child {
 	border-right: 0;
 }
 
@@ -975,32 +975,32 @@ div#clicker {
 
 
 /* @counter-style hex { */
-/*     system: alphabetic; */
-/*     symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F'; */
-/*     prefix: '0x'; */
-/*     suffix: ' '; */
+/* 	system: alphabetic; */
+/* 	symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F'; */
+/* 	prefix: '0x'; */
+/* 	suffix: ' '; */
 /* } */
 
 /* ol { */
-/*     list-style-type: hex; */
-/*     counter-reset: hex 17; */
+/* 	list-style-type: hex; */
+/* 	counter-reset: hex 17; */
 /* } */
 
 @counter-style hex {
-    system: alphabetic;
-    symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
+	system: alphabetic;
+	symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
 }
 
 ol {
-    counter-reset: count 16;
+	counter-reset: count 16;
 }
 
 ol > li {
-    counter-increment: count;
+	counter-increment: count;
 }
 
 ol > li::marker {
-    content: '0x' counter(count, hex) ': ';
+	content: '0x' counter(count, hex) ': ';
 }
 
 blockquote {
