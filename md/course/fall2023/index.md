@@ -44,8 +44,8 @@ Students will:
 |09| 05 Nov|||[L17](lectures/L17.md)||[L18](lectures/L18.md)|||[P2](assignments/P2.md)      |
 |10| 12 Nov|||[L19](lectures/L19.md)||[L20](lectures/L20.md)|||                             |
 |11| 19 Nov|||[L21](lectures/L21.md)||                      |||                             |
-|12| 26 Nov|||[L22](lectures/L22.md)||[L23](lectures/L24.md)|||[F0](assignments/F0.md)      |
-|13| 03 Dec|||[L24](lectures/L24.md)||[L25](lectures/L25.md)|||                             |
+|12| 26 Nov|||[L22](lectures/L22.md)||[L23](lectures/L24.md)|||                             |
+|13| 03 Dec|||[L24](lectures/L24.md)||[L25](lectures/L25.md)|||[F0](assignments/F0.md)      |
 |14| 10 Dec|||[L26](lectures/L26.md)||[L27](lectures/L27.md)|||                             |
 |15| 17 Dec|||[L28](lectures/L28.md)||                      |||[F1](assignments/F1.md)      |
 
