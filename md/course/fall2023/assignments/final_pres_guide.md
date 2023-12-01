@@ -10,6 +10,11 @@ your understanding of your work,
 be able to explain what you did and why it matters to others,
 and show your thought process when you are faced with a problem.
 
+## OUTCOME
+
+* Utilize the cumulative knowledge one has gained in the course
+
+
 ##### Duration
 
 - Total hard time limit: 20 minutes
