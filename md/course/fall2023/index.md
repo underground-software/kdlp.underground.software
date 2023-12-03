@@ -46,7 +46,7 @@ Students will:
 |11| 19 Nov|||[L21](lectures/L21.md)||                      |||                             |
 |12| 26 Nov|||[L22](lectures/L22.md)||[L23](lectures/L24.md)|||                             |
 |13| 03 Dec|||[L24](lectures/L24.md)||[L25](lectures/L25.md)|||[F0](assignments/F0.md)      |
-|14| 10 Dec|||[L26](lectures/L26.md)||[L27](lectures/L27.md)|||                             |
-|15| 17 Dec|||[L28](lectures/L28.md)||                      |||[F1](assignments/F1.md)      |
+|14| 10 Dec|||[L26](lectures/L26.md)||[L27](lectures/L27.md)|||[F1](assignments/F1.md)      |
+|15| 17 Dec|||[L28](lectures/L28.md)||                      |||[Final Presentation](assignments/final_pres_guide.md)|
 
 [Course Policies](policies/course_policies.md) | [Submission Guidelines](policies/submission_guidelines.md) | [Peer Review Process](policies/peer_review.md)
