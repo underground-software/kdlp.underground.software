@@ -11,6 +11,46 @@ and give the instructors feedback.
 * Demonstrate your technical prowess
 * Connect your work to the bigger picture
 
+### What to present:
+
+- Course reflection and feedback (5-10 mins)
+	- In your own words, what did you learn in this class?
+        - Try and pick 2-3 important topics
+        - How did your work on specific assignments build your understanding?
+	- How does your work fit into the big picture of...?
+		- Your academic career
+		- Your software engineering skill development
+		- Your understanding of open source sofware
+	- What assignments did you particularly enjoy or not enjoy?
+        - Explain why your felt that way
+        - For those you enjoyed, how could you go further?
+        - For those you did not enjoy, how could we improve?
+	- Pick an assignment you struggled with:
+        - How did you overcome your obstacles?
+        - How will your approach differ if you did it again?
+	- Pick and assignment you excelled at:
+		- What made your work exceptional?
+		- Do you have any advice for future students?
+	- You must include some sort of visual component, e.g. slides
+- A live demonstration your work on F1: (10-15 mins)
+	- You must use your initial submission unmodified
+	- You must build, load, test and unload the module
+	- You must show the key features of the module
+- Total presentation length must be 30-35 minutes
+
+- Answer the guiding questions
+	- During your presentation you must present this exact version of F1 as submitted
+	- Like other initial submissions, you will only be graded on the final submission.
+- You must have some visual support for your talking points
+	- This can be a slide deck or something more creative
+- If any of the above are incomplete, discuss what you tried and what you are planning to do next
+- We will give you a small coding challenge based on F1 to complete live during your presentation
+
+
+---
+
+# BIN
+
 ##### Requirements
 
 - Expected duration: 30-35 minutes
@@ -42,12 +82,6 @@ and give the instructors feedback.
 
 **Feedback on the course**
 
-- What assignments did you particularly enjoy or not enjoy? Why?
-- What challenges did you face and how did you overcome them?
-- Are there any assignments you think you did an exceptional job on?
-
-- In your own words, what did you learn in this class?
-- How does your work in this class fit into the big picture?
 
 
 ##### Recommendations
