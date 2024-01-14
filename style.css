@@ -25,6 +25,10 @@ h1.title {
 	margin: auto;
 }
 
+div.kdlp_logo {
+	display: flex;
+	align-items: center;
+}
 
 #course_links {
 	text-align: center;
