@@ -280,9 +280,11 @@ table {
 	h2 {
 		font-size: 2em;
 	}
+
 	h3 {
 		font-size: 1.7em;
 	}
+
 	h4 {
 		font-size: 1.5em;
 	}
@@ -734,9 +736,11 @@ div#cgit table.diff td div.hunk {
 		font-size: 1em;
 
 	}
+
 	div#cgit div.cgit-panel form td.label {
 		font-size: 2em;
 	}
+
 	div#cgit div.cgit-panel form select {
 		font-size: 1em;
 		height: 2em;
@@ -877,9 +881,10 @@ div#cgit table.diff td div.hunk {
 	/* this fixes everything
  	 * don't worry about it haha
  	 */
-	div#cgit td.sha1 {
+	td.sha1 {
 		max-width: 642px;
 	}
+
 	div#cgit div.cgit-panel b {
 		padding: 2px;
 		font-size: 2em;
