@@ -36,16 +36,10 @@ div.logo {
 }
 
 #confusion {
-	/*padding-top: 0;
-	margin-top: 0;
-	margin-bottom: 0;*/
 	margin: 0 auto;
 }
 
 #confusion > img {
-	/*padding-top: 0;
-	margin-top: 0;
-	margin-bottom: 0;*/
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -64,9 +58,9 @@ body {
 	display: block;
 	margin: auto;
 	width: 45vw;
-	/* max-width: 600px; */
 	min-width: 60vw;
 	font-family: courier;
+	border-collapse: collapse;
 }
 
 a {
@@ -95,69 +89,12 @@ table, th, td {
 	padding: 0.5em;
 }
 
-div#cgit div {
-	overflow: auto;
-}
-
-div#cgit div.content table {
-	font-size: small;
-}
-
-
-div#cgit div.content {
-	margin-top: 1em;
-} 
-
-div#cgit span.deletions {
-	color: #800;
-}
-
-div#cgit span.insertions {
-	color: #080;
-}
-
-div#cgit table.diff td div.add {
-	color: green;
-}
-
-div#cgit table.diff td div.del {
-	color: red;
-}
- 
-
 pre {
 	white-space: pre-wrap;
 }
 
 code {
 	background-color: #eeeeee;
-}
-
-form.login input {
-	width: 30em;
-	height: 2em;
-}
-
-table.tabs {
-	border: 1px solid black;
-	border-top: 0;
-}
-
-table.tabs input {
-	width: 10em;
-	height: 100%;
-	font-size: small;
-}
-
-table.tabs input[type="submit"] {
-	height: 100%;
-	width: 5em;
-}
-
-table.tabs form {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
 }
 
 input {
@@ -169,24 +106,84 @@ input {
 	font-family: courier;
 }
 
+input.login.logout[type="submit"] {
+	width: 4.5em;
+	height: 1.8em;
+	font-size: 1.5em;
+}
+
 input.form {
 	float: right;
 }
 
-div#cgit a.branch-deco {
-	color: #000;
-	margin: 0px 0.5em;
-	padding: 0px 0.25em;
-	background-color: #88ff88;
-	border: solid 1px #007700;
+
+form.login input {
+	width: 30em;
+	height: 2em;
 }
 
-div#cgit a.deco {
-	color: #000;
-	margin: 0px 0.5em;
-	padding: 0px 0.25em;
-	background-color: #ff8888;
-	border: solid 1px #770000;
+@counter-style hex {
+	system: alphabetic;
+	symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
+}
+
+ol {
+	counter-reset: count 16;
+}
+
+ol > li {
+	counter-increment: count;
+}
+
+ol > li::marker {
+	content: '0x' counter(count, hex) ': ';
+}
+
+blockquote {
+	position: relative;
+}
+
+blockquote::before {
+	position: absolute;
+	content: open-quote;
+	font-size: 4em;
+	margin-left: -0.6em;
+	margin-top: -0.4em;
+}
+
+blockquote::after {
+	position: absolute;
+	content: close-quote;
+	font-size: 4em;
+	bottom: 0;
+	right: 0;
+	margin-right: -0.6em;
+	margin-bottom: -0.8em;
+}
+
+blockquote * {
+	display: inline;
+}
+
+div.nav {
+	display: flex;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+a.nav {
+	padding: 0.5em;
+	font-size: 1em;
+	border-left: 1px solid black;
+	background-color: #eeeeee;
+}
+
+a.nav:first-child {
+	border-left: 0;
+}
+
+a.nav:last-child {
+	border-right: 0;
 }
 
 label {
@@ -194,12 +191,6 @@ label {
 	font-family: courier;
 	margin: 0.5em;
 	display: flex;
-}
-
-input.login.logout[type="submit"] {
-	width: 4.5em;
-	height: 1.8em;
-	font-size: 1.5em;
 }
 
 table#header input {
@@ -229,7 +220,6 @@ div.logout_left {
 }
 
 div.logout_left td {
-	/*max-width: 500px;*/
 	max-width: 310px;
 	word-wrap: break-word;
 }
@@ -240,6 +230,7 @@ div.logout_right {
 	float: left;
 	border: 1px solid black;
 }
+
 div.logout_right_inner {
 	margin: 5px;
 }
@@ -247,7 +238,6 @@ div.logout_right_inner {
 div#login {
 	height: 13em;
 }
-
 
 input.logout {
 	float: left;
@@ -257,12 +247,6 @@ div.logout_buttons {
 	display: inline-block;
 }
 
-form#renew {
-	margin: 0;
-	display: inline-block;
-	overflow: auto;
-}
-
 form#logout {
 	margin: 0;
 	display: inline-block;
@@ -270,150 +254,137 @@ form#logout {
 
 }
 
-div.game_input {
-	display: flex;
-	align-items: stretch;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
-
-div.fast_game_input {
-	display:inline;
-}
-
-form.multi_game_input, form.fast_game_input {
-	/*border: 1px red solid;*/
-	border: 1px solid #e83d2a;
-
-	display: inline-block;
-	flex: 48%;
-
-	overflow: auto;
-}
-
-form.fast_game_input {
-	margin-bottom: 0;
-	border-bottom: 0;
-}
-
-form.multi_game_input textarea:focus, form.fast_game_input input:focus {
-	outline: 2px solid #e83d2a;
-
-}
-
-textarea {
-	border-radius: 0;
-}
-
-div.game_output {
-	background: black;
-	color: #008F11;
-}
-
-textarea.game_output {
-	padding: 2px;
-	border: 1px solid #008F11;
-	background: black;
-	color: #008F11;
-	
-}
-
-/* source for .game_output color scheme
- * https://www.schemecolor.com/matrix-code-green.php
- */
-textarea.game_output::-webkit-scrollbar {
-	background-color: #003B00;
-}
-
-textarea.game_output::-webkit-scrollbar-button {
-	background-color: #00FF41;
-}
-
-textarea.game_output::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-textarea.game_output::-webkit-scrollbar-thumb {
-	background-color: #00FF41;
-	outline: 1px solid black;
-}
-
-textarea.game_output:focus {
-	outline: none;
-}
-
-div.multi_game_input, div.fast_game_input {
-	padding: 0;
-	width: 100%;
-	display: flex;
-}
-
-form.game_output {
-	margin-bottom: none;
-	display: inline;
-}
-
 div.logout_info {
 	margin: 5px;
 	display: flex;
 }
 
-form.multi_game_input label, form.fast_game_input label{
-}
-
-
-input.fast_game_input {
-	width: 90%;
-	margin: 0.5em;
-}
-
-textarea.game_output {
-	width: 100%;
-	height: 40%;
-	resize: none;
-}
-
-textarea.multi_game_input {
-	width: 90%;
-	height: 6em;
-	resize: none;
-	margin: 0.5em;
-}
-
 table {
 	min-width: 100%;
+	margin: 15px 0;
 }
-table.tabs a {
+
+/* mobile style */
+@media only screen and (max-width: 980px) {
+	body {
+		width: 90vw;
+		margin: 0 auto;
+		min-width: 0px;
+		word-wrap: break-word;
+	}
+
+	p, li, td, th, pre, code {
+		font-size: 24pt;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+	h3 {
+		font-size: 1.7em;
+	}
+	h4 {
+		font-size: 1.5em;
+	}
+}
+
+/* cgit */
+
+div#cgit div {
+	overflow: auto;
+}
+
+div#cgit table {
+	margin: auto;
+}
+
+div#cgit div.content table {
+	font-size: small;
+}
+
+div#cgit div.content {
+	margin-top: 1em;
+}
+
+div#cgit span.deletions {
+	color: #800;
+}
+
+div#cgit span.insertions {
+	color: #080;
+}
+
+div#cgit table.diff td div.add {
+	color: green;
+}
+
+div#cgit table.diff td div.del {
+	color: red;
+}
+
+div#cgit table.tabs {
+	border: 1px solid black;
+	border-top: 0;
+}
+
+div#cgit table.tabs input {
+	width: 10em;
+	height: 100%;
+	font-size: small;
+}
+
+div#cgit table.tabs input[type="submit"] {
+	height: 100%;
+	width: 5em;
+}
+
+div#cgit table.tabs form {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+div#cgit a.branch-deco {
+	color: #000;
+	margin: 0px 0.5em;
+	padding: 0px 0.25em;
+	background-color: #88ff88;
+	border: solid 1px #007700;
+}
+
+div#cgit a.deco {
+	color: #000;
+	margin: 0px 0.5em;
+	padding: 0px 0.25em;
+	background-color: #ff8888;
+	border: solid 1px #770000;
+}
+
+div#cgit table.tabs a {
 	font-size: 100%;
 	margin-left: 1em;
 }
 
-table.tabs a.active {
+div#cgit table.tabs a.active {
 	background-color: lightgrey;
 }
 
 
-table.tabs td {
+div#cgit table.tabs td {
 	padding: 0;
 	width: 40%;
 	border: 0;
 	height: 100%;
 }
 
-table.tabs td:nth-child(2) {
+div#cgit table.tabs td:nth-child(2) {
 	width: 50%;
 }
 
-body {
-	border-collapse: collapse;
-}
-
-table.tabs tr { 
+div#cgit table.tabs tr { 
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	/* flex-wrap: wrap; */
-	/* align-content: stretch; */
 	justify-content: space-between;
 	vertical-align: middle;
 	align-items: center;
@@ -426,11 +397,13 @@ div#cgit div.footer {
 	color: #ccc;
 }
 
-td form {
+div#cgit td form {
 	text-align: center;
 }
 
-td form input, td form select, td form button {
+div#cgit td form input,
+div#cgit td form select,
+div#cgit td form button {
 	margin: 3px;
 }
 
@@ -438,7 +411,7 @@ div#cgit {
 	width: 100%;
 }
 
-table#header tr {
+div#cgit table#header tr {
 	display: flex;
 	flex-direction: row;
 	align-content: flex-start;
@@ -447,40 +420,40 @@ table#header tr {
 	height: 8.1em;
 }
 
-table#header tr:nth-child(2) {
+div#cgit table#header tr:nth-child(2) {
 	padding-top: 10px 0;
 	border-top: 1px solid black;
 	vertical-align: baseline;
 	height: 3em;
 }
 
-h1, td.main {
+div#cgit h1,
+div#cgit td.main {
 	display: block;
 	font-size: 2em;
 	font-weight: bold;
 }
 
-
-
-table {
+div#cgit table {
 	border-collapse: collapse;
 }
 
-table#header td.logo {
+div#cgit table#header td.logo {
 	margin: 0;
 	padding: 0;
 	width: 19%;
 	height: 100%;
 	border: 0;
 }
-table#header td.main {
+
+div#cgit table#header td.main {
 	font-size: 1.5em;
 	flex-flow: column;
 	width: 100%;
 	border: 0;
 }
 
-table#header td.form {
+div#cgit table#header td.form {
 	font-size: 1.5em;
 	height: 90%;
 	display: flex;
@@ -490,46 +463,47 @@ table#header td.form {
 	border: 0;
 }
 
-table#header td.form select {
+div#cgit table#header td.form select {
 	height: 1.5em;
 	width: 6em;
 }
 
-table#header td.form input {
+div#cgit table#header td.form input {
 	height: 1.5;
 	width: 6em;
 }
 
-table#header td.sub {
+div#cgit table#header td.sub {
 	display: flex;
 	flex-flow: column;
 	width: 100%;
 	border: 0;
 }
-table#header td.sub.right {
+
+div#cgit table#header td.sub.right {
 	flex-flow: column;
 	width: 10%;
 	font-style: italic;
 	color: #555555;
 }
 
-ul.pager {
+div#cgit ul.pager {
 	display: flex;
 	justify-content: center;
 	list-style: none;
 	text-align: center;
 }
 
-table a {
+div#cgit table a {
 	text-align: center;
 }
 
-ul.pager li {
+div#cgit ul.pager li {
 	display: inline-block;
 	margin: 0 0.5em;
 }
 
-div.cgit-panel {
+div#cgit div.cgit-panel {
 	border: 1px solid black;
 	float: right;
 	min-width: 0;
@@ -541,49 +515,49 @@ div.cgit-panel {
 	margin-left: -1px;
 }
 
-div.cgit-panel table {
+div#cgit div.cgit-panel table {
 	border: 0;
 	padding: 2px;
 }
 
-div.cgit-panel form {
+div#cgit div.cgit-panel form {
 	padding: 2px;
 }
 
-div.cgit-panel b {
+div#cgit div.cgit-panel b {
 	padding: 2px;
 }
 
-div.cgit-panel td {
+div#cgit div.cgit-panel td {
 	padding: 0;
 	border: 0;
 }
 
-div.cgit-panel td.label {
+div#cgit div.cgit-panel td.label {
 	text-align: right;
 	padding: 2px;
 }
 
-div.cgit-panel td.ctrl {
+div#cgit div.cgit-panel td.ctrl {
 }
 
-div.cgit-panel td.ctrl select {
+div#cgit div.cgit-panel td.ctrl select {
 	width: 100%;
 }
 
 
-table.commit-info {
+div#cgit table.commit-info {
 	min-width: 0;
 	width: 80%;
 }
 
-div.commit-subject,
-div.commit-msg,
-div.diffstat-header,
-div.diffstat-summary,
-div.path,
-table.diffstat,
-table.diffstat-summary {
+div#cgit div.commit-subject,
+div#cgit div.commit-msg,
+div#cgit div.diffstat-header,
+div#cgit div.diffstat-summary,
+div#cgit div.path,
+div#cgit table.diffstat,
+div#cgit table.diffstat-summary {
 	border: 1px solid black;
 	border-bottom: 0;
 	border-top: 0;
@@ -591,7 +565,7 @@ table.diffstat-summary {
 	width: 80%;
 }
 
-div.commit-subject {
+div#cgit div.commit-subject {
 	margin-top: 1em;
 	border: 0;
 	padding: 2px;
@@ -599,13 +573,13 @@ div.commit-subject {
 	font-size: 110%;
 }
 
-td.logmsg {
+div#cgit td.logmsg {
 	padding
 	white-space: break-spaces;
 	padding: 2px;
 	text-align: left;
 }
-div.commit-msg {
+div#cgit div.commit-msg {
 	padding: 2px;
 	background-color: #eeeeee;
 	white-space: break-spaces;
@@ -614,13 +588,13 @@ div.commit-msg {
 	border-top: 1px solid black;
 }
 
-div.diffstat-header {
+div#cgit div.diffstat-header {
 	margin-top: 1em;
 	width: 80%;
 	border: 0;
 }
 
-div.diffstat-header:nth-child(2) {
+div#cgit div.diffstat-header:nth-child(2) {
 	padding-top: 0;
 }
 
@@ -658,13 +632,13 @@ div#cgit table.diffstat td.graph td.rem {
 	background-color: #c55;
 }
 
-div.diffstat-summary {
+div#cgit div.diffstat-summary {
 	padding-top: 1em;
 	border: 0;
 	font-style: italic;
 }
 
-div.path {
+div#cgit div.path {
 	margin-top: 1em;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
@@ -679,7 +653,7 @@ div#cgit a.button {
 	padding: 2px;
 }
 
-table tr.nohover td {
+div#cgit table tr.nohover td {
 	min-height: 0;
 	border: 0;
 	height: 0;
@@ -717,33 +691,14 @@ div#cgit table.diff td div.hunk {
 	color: #009;
 }
 
-div.nav {
-	display: flex;
-	text-align: center;
-	box-sizing: border-box;
-} 
-
-
-a.nav {
-	padding: 0.5em;
-	font-size: 1em;
-	border-left: 1px solid black;
-	background-color: #eeeeee;
-}
-
-a.nav:first-child {
-	border-left: 0;
-}
-
-a.nav:last-child {
-	border-right: 0;
-}
-
 @media only screen and (max-width: 1150px) {
-	table#header td.form select {
+	/* cgit small-screen */
+
+	div#cgit table#header td.form select {
 		height: 1.5em;
 		width: 6em;
 	}
+
 	div#cgit table.tabs form {
 		height: 100%;
 		display: flex;
@@ -752,6 +707,7 @@ a.nav:last-child {
 		margin: 0;
 		padding: 0;
 	}
+
 	div#cgit table.tabs td.form form.right > * {
 		margin: 0;
 		padding: 0;
@@ -786,30 +742,12 @@ a.nav:last-child {
 		height: 2em;
 		width: 10em;
 	}
-	
 }
+
 /* overrides for mobile: keep at bottom */
 @media only screen and (max-width: 980px) {
-	html {
-	}
-	body {
-		width: 90vw;
-		margin: 0 auto;
-		min-width: 0px;
-		word-wrap: break-word;
-	}
-	p, li, td, th, pre, code {
-		font-size: 24pt;
-	}
-	h2 {
-		font-size: 2em;
-	}
-	h3 {
-		font-size: 1.7em;
-	}
-	h4 {
-		font-size: 1.5em;
-	}
+	/* cgit mobile */
+
 	div#cgit img {
 		width: 3.9em;
 	}
@@ -839,7 +777,6 @@ a.nav:last-child {
 		width: 50%;
 	}
 
-
 	div#cgit table.tabs form {
 		height: 100%;
 		display: flex;
@@ -850,7 +787,7 @@ a.nav:last-child {
 
 	div#cgit table.tabs form select,
 	div#cgit table.tabs form input.txt,
-	div#cgit table.tabs form input[type="submit"]{
+	div#cgit table.tabs form input[type="submit"] {
 		margin: 0;
 	}
 
@@ -858,7 +795,6 @@ a.nav:last-child {
 		flex-wrap: wrap;
 		align-items: stretch;
 	}
-
 
 	div#cgit table.tabs a,
 	div#cgit table.tabs td.form form > * {
@@ -873,8 +809,6 @@ a.nav:last-child {
 		padding: 0;
 	}
 
-	div#cgit table.tabs td a {
-	}
 	div#cgit table.tabs td.form form > input[type="submit"],
 	div#cgit table.tabs td.form form > button,
 	div#cgit table#header td.form form > {
@@ -893,8 +827,8 @@ a.nav:last-child {
 	div#cgit table.tabs a::after {
 		content: '\a';
 		white-space: pre;
-	}	
-	
+	}
+
 	div#cgit {
 		width: 100%;
 		margin: 0 auto;
@@ -943,15 +877,15 @@ a.nav:last-child {
 	/* this fixes everything
  	 * don't worry about it haha
  	 */
-	td.sha1 {
+	div#cgit td.sha1 {
 		max-width: 642px;
 	}
-	div.cgit-panel b {
+	div#cgit div.cgit-panel b {
 		padding: 2px;
 		font-size: 2em;
 	}
 
-	div.nav {
+	div#cgit div.nav {
 		display: flex;
 		width: 100%;
 		align-items: stretch;
@@ -959,74 +893,11 @@ a.nav:last-child {
 		flex-direction: row;
 		text-align: center;
 		box-sizing: border-box;
-	} 
+	}
 
-	a.nav {
+	div#cgit a.nav {
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
 		font-size: 3em;
 	}
-}
-
-/* for clicker */
-
-div#clicker {
-	display: flex;
-	justify-content: center;
-	collapse-border: border-collapse;
-	box-sizing: border-box;
-}
-
-
-/* @counter-style hex { */
-/* 	system: alphabetic; */
-/* 	symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F'; */
-/* 	prefix: '0x'; */
-/* 	suffix: ' '; */
-/* } */
-
-/* ol { */
-/* 	list-style-type: hex; */
-/* 	counter-reset: hex 17; */
-/* } */
-
-@counter-style hex {
-	system: alphabetic;
-	symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' 'E' 'F';
-}
-
-ol {
-	counter-reset: count 16;
-}
-
-ol > li {
-	counter-increment: count;
-}
-
-ol > li::marker {
-	content: '0x' counter(count, hex) ': ';
-}
-
-blockquote {
-	position: relative;
-}
-
-blockquote::before {
-	position: absolute;
-	content: open-quote;
-	font-size: 4em;
-	margin-left: -0.6em;
-	margin-top: -0.4em;
-}
-blockquote::after {
-	position: absolute;
-	content: close-quote;
-	font-size: 4em;
-	bottom: 0;
-	right: 0;
-	margin-right: -0.6em;
-	margin-bottom: -0.8em;
-}
-blockquote * {
-	display: inline;
 }
