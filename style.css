@@ -169,7 +169,6 @@ a.nav:last-child {
 /* Tables */
 table {
 	min-width: 100%;
-	margin: 15px 0;
 	border-collapse: collapse;
 }
 
@@ -215,17 +214,428 @@ li {
 /* Screen size adjustments */
 @media only screen and (max-width: 1365px) {
 	html, body {
-		margin:2.5% 5% 2.5% 5%;
+		margin: 2.5% 5% 2.5% 5%;
 	}
 }
 
 @media only screen and (max-width: 500px) {
 	html, body {
-		margin:2% 1.5% 2% 1.5%;
+		margin: 2% 1.5% 2% 1.5%;
 	}
 }
 @media only screen and (max-width: 370px) {
 	html, body {
-		margin:2% 1% 2% 1%;
+		margin: 2% 1% 2% 1%;
 	}
+}
+
+/* Nightmare (cgit) */
+
+#cgit {
+	margin: 1rem 0;
+}
+
+#cgit > #header > tbody > tr:first-child {
+	display: none;
+}
+
+#cgit div {
+	overflow: auto;
+}
+
+#cgit table {
+	margin: auto;
+}
+
+#cgit div.content table {
+	font-size: small;
+}
+
+#cgit div.content {
+	margin-top: 1em;
+}
+
+#cgit span.deletions {
+	color: #800;
+}
+
+#cgit span.insertions {
+	color: #080;
+}
+
+#cgit table.diff td div.add {
+	color: green;
+}
+
+#cgit table.diff td div.del {
+	color: red;
+}
+
+#cgit table.tabs {
+	border: 1px solid black;
+	border-top: 0;
+}
+
+#cgit table.tabs input {
+	width: 10em;
+	height: 100%;
+	font-size: small;
+}
+
+#cgit table.tabs input[type="submit"] {
+	height: 100%;
+	width: 5em;
+}
+
+#cgit table.tabs form {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#cgit a.branch-deco {
+	color: #000;
+	margin: 0px 0.5em;
+	padding: 0px 0.25em;
+	background-color: #88ff88;
+	border: solid 1px #007700;
+}
+
+#cgit a.deco {
+	color: #000;
+	margin: 0px 0.5em;
+	padding: 0px 0.25em;
+	background-color: #ff8888;
+	border: solid 1px #770000;
+}
+
+#cgit table.tabs a {
+	font-size: 100%;
+	margin-left: 1em;
+}
+
+#cgit table.tabs a.active {
+	background-color: lightgrey;
+}
+
+
+#cgit table.tabs td {
+	padding: 0;
+	width: 40%;
+	border: 0;
+	height: 100%;
+}
+
+#cgit table.tabs td:nth-child(2) {
+	width: 50%;
+}
+
+#cgit table.tabs tr {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	vertical-align: middle;
+	align-items: center;
+}
+
+#cgit div.footer {
+	margin-top: 0.5em;
+	text-align: center;
+	font-size: 80%;
+	color: #ccc;
+}
+
+#cgit td form {
+	text-align: center;
+}
+
+#cgit td form input,
+#cgit td form select,
+#cgit td form button {
+	margin: 3px;
+}
+
+#cgit {
+	width: 100%;
+}
+
+#cgit table#header tr {
+	display: flex;
+	flex-direction: row;
+	align-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 8.1em;
+}
+
+#cgit table#header tr:nth-child(2) {
+	padding-top: 10px 0;
+	border-top: 1px solid black;
+	vertical-align: baseline;
+	height: 3em;
+}
+
+#cgit h1,
+#cgit td.main {
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#cgit table {
+	border-collapse: collapse;
+}
+
+#cgit table#header td.logo {
+	margin: 0;
+	padding: 0;
+	width: 19%;
+	height: 100%;
+	border: 0;
+}
+
+#cgit table#header td.main {
+	font-size: 1.5em;
+	flex-flow: column;
+	width: 100%;
+	border: 0;
+}
+
+#cgit table#header td.form {
+	font-size: 1.5em;
+	height: 90%;
+	display: flex;
+	flex-flow: column;
+	width: 20%;
+	justify-content: center;
+	border: 0;
+}
+
+#cgit table#header td.form select {
+	height: 1.5em;
+	width: 6em;
+}
+
+#cgit table#header td.form input {
+	height: 1.5;
+	width: 6em;
+}
+
+#cgit table#header td.sub {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	border: 0;
+}
+
+#cgit table#header td.sub.right {
+	flex-flow: column;
+	width: 10%;
+	font-style: italic;
+	color: #555555;
+}
+
+#cgit ul.pager {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	text-align: center;
+}
+
+#cgit table a {
+	text-align: center;
+}
+
+#cgit ul.pager li {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+#cgit div.cgit-panel {
+	border: 1px solid black;
+	float: right;
+	min-width: 0;
+	width: 19.0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	margin-left: -1px;
+}
+
+#cgit div.cgit-panel table {
+	border: 0;
+	padding: 2px;
+}
+
+#cgit div.cgit-panel form {
+	padding: 2px;
+}
+
+#cgit div.cgit-panel b {
+	padding: 2px;
+}
+
+#cgit div.cgit-panel td {
+	padding: 0;
+	border: 0;
+}
+
+#cgit div.cgit-panel td.label {
+	text-align: right;
+	padding: 2px;
+}
+
+#cgit div.cgit-panel td.ctrl {
+}
+
+#cgit div.cgit-panel td.ctrl select {
+	width: 100%;
+}
+
+
+#cgit table.commit-info {
+	min-width: 0;
+	width: 80%;
+}
+
+#cgit div.commit-subject,
+#cgit div.commit-msg,
+#cgit div.diffstat-header,
+#cgit div.diffstat-summary,
+#cgit div.path,
+#cgit table.diffstat,
+#cgit table.diffstat-summary {
+	border: 1px solid black;
+	border-bottom: 0;
+	border-top: 0;
+	box-sizing: border-box;
+	width: 80%;
+}
+
+#cgit div.commit-subject {
+	margin-top: 1em;
+	border: 0;
+	padding: 2px;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+#cgit td.logmsg {
+	padding
+	white-space: break-spaces;
+	padding: 2px;
+	text-align: left;
+}
+#cgit div.commit-msg {
+	padding: 2px;
+	background-color: #eeeeee;
+	white-space: break-spaces;
+	text-align: left;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+#cgit div.diffstat-header {
+	margin-top: 1em;
+	width: 80%;
+	border: 0;
+}
+
+#cgit div.diffstat-header:nth-child(2) {
+	padding-top: 0;
+}
+
+#cgit table.diffstat {
+	text-align: center;
+	min-width: 0;
+	overflow-x: visible;
+	overflow-wrap: break-word;
+	max-width: 80%
+}
+
+#cgit table.diffstat td.mode {
+	width: 15%;
+}
+
+#cgit table.diffstat td.graph {
+	width: 20%;
+}
+
+#cgit table.diffstat td.graph td {
+	padding: 0px;
+	border: 0px;
+	height: 7pt;
+}
+
+#cgit table.diffstat td.right {
+	width: 6%;
+}
+
+#cgit table.diffstat td.graph td.add {
+	background-color: #5c5;
+}
+
+#cgit table.diffstat td.graph td.rem {
+	background-color: #c55;
+}
+
+#cgit div.diffstat-summary {
+	padding-top: 1em;
+	border: 0;
+	font-style: italic;
+}
+
+#cgit div.path {
+	margin-top: 1em;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100%
+}
+
+#cgit table.list {
+	text-align: center;
+}
+
+#cgit a.button {
+	padding: 2px;
+}
+
+#cgit table tr.nohover td {
+	min-height: 0;
+	border: 0;
+	height: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+#cgit span.age-mins {
+	font-weight: bold;
+	color: #080;
+}
+
+#cgit span.age-hours {
+	color: #080;
+}
+
+#cgit span.age-days {
+	color: #040;
+}
+
+#cgit span.age-weeks {
+	color: #444;
+}
+
+#cgit span.age-months {
+	color: #888;
+}
+
+#cgit span.age-years {
+	color: #bbb;
+}
+
+#cgit table.diff td div.hunk {
+	color: #009;
 }
