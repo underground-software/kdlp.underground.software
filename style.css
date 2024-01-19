@@ -232,9 +232,6 @@ li {
 }
 
 /* Cgit */
-	/* Self explanatory selections are left uncommented */
-	/* Some selections are crazy, and are thus commented! */
-
 #cgit {
 	margin: 1rem 0;
 }
@@ -255,14 +252,14 @@ li {
 	border-width: 0;
 }
 
-#cgit > .content {
-	margin: 1rem 0;
-}
-
 #cgit > .footer {
 	display: flex;
 	justify-content: center;
 	color: #ccc;
+}
+
+#cgit .footer a:first-child {
+	margin-left: .5em;
 }
 
 	/* remove border between columns in header & tabs */
@@ -273,6 +270,16 @@ li {
 	/* fix double border between header & tabs */
 #cgit > #header, #cgit > * .sub {
 	border-bottom: 0;
+}
+
+#cgit > .content {
+	margin: 1rem 0;
+}
+
+#cgit > .content > .commit-info,
+#cgit > .content > .commit-msg,
+#cgit > .content > .diffstat-summary {
+	margin-bottom: 1rem;
 }
 
 	/* Decorations next to commit messages */
@@ -292,4 +299,84 @@ li {
 #cgit > * .branch-deco {
 	background-color: #88ff88;
 	border-color: #007700;
+}
+
+#cgit > * .cgit-panel {
+	display: flex;
+	flex-direction: column;
+	float: right;
+	margin-left: 1rem;
+}
+
+#cgit > * .cgit-panel > b {
+	display:flex;
+	justify-content: center;
+	margin-bottom: .5rem;
+}
+
+#cgit > * .cgit-panel > * tr:last-child, #cgit > * .cgit-panel > * tr:first-child {
+	display: none;
+}
+
+#cgit > * .cgit-panel > * .label, #cgit > * .cgit-panel > * .ctrl {
+	border: 0;
+}
+
+#cgit > * .cgit-panel > * .ctrl {
+	float: right;
+}
+
+#cgit > * .commit-info {
+	min-width: 0;
+}
+
+#cgit > * .diffstat > * .mode,
+#cgit > * .list > * .ls-mode,
+#cgit > * .diffstat > * .right {
+	width: 1%;
+	white-space: nowrap;
+}
+
+#cgit > * .diffstat > * .graph > * td {
+	padding: 0;
+	margin: 0;
+	height: .5rem;
+}
+
+#cgit > * tr > .add {
+	background-color: #5c5;
+}
+
+#cgit > * .rem {
+	background-color: #c55;
+}
+
+#cgit .commit-subject {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+#cgit .commit-subject,
+#cgit .diffstat {
+	margin-bottom: .2rem;
+}
+
+#cgit .commit-msg {
+	padding: 2px;
+	background-color: #eeeeee;
+	white-space: break-spaces;
+	text-align: left;
+	border: 1px solid black;
+}
+
+#cgit .diff .add {
+	color: #5c5;
+}
+
+#cgit .diff .hunk {
+	color: blue;
+}
+
+#cgit .diff .del {
+	color: #c55;
 }
