@@ -10,4 +10,11 @@ A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join)
 
 Q: Who is behind this program?
 
-A: [These people](who.md)
+A: These people:
+
+|Name|Role|Contact|
+|--|--|--|
+|Joel Savitz|Software Engineer & Program Lead| [Joel's Website](https://joelsavitz.com)|
+|Julia Denham|Software Engineer & Program Manager | [Julia's Linkedin](https://www.linkedin.com/in/julia-denham-4828a5120/)|
+|Charles "Charlie" Mirabile|Associate Software Engineer & Content Lead| [Charlie's Github](https://github.com/charliemirabile)|
+|Denis Aleksandrov|TA & Intern|[Denis' GitHub](https://github.com/aleksandrov-denis)|
