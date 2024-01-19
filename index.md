@@ -30,6 +30,22 @@ Current offerings:
  - We work with the Miner School of Computer and Information Sciences at the University of Massachuesetts Lowell, to offer [our course to their students](https://www.uml.edu/catalog/courses/COMP/3085) on an ongoing basis
  - We are partnered with the Linux Foundation's LFX mentorship platform to offer our course as a [mentorship](https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957).
 
+Past Work:
+
+ - Spoke at Linux conventions:
+   - [LPC 2023](https://lpc.events/event/17/contributions/1554/)
+   - [Fosdem 2023](https://archive.fosdem.org/2023/schedule/event/kdlp_kernel_devel_learning_pipeline/)
+   - [devconf.cz 2023](https://youtu.be/hbvr9AsHikk)
+   - [devconf.us 2021](https://devconfus2021.sched.com/event/lkgk/fedora-linux-for-the-raspberry-pi-platform)
+ - Upstream patches:
+   - [AT_EMPTY_PATH for linkat syscall](https://lore.kernel.org/all/20231110170615.2168372-1-cmirabil@redhat.com/)
+   - [flags for io_uring linkat support](https://lore.kernel.org/all/20231120105545.1209530-1-cmirabil@redhat.com/)
+   - [nolibc getauxval](https://lore.kernel.org/all/20240116181147.2230944-1-cmirabil@redhat.com/)
+   - [Raspberry Pi Sensehat Driver](https://lore.kernel.org/lkml/20220823174158.45579-1-cmirabil@redhat.com/)
+   - [RPi.GPIO2 python library](https://pypi.org/project/RPi.GPIO2/)
+   - [linux libgpiod library](https://lore.kernel.org/linux-gpio/20191203192305.31722-1-jsavitz@redhat.com/)
+   - [vchiq_arm](https://lore.kernel.org/all/20211014223230.451659-1-mguma@redhat.com/)
+
 Future Plans:
 
  - Scale our program - offer it at more universities
