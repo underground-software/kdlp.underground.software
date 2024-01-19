@@ -1,6 +1,6 @@
 ### Frequently Asked Questions (FAQ):
 
-Q: How do I apply for the program?
+Q: How do I enroll in the "Introduction to Linux Kernel Development" course?
 
 A: Unless this program is offered at your university, apply for Introduction to Linux Kernel Development via [LFX](https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957).
 
