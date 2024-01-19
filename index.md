@@ -4,12 +4,14 @@ The Kernel Development Learning Pipeline (KDLP) program aims to create a compreh
 
 ### Mission statement
 
-Throughout the industry, we have observed a shortage of qualified entry-level software engineers focused on the low-level niche, and especially within the sub-niche of the Linux kernel. As young, novice software engineers, we noticed this problem, and we quickly became aware that we were far from the only ones to do so. Engineers and managers of all levels within our industry niche have observed -- both privately and publicly -- that we must bring new talent into these spaces, and we must do so urgently. We have seen firsthand among the many talented and experienced engineers firsthand and we have benefited greatly from their guidance and mentorship, but we know that this opportunity will not last forever. Time spares no one, not even the engineers from the days of Digital Equipment Corporation.
+Throughout the industry, there is a shortage of qualified entry-level software engineers focused on systems programming, especially within the niche of developing for the Linux kernel.
+As junior software engineers ourselves, this quickly became evident to us, and we are not the only people concerned about it.
 
-We have come to understand the invaluable and non-quantifiable nature of the tribal knowledge that exists distributed among the great engineers of our industry, and we believe that we must act quickly to enable them to pass on the torch, to strengthen the next link of the great chain of our relatively young but quickly maturing industry.
+Engineers and managers of all levels within our industry niche have observed that we must bring new talent into these spaces, and we must do so urgently.
+Time spares no one, not even the most legendary programmers of yore, and if we do not identify and train the next generation, there will be no one to carry the torch of systems programming.
 
-With this understanding, we have created the Kernel Development Learning Pipeline, a program to bridge the gaps between academia and industry, between the novice and the legend, between the past and the future.
-
+We have had the chance to work with many talented and experienced engineers firsthand, and we have benefited greatly from their guidance and mentorship, but we know that this opportunity will not last forever.
+In response, we have created the Kernel Development Learning Pipeline, a program to bridge the gaps between academia and industry, between the novice and the legend, between the past and the future.
 
 ### More detail
 
