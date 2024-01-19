@@ -236,7 +236,7 @@ li {
 	margin: 1rem 0;
 }
 
-#cgit > * .logo {
+#cgit .logo {
 	display: none;
 }
 	/* Search bar */
@@ -268,7 +268,7 @@ li {
 }
 
 	/* fix double border between header & tabs */
-#cgit > #header, #cgit > * .sub {
+#cgit > #header, #cgit .sub {
 	border-bottom: 0;
 }
 
@@ -283,7 +283,7 @@ li {
 }
 
 	/* Decorations next to commit messages */
-#cgit > * .decoration > a {
+#cgit .decoration > a {
 	margin: 0 .5em;
 	padding: 0 .25em;
 	border: solid 1px;
@@ -291,63 +291,63 @@ li {
 	text-decoration: none;
 }
 	/* HEAD decoration */
-#cgit > * .deco {
+#cgit .deco {
 	background-color: #ff8888;
 	border-color: #770000;
 }
 	/* Branch decoration */
-#cgit > * .branch-deco {
+#cgit .branch-deco {
 	background-color: #88ff88;
 	border-color: #007700;
 }
 
-#cgit > * .cgit-panel {
+#cgit .cgit-panel {
 	display: flex;
 	flex-direction: column;
 	float: right;
 	margin-left: 1rem;
 }
 
-#cgit > * .cgit-panel > b {
+#cgit .cgit-panel > b {
 	display:flex;
 	justify-content: center;
 	margin-bottom: .5rem;
 }
 
-#cgit > * .cgit-panel > * tr:last-child, #cgit > * .cgit-panel > * tr:first-child {
+#cgit .cgit-panel tr:last-child, #cgit .cgit-panel tr:first-child {
 	display: none;
 }
 
-#cgit > * .cgit-panel > * .label, #cgit > * .cgit-panel > * .ctrl {
+#cgit .cgit-panel .label, #cgit .cgit-panel .ctrl {
 	border: 0;
 }
 
-#cgit > * .cgit-panel > * .ctrl {
+#cgit .cgit-panel .ctrl {
 	float: right;
 }
 
-#cgit > * .commit-info {
+#cgit .commit-info {
 	min-width: 0;
 }
 
-#cgit > * .diffstat > * .mode,
-#cgit > * .list > * .ls-mode,
-#cgit > * .diffstat > * .right {
+#cgit .diffstat .mode,
+#cgit .list .ls-mode,
+#cgit .diffstat .right {
 	width: 1%;
 	white-space: nowrap;
 }
 
-#cgit > * .diffstat > * .graph > * td {
+#cgit .diffstat .graph td {
 	padding: 0;
 	margin: 0;
 	height: .5rem;
 }
 
-#cgit > * tr > .add {
+#cgit tr > .add {
 	background-color: #5c5;
 }
 
-#cgit > * .rem {
+#cgit .rem {
 	background-color: #c55;
 }
 
