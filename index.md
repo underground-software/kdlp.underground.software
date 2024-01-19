@@ -14,21 +14,6 @@ We have pulled together this program from scratch over the past few years, itera
 
 As an established program, we plan to continue to scale our program and strengthen our partnerships, including a recent one with the Linux Foundation, in order to bring Linux kernel and low-level software engineering education to a larger audience and global talent pool.
 
-### Frequently Asked Questions (FAQ):
-
-Q: How do I apply for the program?
-
-A: Unless this program is offered at your university, apply for Introduction to Linux Kernel Development via [LFX](https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957).
-
-Q: How can I stay informed about this program?
-
-A: [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join) to recieve our quarterly newsletter.
-
-Q: Who is behind this program?
-
-A: [These people](who.md)
-
-
 ### Fun fact
 
 You can view this website in a CLI browser (such as [lynx](https://lynx.invisible-island.net/lynx2.8.9/index.html))
