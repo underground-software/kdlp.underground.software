@@ -16,4 +16,4 @@ As an established program, we plan to continue to scale our program and strength
 
 ### Fun fact
 
-You can view this website in a CLI browser (such as [lynx](https://lynx.invisible-island.net/lynx2.8.9/index.html))
+You can view this website in a CLI browser (such as [lynx](https://lynx.invisible-island.net/lynx2.8.9/index.html)).
