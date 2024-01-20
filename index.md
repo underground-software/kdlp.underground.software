@@ -5,13 +5,15 @@ The Kernel Development Learning Pipeline (KDLP) program aims to create a compreh
 ### Mission statement
 
 Throughout the industry, there is a shortage of qualified entry-level software engineers focused on systems programming, especially within the niche of developing for the Linux kernel.
+
 As junior software engineers ourselves, this quickly became evident to us, and we are not the only people concerned about it.
-
 Engineers and managers of all levels within our industry niche have observed that we must bring new talent into these spaces, and we must do so urgently.
-Time spares no one, not even the most legendary programmers of yore, and if we do not identify and train the next generation, there will be no one to carry the torch of systems programming.
 
+Time spares no one, not even the most legendary programmers of yore, and if we do not identify and train the next generation,
+there will be no one to carry the torch of systems programming.
 We have had the chance to work with many talented and experienced engineers firsthand, and we have benefited greatly from their guidance and mentorship, but we know that this opportunity will not last forever.
-In response, we have created the Kernel Development Learning Pipeline, a program to bridge the gaps between academia and industry, between the novice and the legend, between the past and the future.
+
+In response, we have created the Kernel Development Learning Pipeline a program to bridge the gaps between academia and industry, between the novice and the legend, between the past and the future.
 
 ### More detail
 
