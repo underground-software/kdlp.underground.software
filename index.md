@@ -37,7 +37,7 @@ Past Work:
  - Spoke at Linux conventions:
     - [LPC 2023](https://lpc.events/event/17/contributions/1554/)
     - [Fosdem 2023](https://archive.fosdem.org/2023/schedule/event/kdlp_kernel_devel_learning_pipeline/)
-    - [devconf.cz 2023](https://youtu.be/hbvr9AsHikk)
+    - [devconf.cz 2023](https://devconfcz2023.sched.com/event/1MYmM/kernel-development-learning-pipeline-kdlp)
     - [devconf.us 2021](https://devconfus2021.sched.com/event/lkgk/fedora-linux-for-the-raspberry-pi-platform)
   - Upstream patches:
     - [AT_EMPTY_PATH for linkat syscall](https://lore.kernel.org/all/20231110170615.2168372-1-cmirabil@redhat.com/)
