@@ -278,6 +278,7 @@ li {
 
 #cgit > .content > .commit-info,
 #cgit > .content > .commit-msg,
+#cgit > .content > .cgit-panel,
 #cgit > .content > .diffstat-summary {
 	margin-bottom: 1rem;
 }
@@ -326,7 +327,8 @@ li {
 	float: right;
 }
 
-#cgit .commit-info {
+#cgit .commit-info,
+#cgit .diffstat {
 	min-width: 0;
 }
 
