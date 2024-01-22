@@ -40,7 +40,6 @@ pre > code {
 }
 
 pre {
-	/* `pre`s dont look great on mobile quite yet.*/
 	font: inherit;
 	width: fit-content;
 	margin: 1em;
