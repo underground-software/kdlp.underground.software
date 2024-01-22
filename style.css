@@ -227,6 +227,14 @@ li {
 		margin: 1%;
 	}
 }
+
+	/* Makes the course calendar completely visible, but hard to navigate */
+@media only screen and (max-width: 470px) {
+	table {
+		font-size: .75rem;
+	}
+}
+
 @media only screen and (max-width: 370px) {
 	html, body {
 		margin: .5%;
