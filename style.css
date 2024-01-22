@@ -57,6 +57,7 @@ a:visited {
 img {
 	display: block;
 	margin: auto;
+	max-width:100%;
 }
 
 h1 {
@@ -209,6 +210,10 @@ li > p {
 	padding: 0;
 }
 
+#confusion > img {
+	padding-top: 1rem;
+}
+
 li {
 	padding-top: .4rem;
 }
@@ -216,18 +221,18 @@ li {
 /* Screen size adjustments */
 @media only screen and (max-width: 1365px) {
 	html, body {
-		margin: 2.5% 5% 2.5% 5%;
+		margin: 2.5% 5%;
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 720px) {
 	html, body {
-		margin: 2% 1.5% 2% 1.5%;
+		margin: 1%;
 	}
 }
 @media only screen and (max-width: 370px) {
 	html, body {
-		margin: 2% 1% 2% 1%;
+		margin: .5%;
 	}
 }
 
