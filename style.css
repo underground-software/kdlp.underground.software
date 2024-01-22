@@ -100,9 +100,11 @@ button {
 	font: inherit;
 }
 
+#confusion > img {
+	padding-top: 1rem;
+}
 
 /* Login page */
-
 #login {
 	margin: 1em 0em 1em 0em;
 }
@@ -210,10 +212,6 @@ li > p {
 	padding: 0;
 }
 
-#confusion > img {
-	padding-top: 1rem;
-}
-
 li {
 	padding-top: .4rem;
 }
@@ -307,6 +305,7 @@ li {
 	border-color: #007700;
 }
 
+/* `diff options` panel */
 #cgit .cgit-panel {
 	display: flex;
 	flex-direction: column;
@@ -332,11 +331,13 @@ li {
 	float: right;
 }
 
+/* diff statistics, general commit overview + diff page stuff */
 #cgit .commit-info,
 #cgit .diffstat {
 	min-width: 0;
 }
 
+	/* Make columns in diffstat panel take up as little space as necessary */
 #cgit .diffstat .mode,
 #cgit .list .ls-mode,
 #cgit .diffstat .right {
