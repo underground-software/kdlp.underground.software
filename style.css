@@ -349,6 +349,7 @@ li {
 	padding: 0;
 	margin: 0;
 	height: .5rem;
+	border-width: 0;
 }
 
 #cgit tr > .add {
