@@ -240,6 +240,9 @@ li {
 	body {
 		margin: .5rem 1%;
 	}
+	h1.title {
+		font-size: 1.8rem;
+	}
 }
 
 /* Cgit */
