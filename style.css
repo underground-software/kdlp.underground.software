@@ -105,23 +105,38 @@ button {
 	padding-top: 1rem;
 }
 
-/* Login page */
-#login {
-	margin: 1em 0em 1em 0em;
+/* Login/logout/register page */
+#login, #register {
+	margin: 1em 0;
 }
 
-#login > label {
+#login label,
+#register label {
 	font-size: 1.5em;
 	margin: .5em;
 }
 
-#login > input {
+#login input,
+#register input {
 	font-size: 1.4em;
 	margin: 1em;
 }
 
-#login > button {
+#login button,
+#register button {
 	margin-left: 2em;
+}
+
+#register button {
+	margin-bottom: .5rem;
+}
+
+.logout-info {
+	margin-top: .5rem;
+}
+
+.logout_buttons {
+	margin-bottom: .5rem;
 }
 
 /* Title + Navbar */
