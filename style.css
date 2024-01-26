@@ -293,6 +293,7 @@ li {
 #cgit > .footer {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	color: #ccc;
 }
 
