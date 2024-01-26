@@ -281,9 +281,13 @@ li {
 	/* Tabs (e.g. `summary` `refs` `log` `tree` ... links when in a repo,
 	`index` link on main page.) */
 #cgit > table.tabs > tbody > tr > td:first-child {
-	justify-content: space-around;
+	justify-content: space-between;
 	display: flex;
 	border-width: 0;
+}
+
+#cgit > table.tabs > tbody .form {
+	width: 40%;
 }
 
 #cgit > .footer {
