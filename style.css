@@ -18,10 +18,12 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 /* Basic elements */
 html, body {
-	margin-left:10%;
-	margin-right:10%;
 	font-family: courier, mono;
 	font-size: 15px;
+}
+
+body {
+	margin: .5rem 20%;
 }
 
 a {
@@ -132,13 +134,10 @@ img.logo {
 	display: flex;
 	align-items: center;
 	vertical-align: middle;
-	margin-top: .3em;
-	margin-bottom: .3em;
 }
 
 h1.title {
 	margin: auto;
-	padding: 1em;
 }
 
 hr {
@@ -217,14 +216,14 @@ li {
 
 /* Screen size adjustments */
 @media only screen and (max-width: 1365px) {
-	html, body {
-		margin: 2.5% 5%;
+	body {
+		margin: .5rem 10%;
 	}
 }
 
 @media only screen and (max-width: 720px) {
-	html, body {
-		margin: 1%;
+	body {
+		margin: .5rem 2%;
 	}
 }
 
@@ -236,8 +235,8 @@ li {
 }
 
 @media only screen and (max-width: 370px) {
-	html, body {
-		margin: .5%;
+	body {
+		margin: .5rem 1%;
 	}
 }
 
