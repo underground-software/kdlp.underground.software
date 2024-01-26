@@ -197,6 +197,11 @@ table, th, td {
 	padding: 0.5em;
 }
 
+	/* faq page table needs a lil spacing from the <hr> */
+table + hr {
+	margin-top: .5rem;
+}
+
 /* Lists */
 @counter-style hex {
 	system: alphabetic;
