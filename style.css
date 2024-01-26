@@ -128,12 +128,14 @@ button {
 img.logo {
 	width: 8em;
 	height: auto;
+	margin: 0 1rem 0 0;
 }
 
-.logo {
+div.logo {
 	display: flex;
 	align-items: center;
 	vertical-align: middle;
+	margin-bottom: .5rem;
 }
 
 h1.title {
