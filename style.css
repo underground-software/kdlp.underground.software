@@ -286,6 +286,10 @@ li {
 	border-width: 0;
 }
 
+#cgit > table.tabs > tbody > tr > td:first-child a {
+	padding: 0 2px;
+}
+
 #cgit > table.tabs > tbody .form {
 	width: 40%;
 }
@@ -424,4 +428,18 @@ li {
 
 #cgit .diff .del {
 	color: #c55;
+}
+
+#cgit ul.pager {
+	display: flex;
+	justify-content: center;
+}
+
+#cgit ul.pager li {
+	padding: 0
+	10px;
+}
+
+#cgit ul.pager li::marker {
+	content: none;
 }
