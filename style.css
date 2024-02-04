@@ -191,7 +191,7 @@ label {
 	display: flex;
 }
 
-button.login.logout[type="submit"] {
+input.login.logout[type="submit"] {
 	width: 4.5em;
 	height: 1.8em;
 	font-size: 1.5em;
@@ -202,7 +202,7 @@ table#header input {
 	width: 6em;
 }
 
-button[type="submit"] {
+button[type="submit"], .logout {
 	margin: 0.5em;
 	border: 2px solid #e83d2a;
 	border-radius: 0;
@@ -244,7 +244,7 @@ div#login {
 }
 
 
-button.logout {
+input.logout {
 	float: left;
 }
 
@@ -267,7 +267,6 @@ form#logout {
 
 div.game_input {
 	display: flex;
-	
 	align-items: stretch;
 	flex-wrap: wrap;
 	flex-direction: column;
