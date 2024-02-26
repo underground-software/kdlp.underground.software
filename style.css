@@ -441,6 +441,11 @@ li {
 	font-family: courier, mono;
 }
 
+/* hide the 'plain' button from 'tree' view */
+#cgit .list > tbody > tr > td:last-child > .button:last-child {
+	display: none;
+}
+
 #cgit ul.pager {
 	display: flex;
 	justify-content: center;
