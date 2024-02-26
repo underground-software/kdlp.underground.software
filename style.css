@@ -430,6 +430,17 @@ li {
 	color: #c55;
 }
 
+#cgit .linenumbers,
+#cgit .lines {
+	background-color: #eeeeee;
+}
+
+#cgit .linenumbers a,
+#cgit .lines code {
+	font-size: 15px;
+	font-family: courier, mono;
+}
+
 #cgit ul.pager {
 	display: flex;
 	justify-content: center;
