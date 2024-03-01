@@ -101,8 +101,8 @@ button {
 	font: inherit;
 }
 
-#confusion > img {
-	padding-top: 1rem;
+p img {
+	padding: 1rem 0 .5rem 0;
 }
 
 /* Login/logout/register page */

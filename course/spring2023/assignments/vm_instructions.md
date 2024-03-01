@@ -26,9 +26,7 @@ Start downloading the standard ISO image for Fedora for your architechture (most
 * Mostly follow the on-screen instructions, but there are some confusing steps. There are numerous tutorials online on how to proceed based on the VM you are using.
 * This particular step, depicted below, might be especially confusing. Just click on "Installation Destination" and click "Done", you don't need to change anything you just need to confirm what was already selected by default.
 
-<div id="confusion"><img alt="fedora confusion image" src="/images/fedora_confusion.png"></img></div>
-
-<br>
+<img alt="fedora confusion image" src="/images/fedora_confusion.png"></img>
 
 * Once the installation has finished, Fedora will tell you to reboot. Shut down the machine and remove the ISO image from where you attached it to the VM (once this is done and you confirmed the installation was successful, you can remove the ISO image from your host machine to free up disk space).
 * Boot the VM and you should be greeted with a Fedora login prompt, use the username "root" and then enter the root password you selected during installation (it won't look like you are typing the password, but that is just a security measure).

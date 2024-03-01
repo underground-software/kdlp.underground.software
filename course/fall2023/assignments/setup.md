@@ -56,7 +56,7 @@ Use this as an opportunity to introduce yourself, get your feet wet with the ema
   The installation destination icon will have a red warning triangle, to proceed, click on the icon and it will open the screen below. Just click "Done",
   you don't need to change anything---it just wants you to confirm the default hard-drive and partitioning selections it has made.
 
-<div id="confusion"><img alt="fedora confusion image" src="/images/fedora_confusion.png"></img></div><br>
+<img alt="fedora confusion image" src="/images/fedora_confusion.png"></img>
 
 * Once the installation has finished, Fedora will tell you to reboot. Shut down the machine and remove the ISO image from where you attached it to the VM
   (once this is done and you confirmed the installation was successful, you can remove the ISO image from your host machine to free up disk space).
