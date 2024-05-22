@@ -9,10 +9,4 @@
 |Fall 2021|First iteration|
 |Spring 2021|Initial attempt|
 
-[Course Dashboard](/dashboard)
-
 [Course Slides](slides/index.md)
-
-[KDLP Git](/cgit)
-
-[Course Assignments Repository](/cgit/KDLP_assignments.git)
