@@ -1,5 +1,7 @@
 items:
   - title: Home
     url: /index.html
+  - title: Courses
+    url: /course/index.html
   - title: FAQ
     url: /faq.html
