@@ -102,5 +102,5 @@ INIT_LIST_HEAD(&todo_list);
 ---
 
 # Linked Lists
-![ll image](images/Kernel_Data_Types/ll.png)
+![ll image](/images/Kernel_Data_Types/ll.png)
 [Source](https://static.lwn.net/images/pdf/LDD3/ch11.pdf)

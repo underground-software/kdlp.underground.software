@@ -39,7 +39,7 @@ title: Concurrency
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
 <h1>Sleep</h1>
-<p><img src="images/Concurrency/penguins.png" alt="penguins" /></p>
+<p><img src="/images/Concurrency/penguins.png" alt="penguins" /></p>
 <ul>
 <li>When a linux process reaches a point where it cannot make further progress until something else is finished (e.g. waiting for data from disk or user io)</li>
 <li>Scheduler yields the processor to another thread</li>
@@ -91,20 +91,20 @@ title: Concurrency
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
-<p><img src="images/Concurrency/slide10.png" alt="mutual exclusion 1" /><br />
+<p><img src="/images/Concurrency/slide10.png" alt="mutual exclusion 1" /><br />
 <a href="https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/">image source</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
-<p><img src="images/Concurrency/slide11.png" alt="mutual exclusion 2" /><br />
+<p><img src="/images/Concurrency/slide11.png" alt="mutual exclusion 2" /><br />
 <a href="https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/">image source</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
-<p><img src="images/Concurrency/slide12.png" alt="mutual exclusion 3" /><br />
+<p><img src="/images/Concurrency/slide12.png" alt="mutual exclusion 3" /><br />
 <a href="https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/">image source</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
 <h1>Deadlock</h1>
-<p><img src="images/Concurrency/slide13.png" alt="deadlock" /></p>
+<p><img src="/images/Concurrency/slide13.png" alt="deadlock" /></p>
 <ul>
 <li>Mutual exclusion gone wrong</li>
 <li>A situation where threads are holding some resources but also blocked waiting for others in a cycle preventing any forward progress.<br />
@@ -167,7 +167,7 @@ Only acceptable in atomic contexts</li>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
 <h1>Reader/Write Semaphores</h1>
-<p><img src="images/Concurrency/slide19.png" alt="semaphores" /></p>
+<p><img src="/images/Concurrency/slide19.png" alt="semaphores" /></p>
 <ul>
 <li>Allows multiple concurrent readers</li>
 <li>rwsem
@@ -210,7 +210,7 @@ Common solution: modified _bar() that assumes A is already held</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
 <h1>Lock Ordering Rules</h1>
-<p><img src="images/Concurrency/slide23.png" alt="lock ordering" /><br />
+<p><img src="/images/Concurrency/slide23.png" alt="lock ordering" /><br />
 Total ordering!<br />
 if you lock A then B then C<br />
 You MUST unlock C then B then A<br />

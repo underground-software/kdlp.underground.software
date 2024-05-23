@@ -32,7 +32,7 @@ theme: white
 ---
 
 # Page table diagram
-![page table](images/MM_DMA/page_table.png)
+![page table](/images/MM_DMA/page_table.png)
 [source](https://0xax.gitbooks.io/linux-insides/content/Theory/linux-theory-1.html)
 
 ---
