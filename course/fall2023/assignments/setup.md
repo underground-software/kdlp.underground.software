@@ -210,4 +210,4 @@ push "&lt;change-folder&gt;pops://$my_username:$my_password@kdlp.underground.sof
 * Generate a patchset from your commit with a cover letter.
 * Send the patchset to introductions@kdlp.underground.software.
 
-[Submission Guidelines](../policies/submission_guidelines.md)
+[Submission Guidelines](../policies/submission_guidelines)

@@ -1,10 +1,10 @@
 
 ##  Latest Policy Documents
 
-[Course Policies](course_policies.md)
+[Course Policies](course_policies)
 
-[Submission Guidelines](submission_guidelines.md)
+[Submission Guidelines](submission_guidelines)
 
-[Peer Review Process](peer_review.md)
+[Peer Review Process](peer_review)
 
-[Presentation Guidelines](presentation_guidelines.md)
+[Presentation Guidelines](presentation_guidelines)
