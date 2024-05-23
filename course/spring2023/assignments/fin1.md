@@ -36,4 +36,4 @@ What to submit:
 
 - Don’t forget a cover letter.
 
-[Submission Guidelines](submission_guidelines.html)
+[Submission Guidelines](../policies/submission_guidelines.md)
