@@ -8,5 +8,3 @@
 |[Spring 2022](spring2022/index.md)|Second iteration|
 |Fall 2021|First iteration|
 |Spring 2021|Initial attempt|
-
-[Course Slides](slides/index.md)
