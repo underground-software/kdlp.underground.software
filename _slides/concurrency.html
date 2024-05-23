@@ -1,3 +1,7 @@
+---
+layout: slide
+title: Concurrency
+---
 <!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style media="screen">body,html{-ms-scroll-snap-points-y:repeat(100%);scroll-snap-points-y:repeat(100%);background:#000;height:100%;margin:0;overflow:auto;-ms-scroll-snap-type:y mandatory;scroll-snap-type:y mandatory;-ms-scroll-snap-type:mandatory;scroll-snap-type:mandatory}body>svg{scroll-snap-align:center center;display:block;height:100%;width:100%}</style><style>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}svg>foreignObject>section{page-break-before:always;break-before:page}svg>foreignObject>section,svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
 /*!
  * Marp default theme.
@@ -9,181 +13,285 @@
  * @size 4:3 960px 720px
  */svg>foreignObject>section .octicon{fill:currentColor;display:inline-block;vertical-align:text-bottom}svg>foreignObject>section .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}svg>foreignObject>section .anchor:focus{outline:none}svg>foreignObject>section h1 .octicon-link,svg>foreignObject>section h2 .octicon-link,svg>foreignObject>section h3 .octicon-link,svg>foreignObject>section h4 .octicon-link,svg>foreignObject>section h5 .octicon-link,svg>foreignObject>section h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}svg>foreignObject>section h1:hover .anchor,svg>foreignObject>section h2:hover .anchor,svg>foreignObject>section h3:hover .anchor,svg>foreignObject>section h4:hover .anchor,svg>foreignObject>section h5:hover .anchor,svg>foreignObject>section h6:hover .anchor{text-decoration:none}svg>foreignObject>section h1:hover .anchor .octicon-link,svg>foreignObject>section h2:hover .anchor .octicon-link,svg>foreignObject>section h3:hover .anchor .octicon-link,svg>foreignObject>section h4:hover .anchor .octicon-link,svg>foreignObject>section h5:hover .anchor .octicon-link,svg>foreignObject>section h6:hover .anchor .octicon-link{visibility:visible}svg>foreignObject>section h1:hover .anchor .octicon-link:before,svg>foreignObject>section h2:hover .anchor .octicon-link:before,svg>foreignObject>section h3:hover .anchor .octicon-link:before,svg>foreignObject>section h4:hover .anchor .octicon-link:before,svg>foreignObject>section h5:hover .anchor .octicon-link:before,svg>foreignObject>section h6:hover .anchor .octicon-link:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E");content:" ";display:inline-block;height:16px;width:16px}svg>foreignObject>section{word-wrap:break-word;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}svg>foreignObject>section{--marpit-root-font-size:16px}svg>foreignObject>section details{display:block}svg>foreignObject>section summary{display:list-item}svg>foreignObject>section a{background-color:initial}svg>foreignObject>section a:active,svg>foreignObject>section a:hover{outline-width:0}svg>foreignObject>section strong{font-weight:inherit;font-weight:bolder}svg>foreignObject>section h1{margin:.67em 0}svg>foreignObject>section img{border-style:none}svg>foreignObject>section code,svg>foreignObject>section kbd,svg>foreignObject>section pre{font-family:monospace,monospace;font-size:1em}svg>foreignObject>section hr{box-sizing:initial;overflow:visible}svg>foreignObject>section input{font:inherit;margin:0;overflow:visible}svg>foreignObject>section [type=checkbox]{padding:0}svg>foreignObject>section *,svg>foreignObject>section [type=checkbox]{box-sizing:border-box}svg>foreignObject>section input{font-family:inherit;font-size:inherit;line-height:inherit}svg>foreignObject>section a{color:#0366d6;text-decoration:none}svg>foreignObject>section a:hover{text-decoration:underline}svg>foreignObject>section strong{font-weight:600}svg>foreignObject>section hr{background:transparent;border-bottom:1px solid #dfe2e5;height:0;margin:15px 0;overflow:hidden}svg>foreignObject>section hr:after,svg>foreignObject>section hr:before{content:"";display:table}svg>foreignObject>section hr:after{clear:both}svg>foreignObject>section table{border-collapse:collapse;border-spacing:0}svg>foreignObject>section td,svg>foreignObject>section th{padding:0}svg>foreignObject>section details summary{cursor:pointer}svg>foreignObject>section h1,svg>foreignObject>section h2,svg>foreignObject>section h3,svg>foreignObject>section h4,svg>foreignObject>section h5,svg>foreignObject>section h6{margin-bottom:0;margin-top:0}svg>foreignObject>section h1{font-size:32px}svg>foreignObject>section h1,svg>foreignObject>section h2{font-weight:600}svg>foreignObject>section h2{font-size:24px}svg>foreignObject>section h3{font-size:20px}svg>foreignObject>section h3,svg>foreignObject>section h4{font-weight:600}svg>foreignObject>section h4{font-size:16px}svg>foreignObject>section h5{font-size:14px}svg>foreignObject>section h5,svg>foreignObject>section h6{font-weight:600}svg>foreignObject>section h6{font-size:12px}svg>foreignObject>section p{margin-bottom:10px;margin-top:0}svg>foreignObject>section blockquote{margin:0}svg>foreignObject>section ol,svg>foreignObject>section ul{margin-bottom:0;margin-top:0;padding-left:0}svg>foreignObject>section ol ol,svg>foreignObject>section ul ol{list-style-type:lower-roman}svg>foreignObject>section ol ol ol,svg>foreignObject>section ol ul ol,svg>foreignObject>section ul ol ol,svg>foreignObject>section ul ul ol{list-style-type:lower-alpha}svg>foreignObject>section dd{margin-left:0}svg>foreignObject>section code,svg>foreignObject>section pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}svg>foreignObject>section pre{margin-bottom:0;margin-top:0}svg>foreignObject>section input::-webkit-inner-spin-button,svg>foreignObject>section input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}svg>foreignObject>section :checked+.radio-label{border-color:#0366d6;position:relative;z-index:1}svg>foreignObject>section .border{border:1px solid #e1e4e8!important}svg>foreignObject>section .border-0{border:0!important}svg>foreignObject>section .border-bottom{border-bottom:1px solid #e1e4e8!important}svg>foreignObject>section .rounded-1{border-radius:3px!important}svg>foreignObject>section .bg-white{background-color:#fff!important}svg>foreignObject>section .bg-gray-light{background-color:#fafbfc!important}svg>foreignObject>section .text-gray-light{color:#6a737d!important}svg>foreignObject>section .pl-3,svg>foreignObject>section .px-3{padding-left:16px!important}svg>foreignObject>section .px-3{padding-right:16px!important}svg>foreignObject>section .f6{font-size:12px!important}svg>foreignObject>section>svg>foreignObject>section section.f6{--marpit-root-font-size:12px!important}svg>foreignObject>section .lh-condensed{line-height:1.25!important}svg>foreignObject>section .text-bold{font-weight:600!important}svg>foreignObject>section .pl-c{color:#6a737d}svg>foreignObject>section .pl-c1,svg>foreignObject>section .pl-s .pl-v{color:#005cc5}svg>foreignObject>section .pl-e,svg>foreignObject>section .pl-en{color:#6f42c1}svg>foreignObject>section .pl-s .pl-s1,svg>foreignObject>section .pl-smi{color:#24292e}svg>foreignObject>section .pl-ent{color:#22863a}svg>foreignObject>section .pl-k{color:#d73a49}svg>foreignObject>section .pl-pds,svg>foreignObject>section .pl-s,svg>foreignObject>section .pl-s .pl-pse .pl-s1,svg>foreignObject>section .pl-sr,svg>foreignObject>section .pl-sr .pl-cce,svg>foreignObject>section .pl-sr .pl-sra,svg>foreignObject>section .pl-sr .pl-sre{color:#032f62}svg>foreignObject>section .pl-smw,svg>foreignObject>section .pl-v{color:#e36209}svg>foreignObject>section .pl-bu{color:#b31d28}svg>foreignObject>section .pl-ii{background-color:#b31d28;color:#fafbfc}svg>foreignObject>section .pl-c2{background-color:#d73a49;color:#fafbfc}svg>foreignObject>section .pl-c2:before{content:"^M"}svg>foreignObject>section .pl-sr .pl-cce{color:#22863a;font-weight:700}svg>foreignObject>section .pl-ml{color:#735c0f}svg>foreignObject>section .pl-mh,svg>foreignObject>section .pl-mh .pl-en,svg>foreignObject>section .pl-ms{color:#005cc5;font-weight:700}svg>foreignObject>section .pl-mi{color:#24292e;font-style:italic}svg>foreignObject>section .pl-mb{color:#24292e;font-weight:700}svg>foreignObject>section .pl-md{background-color:#ffeef0;color:#b31d28}svg>foreignObject>section .pl-mi1{background-color:#f0fff4;color:#22863a}svg>foreignObject>section .pl-mc{background-color:#ffebda;color:#e36209}svg>foreignObject>section .pl-mi2{background-color:#005cc5;color:#f6f8fa}svg>foreignObject>section .pl-mdr{color:#6f42c1;font-weight:700}svg>foreignObject>section .pl-ba{color:#586069}svg>foreignObject>section .pl-sg{color:#959da5}svg>foreignObject>section .pl-corl{color:#032f62;text-decoration:underline}svg>foreignObject>section .mb-0{margin-bottom:0!important}svg>foreignObject>section .my-2{margin-bottom:8px!important;margin-top:8px!important}svg>foreignObject>section .pl-0{padding-left:0!important}svg>foreignObject>section .py-0{padding-bottom:0!important;padding-top:0!important}svg>foreignObject>section .pl-1{padding-left:4px!important}svg>foreignObject>section .pl-2{padding-left:8px!important}svg>foreignObject>section .py-2{padding-bottom:8px!important;padding-top:8px!important}svg>foreignObject>section .pl-3{padding-left:16px!important}svg>foreignObject>section .pl-4{padding-left:24px!important}svg>foreignObject>section .pl-5{padding-left:32px!important}svg>foreignObject>section .pl-6{padding-left:40px!important}svg>foreignObject>section .pl-7{padding-left:48px!important}svg>foreignObject>section .pl-8{padding-left:64px!important}svg>foreignObject>section .pl-9{padding-left:80px!important}svg>foreignObject>section .pl-10{padding-left:96px!important}svg>foreignObject>section .pl-11{padding-left:112px!important}svg>foreignObject>section .pl-12{padding-left:128px!important}svg>foreignObject>section hr{border-bottom-color:#eee}svg>foreignObject>section kbd{background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da;color:#444d56;display:inline-block;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}svg>foreignObject>section:after,svg>foreignObject>section:before{
   /* content:""; */display:table}svg>foreignObject>section:after{clear:both}svg>foreignObject>section>:first-child{margin-top:0!important}svg>foreignObject>section>:last-child{margin-bottom:0!important}svg>foreignObject>section a:not([href]){color:inherit;text-decoration:none}svg>foreignObject>section blockquote,svg>foreignObject>section details,svg>foreignObject>section dl,svg>foreignObject>section ol,svg>foreignObject>section p,svg>foreignObject>section pre,svg>foreignObject>section table,svg>foreignObject>section ul{margin-bottom:16px;margin-top:0}svg>foreignObject>section hr{background-color:#e1e4e8;border:0;height:.25em;margin:24px 0;padding:0}svg>foreignObject>section blockquote{border-left:.25em solid #dfe2e5;color:#6a737d;padding:0 1em}svg>foreignObject>section blockquote>:first-child{margin-top:0}svg>foreignObject>section blockquote>:last-child{margin-bottom:0}svg>foreignObject>section h1,svg>foreignObject>section h2,svg>foreignObject>section h3,svg>foreignObject>section h4,svg>foreignObject>section h5,svg>foreignObject>section h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}svg>foreignObject>section h1{font-size:2em}svg>foreignObject>section h1,svg>foreignObject>section h2{border-bottom:1px solid #eaecef;padding-bottom:.3em}svg>foreignObject>section h2{font-size:1.5em}svg>foreignObject>section h3{font-size:1.25em}svg>foreignObject>section h4{font-size:1em}svg>foreignObject>section h5{font-size:.875em}svg>foreignObject>section h6{color:#6a737d;font-size:.85em}svg>foreignObject>section ol,svg>foreignObject>section ul{padding-left:2em}svg>foreignObject>section ol ol,svg>foreignObject>section ol ul,svg>foreignObject>section ul ol,svg>foreignObject>section ul ul{margin-bottom:0;margin-top:0}svg>foreignObject>section li{word-wrap:break-all}svg>foreignObject>section li>p{margin-top:16px}svg>foreignObject>section li+li{margin-top:.25em}svg>foreignObject>section dl{padding:0}svg>foreignObject>section dl dt{font-size:1em;font-style:italic;font-weight:600;margin-top:16px;padding:0}svg>foreignObject>section dl dd{margin-bottom:16px;padding:0 16px}svg>foreignObject>section table{display:block;overflow:auto;width:100%}svg>foreignObject>section table th{font-weight:600}svg>foreignObject>section table td,svg>foreignObject>section table th{border:1px solid #dfe2e5;padding:6px 13px}svg>foreignObject>section table tr{background-color:#fff;border-top:1px solid #c6cbd1}svg>foreignObject>section table tr:nth-child(2n){background-color:#f6f8fa}svg>foreignObject>section img{background-color:#fff;box-sizing:initial;max-width:100%}svg>foreignObject>section img[align=right]{padding-left:20px}svg>foreignObject>section img[align=left]{padding-right:20px}svg>foreignObject>section code{background-color:rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em .4em}svg>foreignObject>section pre{word-wrap:normal}svg>foreignObject>section pre>code{background:transparent;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}svg>foreignObject>section .highlight{margin-bottom:16px}svg>foreignObject>section .highlight pre{margin-bottom:0;word-break:normal}svg>foreignObject>section pre{background-color:#f6f8fa;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}svg>foreignObject>section pre code{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}svg>foreignObject>section .commit-tease-sha{color:#444d56;display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%}svg>foreignObject>section>svg>foreignObject>section section.commit-tease-sha{--marpit-root-font-size:90%}svg>foreignObject>section .full-commit .btn-outline:not(:disabled):hover{border-color:#005cc5;color:#005cc5}svg>foreignObject>section .blob-wrapper{overflow-x:auto;overflow-y:hidden}svg>foreignObject>section .blob-wrapper-embedded{max-height:240px;overflow-y:auto}svg>foreignObject>section .blob-num{color:rgba(27,31,35,.3);cursor:pointer;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;min-width:50px;padding-left:10px;padding-right:10px;text-align:right;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:top;white-space:nowrap;width:1%}svg>foreignObject>section>svg>foreignObject>section section.blob-num{--marpit-root-font-size:12px}svg>foreignObject>section .blob-num:hover{color:rgba(27,31,35,.6)}svg>foreignObject>section .blob-num:before{content:attr(data-line-number)}svg>foreignObject>section .blob-code{line-height:20px;padding-left:10px;padding-right:10px;position:relative;vertical-align:top}svg>foreignObject>section .blob-code-inner{word-wrap:normal;color:#24292e;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;overflow:visible;white-space:pre}svg>foreignObject>section>svg>foreignObject>section section.blob-code-inner{--marpit-root-font-size:12px}svg>foreignObject>section .pl-token.active,svg>foreignObject>section .pl-token:hover{background:#ffea7f;cursor:pointer}svg>foreignObject>section .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}svg>foreignObject>section .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}svg>foreignObject>section .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}svg>foreignObject>section .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}svg>foreignObject>section .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}svg>foreignObject>section .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}svg>foreignObject>section .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}svg>foreignObject>section .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}svg>foreignObject>section .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}svg>foreignObject>section .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}svg>foreignObject>section .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}svg>foreignObject>section .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}svg>foreignObject>section .task-list-item{list-style-type:none}svg>foreignObject>section .task-list-item+.task-list-item{margin-top:3px}svg>foreignObject>section .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}svg>foreignObject>section .hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}svg>foreignObject>section .hljs-comment,svg>foreignObject>section .hljs-meta{color:#969896}svg>foreignObject>section .hljs-emphasis,svg>foreignObject>section .hljs-quote,svg>foreignObject>section .hljs-strong,svg>foreignObject>section .hljs-template-variable,svg>foreignObject>section .hljs-variable{color:#df5000}svg>foreignObject>section .hljs-keyword,svg>foreignObject>section .hljs-selector-tag,svg>foreignObject>section .hljs-type{color:#d73a49}svg>foreignObject>section .hljs-attribute,svg>foreignObject>section .hljs-bullet,svg>foreignObject>section .hljs-literal,svg>foreignObject>section .hljs-symbol{color:#0086b3}svg>foreignObject>section .hljs-name,svg>foreignObject>section .hljs-section{color:#63a35c}svg>foreignObject>section .hljs-tag{color:#333}svg>foreignObject>section .hljs-attr,svg>foreignObject>section .hljs-selector-attr,svg>foreignObject>section .hljs-selector-class,svg>foreignObject>section .hljs-selector-id,svg>foreignObject>section .hljs-selector-pseudo,svg>foreignObject>section .hljs-title{color:#6f42c1}svg>foreignObject>section .hljs-addition{background-color:#eaffea;color:#55a532}svg>foreignObject>section .hljs-deletion{background-color:#ffecec;color:#bd2c00}svg>foreignObject>section .hljs-link{text-decoration:underline}svg>foreignObject>section .hljs-number{color:#005cc5}svg>foreignObject>section .hljs-string{color:#032f62}svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:563px}svg>foreignObject>section h1{color:#246;font-size:1.6em}svg>foreignObject>section h1,svg>foreignObject>section h2{border-bottom:none}svg>foreignObject>section h2{font-size:1.3em}svg>foreignObject>section h3{font-size:1.1em}svg>foreignObject>section h4{font-size:1.05em}svg>foreignObject>section h5{font-size:1em}svg>foreignObject>section h6{font-size:.9em}svg>foreignObject>section h1 strong,svg>foreignObject>section h2 strong,svg>foreignObject>section h3 strong,svg>foreignObject>section h4 strong,svg>foreignObject>section h5 strong,svg>foreignObject>section h6 strong{color:#48c;font-weight:inherit}svg>foreignObject>section hr{height:0;padding-top:.25em}svg>foreignObject>section pre{border:1px solid #999;line-height:1.15;overflow:visible}svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:529px}svg>foreignObject>section footer,svg>foreignObject>section header{color:hsla(0,0%,40%,.75);font-size:18px;left:30px;margin:0;position:absolute}svg>foreignObject>section header{top:21px}svg>foreignObject>section footer{bottom:21px}svg>foreignObject>section{align-items:stretch;background:#fff;display:flex;flex-direction:column;flex-wrap:nowrap;font-size:29px;height:720px;justify-content:center;padding:78.5px;width:1280px}svg>foreignObject>section{--marpit-root-font-size:29px}svg>foreignObject>section>:last-child,svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}svg>foreignObject>section>:first-child,svg>foreignObject>section>header:first-child+*{margin-top:0}svg>foreignObject>section:after{bottom:21px;color:#777;font-size:24px;padding:0;position:absolute;right:30px}svg>foreignObject>section:after{--marpit-root-font-size:24px}svg>foreignObject>section.invert{background-color:#222;color:#e6eaf0}svg>foreignObject>section.invert:after{color:#999}svg>foreignObject>section.invert img{background-color:transparent}svg>foreignObject>section.invert a{color:#50b3ff}svg>foreignObject>section.invert h1{color:#a3c5e7}svg>foreignObject>section.invert h2,svg>foreignObject>section.invert h3,svg>foreignObject>section.invert h4,svg>foreignObject>section.invert h5{color:#ebeff5}svg>foreignObject>section.invert blockquote,svg>foreignObject>section.invert h6{border-color:#3d3f43;color:#939699}svg>foreignObject>section.invert h1 strong,svg>foreignObject>section.invert h2 strong,svg>foreignObject>section.invert h3 strong,svg>foreignObject>section.invert h4 strong,svg>foreignObject>section.invert h5 strong,svg>foreignObject>section.invert h6 strong{color:#7bf}svg>foreignObject>section.invert hr{background-color:#3d3f43}svg>foreignObject>section.invert footer,svg>foreignObject>section.invert header{color:hsla(0,0%,60%,.75)}svg>foreignObject>section.invert code,svg>foreignObject>section.invert kbd{background-color:#111}svg>foreignObject>section.invert kbd{border-color:#666;box-shadow:inset 0 -1px 0 #555;color:#e6eaf0}svg>foreignObject>section.invert table tr{background-color:#12181d;border-color:#60657b}svg>foreignObject>section.invert table tr:nth-child(2n){background-color:#1b2024}svg>foreignObject>section.invert table td,svg>foreignObject>section.invert table th{border-color:#5b5e61}svg>foreignObject>section.invert pre{background-color:#0a0e12;border-color:#777}svg>foreignObject>section.invert pre code{background-color:transparent}svg>foreignObject>section[data-color] h1,svg>foreignObject>section[data-color] h2,svg>foreignObject>section[data-color] h3,svg>foreignObject>section[data-color] h4,svg>foreignObject>section[data-color] h5,svg>foreignObject>section[data-color] h6{color:currentColor}svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}svg>foreignObject>section[data-marpit-advanced-background=background]:after,svg>foreignObject>section[data-marpit-advanced-background=background]:before,svg>foreignObject>section[data-marpit-advanced-background=content]:after,svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}svg>foreignObject>section[data-marpit-advanced-background=content],svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}svg>foreignObject>section[data-marpit-advanced-background=pseudo],svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1">
-<h1>Measuring Time</h1>
-<p><a href="https://static.lwn.net/images/pdf/LDD3/ch07.pdf">Chapter 7</a></p>
+<h1>Concurrency and Race Conditions</h1>
+<h2>In the Linux kernel</h2>
+<p><a href="https://www.amazon.com/Linux-Device-Drivers-Jonathan-Corbet/dp/0596005903">LDD3</a>: <a href="https://lwn.net/Kernel/LDD3/">Chapter</a> <a href="https://static.lwn.net/images/pdf/LDD3/ch05.pdf">5</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2">
-<h1>Measuring time lapses</h1>
-<ul>
-<li>Timer interrupts</li>
-<li>Generated by system hardware</li>
-<li>Interval programmed at boot time by kernel</li>
-<li>100 or 1000 interrupts per second for most platforms
-<ul>
-<li>See HZ macro</li>
-</ul>
-</li>
-<li>jiffies{_64,} (internal kernel counter)
-<ul>
-<li>Number of clock ticks since last boot for a given CPU</li>
-<li>Has nothing to do with wall clock time</li>
-</ul>
-</li>
-</ul>
+<h1>Review of Definitions</h1>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
-<h1>Using jiffies</h1>
+<h1>Thread</h1>
 <ul>
-<li>Read only</li>
-<li>Needed to calculate a future time stamp</li>
-<li>time_{before,after}{,_eq}()</li>
-<li>struct timeval &amp; struct time_spec
-<ul>
-<li>Used to exchange time representations with user space programs</li>
-</ul>
-</li>
+<li>Thread of execution</li>
+<li>Stores execution state (registers + instruction pointer) and has its own stack</li>
+<li>Each process has at least one (but maybe more) of them</li>
+<li>Is the unit of program that actually is scheduled on to the CPU</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
-<h1>Processor-Specific Registers</h1>
+<h1>Concurrency</h1>
 <ul>
-<li>Most modern CPUs have a counter register
-<ul>
-<li>Used to count clock cycles</li>
-</ul>
-</li>
-<li>Depends on platform but this register may or may not be readable</li>
-<li>Handle overflows if reg is not writable</li>
-<li>rdtsc on x86
-<ul>
-<li>Read (rd) time stamp counter (tsc) register</li>
-<li>Different on other platforms</li>
-</ul>
-</li>
+<li>Multiple threads of execution happening (or appearing to happen) at the same time</li>
+<li>Even with a single cpu core, task switching can give the same effects as true multiprocessing</li>
+<li>Up to the OS scheduler to decide who runs when</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
-<h1>Knowing the Current Time</h1>
+<h1>Sleep</h1>
+<p><img src="images/Concurrency/penguins.png" alt="penguins" /></p>
 <ul>
-<li>Drivers use jiffies to calculate time intervals across events
-<ul>
-<li>For example, to tell double-clicks from single-clicks</li>
-</ul>
-</li>
-<li>Processor specific registers for more precise measurements</li>
-<li>Use do_gettimeofday to get absolute timestamp in kernel
-<ul>
-<li>Uses struct timeval to export time stamp</li>
-</ul>
-</li>
-<li>Otherwise real world time is best left for user space where the c library offers better support
-<ul>
-<li>clock_gettime(3) for example</li>
-</ul>
-</li>
+<li>When a linux process reaches a point where it cannot make further progress until something else is finished (e.g. waiting for data from disk or user io)</li>
+<li>Scheduler yields the processor to another thread</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
-<h1>Long Delays</h1>
-<p><a href="https://static.lwn.net/images/pdf/LDD3/ch07.pdf">Chapter 7</a></p>
+<h1>Interrupt</h1>
+<ul>
+<li>A signal emitted by hardware or software when something needs immediate attention</li>
+<li>Scheduler gives the code responsible for handling these extremely high priority</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
-<h1>Long Delays: Approach #1: Busy waiting</h1>
+<h1>Critical Section</h1>
 <ul>
-<li>A loop that monitors the jiffy counter</li>
-<li>while (time_before(jiffies, j1))<br />
-cpu_relax();</li>
-<li>Call to cpu_relax invokes a way of saying you’re not doing much with the processor right now</li>
-<li>If kernel not configured for preemption, loop locks processor for duration of delay</li>
-<li>Avoid: what does relax even mean?? How relaxed?? (not very)</li>
-<li>On x86: cpu_relax &lt;==&gt; no-op</li>
+<li>Section of code where shared resources (data like global variables or state like i/o) are accessed by a thread of execution</li>
+<li>Cannot have multiple threads working on the same shared resources running their critical sections concurrently
+<ul>
+<li>That’s a race condition!</li>
+</ul>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
-<h1>Long Delays: Approach #2: Yielding the processor</h1>
+<h1>Race Condition</h1>
 <ul>
-<li>Release the cpu when not interested in it</li>
-<li>while (time_before(jiffies, j1))<br />
-schedule();</li>
-<li>The current process does nothing but release the cpu but remains in run queue</li>
-<li>On realtime: schedule just re-schedules the caller!</li>
+<li>Multiple processes trying to access shared data at the same time</li>
+<li>“Race” to see which thread reads/writes data first</li>
+<li>Unexpected results when wrong access pattern happens
+<ul>
+<li>Memory leak</li>
+<li>Corrupted data</li>
+<li>System crash</li>
+</ul>
+</li>
+<li>The asynchronous nature of interrupts means that code handling them must be extremely careful with global data. It also cannot block (sleeping)
+<ul>
+<li>Increased probability of race conditions</li>
+</ul>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
-<h1>Long Delays: Approach #3: Timeouts</h1>
+<h1>Mutual exclusion</h1>
 <ul>
-<li>Ask kernel to do a delay for you</li>
-<li>wait_event _timeout(...);
-<ul>
-<li>Wait queue to wait for some other event but also run within a certain period of time</li>
-<li>Returns after timeout</li>
-</ul>
-</li>
-<li>wait_event_interruptable_timeout(...);
-<ul>
-<li>Interruptible sleep</li>
-</ul>
-</li>
+<li>Maintain concurrency for independent parts of execution (so we can enjoy speed or responsiveness benefits of parallel execution)</li>
+<li>Stop multiple processes from running within a critical section simultaneously</li>
+<li>Ensured using locking data structures like spin locks, semaphores, mutexes, event counters, sequencers, etc.</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
-<h1>Short Delays</h1>
-<ul>
-<li>Drivers deal with latencies using short delays</li>
-<li>ndelay, udelay, mdelay
-<ul>
-<li>Nanoseconds, microseconds and milliseconds</li>
-</ul>
-</li>
-</ul>
+<p><img src="images/Concurrency/slide10.png" alt="mutual exclusion 1" /><br />
+<a href="https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/">image source</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
-<h1>Kernel Timers</h1>
-<ul>
-<li>Asynchronous execution</li>
-<li>Call f(x,y,z) at some point in the future</li>
-<li>Used to schedule an action to happen later without blocking the current process
-<ul>
-<li>For example, polling a device by checking its state at regular intervals</li>
-</ul>
-</li>
-</ul>
+<p><img src="images/Concurrency/slide11.png" alt="mutual exclusion 2" /><br />
+<a href="https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/">image source</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
-<h1>Tasklets</h1>
-<ul>
-<li>Data structure that must be initialized before use.
-<ul>
-<li>struct tasklet_struct { (*func)(u long); u long data; };</li>
-</ul>
-</li>
-<li>Mostly used in interrupt management and run at interrupt time</li>
-<li>Let kernel decide when to run the task</li>
-<li>Run in atomic context</li>
-</ul>
+<p><img src="images/Concurrency/slide12.png" alt="mutual exclusion 3" /><br />
+<a href="https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/">image source</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
-<h1>Workqueues</h1>
+<h1>Deadlock</h1>
+<p><img src="images/Concurrency/slide13.png" alt="deadlock" /></p>
 <ul>
-<li>Similar to tasklets with a few differences</li>
-<li>workqueues run in kernel process context while tasklets run in atomic context</li>
-<li>Kernel code can delay execution of workqueue functions</li>
-<li>Key difference is that tasklets execute quickly and in atomic mode</li>
-<li>Both tasklets and workqueues run on the same processor they were submitted</li>
+<li>Mutual exclusion gone wrong</li>
+<li>A situation where threads are holding some resources but also blocked waiting for others in a cycle preventing any forward progress.<br />
+<a href="https://www.geeksforgeeks.org/introduction-of-deadlock-in-operating-system/">image source</a></li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
-<h1>The Shared Queue</h1>
+<h1>Locking Data Structures</h1>
 <ul>
-<li>Used occasionally to submit tasks if in driver</li>
-<li>Tasks may take longer to execute since there’s sharing</li>
-<li>Struct jiq_work. Actual code below:</li>
+<li>spinlock
+<ul>
+<li>locking primitive that can be used to implement all other forms of mutual exlcusion</li>
 </ul>
-<pre><code class="language-console"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>prepare_to_wait(&amp;jiq_wait, &amp;wait, TASK_INTERRUPTIBLE); 
-schedule_work(&amp;jiq_work); 
-schedule( ); 
-finish_wait(&amp;jiq_wait, &amp;wait);
-</span></span></foreignObject></svg></code></pre>
+</li>
+<li>semaphore
+<ul>
+<li>Combination of integer value and two functions for increment and decrement (v,p)</li>
+</ul>
+</li>
+<li>mutex
+<ul>
+<li>Special kind of semaphore with only two states locked/unlocked</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<h1>Concurrency Techniques within Linux</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>Spinlocks</h1>
+<ul>
+<li>spinlock_t in kernel</li>
+<li>Spinlocks must be held for minimum time possible<br />
+Only acceptable in atomic contexts</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>Spinlocks in Atomic Context</h1>
+<ul>
+<li>Interrupts must be disabled on local cpu when a lock is used
+<ul>
+<li>Preemption disabled by locking implementation!</li>
+</ul>
+</li>
+<li>Why? an interrupt might cause a different thread to be scheduled, which may require the lock you just took but haven’t yet released
+<ul>
+<li>Deadlock!</li>
+</ul>
+</li>
+<li>Code must therefore be atomic (cannot sleep)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h1>Semaphores and Mutexes</h1>
+<ul>
+<li>struct semaphore</li>
+<li>struct mutex</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+<h1>Reader/Write Semaphores</h1>
+<p><img src="images/Concurrency/slide19.png" alt="semaphores" /></p>
+<ul>
+<li>Allows multiple concurrent readers</li>
+<li>rwsem
+<ul>
+<li>One writer or unlimited number of readers</li>
+<li>Writers get priority</li>
+<li>Allowing multiple readers Optimizes performance<br />
+<a href="https://sungju.github.io/kernel/internals/synchronization.html">image source</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+<h1>Completions</h1>
+<ul>
+<li>Allow a thread to tell another that a job is done</li>
+<li>Better locking mechanism
+<ul>
+<li>Prevents performance issues when creation of user processes or new kernel threads are involved</li>
+</ul>
+</li>
+<li>A: complete(xxx)</li>
+<li>B: wait_for_completion(xxx)</li>
+<li>B only proceeds when A had called complete</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h1>Reader/Writer Spinlocks</h1>
+<ul>
+<li>Allow any number of readers into critical section simultaneously</li>
+<li>Writers must have exclusive access</li>
+<li>rwlock_t similar to rwsem semaphore</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h1>Ambiguous rules</h1>
+<p>Be careful not to double lock!<br />
+e.g. foo() gets lock A, calls bar() which also gets lock A<br />
+Common solution: modified _bar() that assumes A is already held</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h1>Lock Ordering Rules</h1>
+<p><img src="images/Concurrency/slide23.png" alt="lock ordering" /><br />
+Total ordering!<br />
+if you lock A then B then C<br />
+You MUST unlock C then B then A<br />
+And never lock B then A (etc) somewhere else!<br />
+Otherwise, you get deadlock…</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h1>Fine Versus Coarse-Grained Locking</h1>
+<ul>
+<li>Old kernels had one big lock
+<ul>
+<li>Not scalable</li>
+</ul>
+</li>
+<li>Modern kernels have thousands of locks each protecting smaller resources</li>
+<li>Can be too complex</li>
+<li>lock_kernel() lmao <img class="emoji" draggable="false" alt="😂" src="https://twemoji.maxcdn.com/2/svg/1f602.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h1>Alternatives to locking</h1>
+<h2><img class="emoji" draggable="false" alt="😳" src="https://twemoji.maxcdn.com/2/svg/1f633.svg" data-marp-twemoji=""/></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h1>Lock-Free Algorithms</h1>
+<ul>
+<li>Circular buffer</li>
+<li>Requires no locking in the absence of multiple consumers and producers</li>
+<li>Only Producer thread can modify the write index and array location it points to</li>
+<li>Only reader thread can access read index and value it points to</li>
+<li>If the two pointers don’t overrun each other, the producer and consumer can access the buffer concurrently with no race conditions<br />
+<a href="https://stackoverflow.com/questions/871234/circular-lock-free-buffer">https://stackoverflow.com/questions/871234/circular-lock-free-buffer</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h1>Atomic Variables</h1>
+<ul>
+<li>Used for simple shared resources like an int value</li>
+<li>o_op++;
+<ul>
+<li>Can be done in atomic manner</li>
+</ul>
+</li>
+<li>Locking is overkill, use an atomic_t instead
+<ul>
+<li>atomic_inc(atomic_t *v);</li>
+<li>atomic_dec(atomic_t *v);</li>
+<li>atomic_add_return(int i, atomic_t *v);</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<h1>Bit Operations</h1>
+<ul>
+<li>Used for shared flags</li>
+<li>Manipulate individual bits in an atomic manner</li>
+<li>Example functions
+<ul>
+<li>set_bit(nr, void *addr);</li>
+<li>clear_bit(nr, void *addr);</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+<h1>seqlocks</h1>
+<ul>
+<li>Used for a frequently accessed, small, and simple resource</li>
+<li>Allows free access for readers but requires the readers to check for collisions with writers</li>
+<li>When a collision occurs, retry their access<br />
+<a href="https://www.kernel.org/doc/html/latest/locking/seqlock.html">https://www.kernel.org/doc/html/latest/locking/seqlock.html</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h1>Read-Copy-Update (RCU)</h1>
+<ul>
+<li>When a data structure needs to be changed, the writing thread makes a copy, changes the copy, then aims the relevant pointer at the new version</li>
+<li>Used for situations where, reads are common and writes are rare</li>
+<li>Very complex: many memory barriers used</li>
+</ul>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></body></html>
