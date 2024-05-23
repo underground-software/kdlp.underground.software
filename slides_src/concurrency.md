@@ -29,7 +29,7 @@ theme: white
 ---
 
 # Sleep
-![penguins](images/Concurrency/penguins.png)
+![penguins](/images/Concurrency/penguins.png)
 - When a linux process reaches a point where it cannot make further progress until something else is finished (e.g. waiting for data from disk or user io)
 - Scheduler yields the processor to another thread
 
@@ -67,23 +67,23 @@ theme: white
 
 ---
 
-![mutual exclusion 1](images/Concurrency/slide10.png)
+![mutual exclusion 1](/images/Concurrency/slide10.png)
 [image source](https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/)
 
 ---
 
-![mutual exclusion 2](images/Concurrency/slide11.png)
+![mutual exclusion 2](/images/Concurrency/slide11.png)
 [image source](https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/)
 
 ---
 
-![mutual exclusion 3](images/Concurrency/slide12.png)
+![mutual exclusion 3](/images/Concurrency/slide12.png)
 [image source](https://www.geeksforgeeks.org/mutual-exclusion-in-synchronization/)
 
 ---
 
 # Deadlock
-![deadlock](images/Concurrency/slide13.png)
+![deadlock](/images/Concurrency/slide13.png)
 - Mutual exclusion gone wrong
 - A situation where threads are holding some resources but also blocked waiting for others in a cycle preventing any forward progress.
 [image source](https://www.geeksforgeeks.org/introduction-of-deadlock-in-operating-system/)
@@ -127,7 +127,7 @@ Only acceptable in atomic contexts
 ---
 
 # Reader/Write Semaphores
-![semaphores](images/Concurrency/slide19.png)
+![semaphores](/images/Concurrency/slide19.png)
 - Allows multiple concurrent readers
 - rwsem 
   - One writer or unlimited number of readers
@@ -162,7 +162,7 @@ Common solution: modified _bar() that assumes A is already held
 ---
 
 # Lock Ordering Rules
-![lock ordering](images/Concurrency/slide23.png)
+![lock ordering](/images/Concurrency/slide23.png)
 Total ordering!
 if you lock A then B then C
 You MUST unlock C then B then A

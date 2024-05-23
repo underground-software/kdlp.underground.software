@@ -30,7 +30,7 @@ theme: white
 ---
 
 # Overview
-![height:500px](images/Modules_Drivers/modules_drivers_slide9.png)
+![height:500px](/images/Modules_Drivers/modules_drivers_slide9.png)
 <http://haifux.org/lectures/86-sil/kernel-modules-drivers/kernel-modules-drivers.html>
 
 ---

@@ -62,7 +62,7 @@ module_exit(hello_exit);
 - Potential confusion: What is called when?
 - Kernel code must be able to run in more than one context
 - Mutexes mandatory
-![reentrant code](images/Modules_Drivers/modules_drivers_slide14.png)
+![reentrant code](/images/Modules_Drivers/modules_drivers_slide14.png)
 <https://www.cs.mcgill.ca/~cs573/fall2002/notes/lec273/lecture15/re-ent2.GIF>
 
 ---
