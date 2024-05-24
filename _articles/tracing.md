@@ -1,0 +1,390 @@
+---
+layout: article
+title: Kernel Tracing
+---
+### Tracing with ftrace
+
+Ftrace is mounted as tracefs file system, usually at `/sys/kernel/debug/tracing`
+
+The kernel source has some
+[documentation](https://www.kernel.org/doc/Documentation/trace/ftrace.txt)
+
+The demo in class was done approximately like so:
+
+0. Ensure tracing is off and wipe the buffer:
+
+		echo -n > trace
+		echo 0 > tracing_on
+
+0. Select the function_graph  tracer instead of nop tracer
+
+		echo function_graph > current_tracer
+
+0. Turn tracing on and back off again
+
+		echo 1 > tracing_on
+		echo 0 > tracing_on
+
+0. Take a look at the output
+
+		{one of: less,nano,vim} trace
+
+The events recorded in this file all took place between enable and disabling tracing. There should be a large number of lines in this file.
+
+### Finding syscall definitions in kernel source
+
+This file defines the `SYSCALL_DEFINE*` macros:
+
+[/include/linux/syscalls.h](https://elixir.bootlin.com/linux/latest/source/include/linux/syscalls.h)
+
+This will quickly locate the syscall named `$SYSCALLNAME` in the kernel:
+
+	git grep '^SYSCALL_DEFINE.($SYSCALLNAME'
+
+e.g: `^SYSCALL_DEFINE.(read'`
+
+### Tracing with bpftrace
+
+bpftrace is a scripting language that implements a frontend for the BPF Linux subsystem.
+
+[BPF](https://en.wikipedia.org/wiki/Berkeley_Packet_Filter) (formerly eBPF) is a Linux subsystem that implements a virtual machine to quickly insert verified BPF bytecode programs while the kernel is running.
+
+The bpftrace syntax is based on
+[awk](https://en.wikipedia.org/wiki/AWK),
+a small scripting language for rapidly processing text files using very simple programs.
+
+Here's a complete hello world executable script in awk:
+
+		#!/bin/awk -f
+
+		BEGIN { printf("hello, World!\n"); }
+
+You can also run this directly in the shell:
+
+		[root@kdlp ~]# awk 'BEGIN { printf("hello, World!\n"); }'
+
+This also valid bpftrace (you must `dnf install bpftrace`):
+
+		[root@kdlp ~]# bpftrace -e 'BEGIN { printf("hello, World!\n"); }'
+		Attaching 1 probe...
+		hello, World!
+
+Use this if you run into problems with bpftrace:
+[Great Reference Guide](https://github.com/iovisor/bpftrace/blob/master/docs/reference_guide.md)
+
+Buy this to take your BPF knowledge to the next level:
+[The BPF Bible: how to become one with the kernel](https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822)
+
+
+**Cscope Interlude**
+
+With the vim cscope plugin and cscope installed on your system:
+
+Run: `cscope -R -k` in the root of your kernel tree to create your cscope database.
+
+
+Within vim you can use `cs find g struct cs find t 'struct whatever {'` to find the definition of that structure. You can also do this without vim by directly running `cscope` in your kernel tree.
+
+
+**A Quick Example**
+
+List all available kprobes that trace functions containing the characters xxx:
+
+	bpftrace -l k:*xxx*
+
+On every invocation of the `xxx` kernel function, print the command name string and the pid for the current task on the CPU (see:
+[task_struct](https://elixir.bootlin.com/linux/latest/source/include/linux/sched.h#L738)).
+
+	bpftrace -e 'k:xxx { printf("%s/%d\n", comm, pid) ; }'
+
+**A Final Example**
+
+First, we'll need a little program to trace:
+
+```
+[root@kdlp ~]# cat > foo <<EOF
+#!/bin/bash
+
+echo x > x
+cat x
+EOF
+[root@kdlp bpftest]# chmod +x foo
+
+```
+
+Trigger on the read system call and print its arguments (sans user buffer), the kernel stack, and the userspace stack.
+
+	bpftrace -e  'kprobe:__x64_sys_read /comm=="foo"/ { printf("hello read(%d, %s, %zu) %s/%d [%s] [%s]\n",arg0, str(arg1), arg2, comm, pid, kstack, ustack); }'
+
+This is unwieldy at the interactive shell. Let's put it in an executable file with some formatting:
+
+```
+[root@kdlp bpftest]# cat > kprobe_read.bp <<EOF
+#!/bin/env bpftrace
+
+kprobe:__x64_sys_read /comm=="foo"/
+{
+        printf("hello read(%d, %s, %zu) %s/%d [%s] [%s]\n",
+                arg0, str(arg1), arg2, comm, pid, kstack, ustack);
+}
+EOF
+[root@kdlp bpftest]# chmod +x kprobe_read.bp
+[root@kdlp bpftest]# ./kprobe_read.bp
+Attaching 1 probe...
+....
+```
+
+While this is still running in its shell, invocation of `./foo` in a separate shell generates output from `bpftrace` that should closely resemble this:
+
+```
+[root@kdlp bpftest]# ./kprobe_read.bp
+Attaching 1 probe...
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827c7d478
+        0x7f8827c64af7
+        0x7f8827c5e78d
+        0x7f8827c5d523
+        0x7f8827c5ebe8
+        0x7f8827c7a10e
+        0x7f8827c76c16
+        0x7f8827c783de
+        0x7f8827c77208
+]
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827c7d478
+        0x7f8827c64af7
+        0x7f8827c5e78d
+        0x7f8827c5d523
+        0x7f8827c5ebe8
+        0x7f8827c7a10e
+        0x7f8827c76c16
+        0x7f8827c783de
+        0x7f8827c77208
+]
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827b491e8
+        0x7f8827ac8fb9
+        0x7f8827abb4ca
+        0x7f8827ac58ae
+        0x7f8827a7ccf8
+        0x7f8827a7d26a
+        0x7f8827a769c9
+        0x7f8827a75f7d
+        0x561e2238a4b5
+        0x561e22317703
+        0x7f8827a6ab8a
+        0x7f8827a6ac4b
+        0x561e22319255
+]
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827b491e8
+        0x7f8827ac8fb9
+        0x7f8827abb4ca
+        0x7f8827ac58ae
+        0x7f8827a7ccf8
+        0x7f8827a7d26a
+        0x7f8827a769c9
+        0x7f8827a75f7d
+        0x561e2238a4b5
+        0x561e22317703
+        0x7f8827a6ab8a
+        0x7f8827a6ac4b
+        0x561e22319255
+]
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827b440c1
+        0x7f8827a6ab8a
+        0x7f8827a6ac4b
+        0x561e22319255
+]
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827b440c1
+        0x561e22373628
+        0x561e2231c018
+        0x561e223f55bb
+        0x561e22320d01
+        0x561e22324940
+        0x561e22324b0c
+        0x561e22324d2e
+        0x561e22318522
+        0x7f8827a6ab8a
+        0x7f8827a6ac4b
+        0x561e22319255
+]
+hello read(-1061355688, , 18446744073709551615) foo/38373 [
+        __x64_sys_read+1
+        do_syscall_64+88
+        entry_SYSCALL_64_after_hwframe+114
+] [
+        0x7f8827b440c1
+        0x561e22373628
+        0x561e2231c018
+        0x561e223f55bb
+        0x561e22320d01
+        0x561e22324940
+        0x561e22324b0c
+        0x561e22324d2e
+        0x561e22318522
+        0x7f8827a6ab8a
+        0x7f8827a6ac4b
+        0x561e22319255
+]
+```
+
+We see that the first and third arguments, the kernel stack, and the user stack are printed without any issues. Despite appearances, the user stacks that list addresses are correct output, however we were not able to find a symbol table and therefore we don't know what strings the compiler mapped to these addresses.
+
+Unfortunately, the second "`char * __user buf`" argument does not display correctly as it is a userspace address and the kprobe probe type is triggered by the ftrace instrumentation added to the text of the kernel binary by the build system.
+
+Alternatively, we can use a tracepoint and directly access all of the arguments by name, including the userspace buffer:
+
+```
+[root@kdlp ~]# bpftrace -lv tracepoint:syscalls:sys_enter_read
+tracepoint:syscalls:sys_enter_read
+    int __syscall_nr
+    unsigned int fd
+    char * buf
+    size_t count
+[root@kdlp bpftest]# cat > tracepoint_read.bp <<EOF
+#!/bin/env bpftrace
+
+tracepoint:syscalls:sys_enter_read /comm=="foo"/
+{
+        printf("hello read(%d, %s, %zu) %s/%d [%s] [%s]\n",
+                args->fd, str(args->buf), args->count, comm, pid, kstack, ustack);
+}
+EOF
+
+[root@kdlp bpftest]# chmod +x tracepoint_read.bp
+[root@kdlp bpftest]# ./tracepoint_read.bp
+Attaching 1 probe...
+```
+
+Finally, we invoke `./foo` in a separate shell on the same system to generate something like the following:
+
+```
+hello read(3, , 832) foo/38364 [] [
+        __GI___read_nocancel+8
+        0x7f89f99a4af7
+        0x7f89f999e78d
+        0x7f89f999d523
+        0x7f89f999ebe8
+        0x7f89f99ba10e
+        0x7f89f99b6c16
+        0x7f89f99b83de
+        0x7f89f99b7208
+]
+hello read(3, ����, 832) foo/38364 [] [
+        0x7f89f99bd478
+        0x7f89f99a4af7
+        0x7f89f999e78d
+        0x7f89f999d523
+        0x7f89f999ebe8
+        0x7f89f99ba10e
+        0x7f89f99b6c16
+        0x7f89f99b83de
+        0x7f89f99b7208
+]
+hello read(3, , 4096) foo/38364 [] [
+        0x7f89f98891e8
+        0x7f89f9808fb9
+        0x7f89f97fb4ca
+        0x7f89f98058ae
+        0x7f89f97bccf8
+        0x7f89f97bd26a
+        0x7f89f97b69c9
+        0x7f89f97b5f7d
+        0x556ebbbad4b5
+        0x556ebbb3a703
+        0x7f89f97aab8a
+        0x7f89f97aac4b
+        0x556ebbb3c255
+]
+hello read(3, # Locale name alias data base.
+# Copyright (C) 1996-2023 Free S, 4096) foo/38364 [] [
+        0x7f89f98891e8
+        0x7f89f9808fb9
+        0x7f89f97fb4ca
+        0x7f89f98058ae
+        0x7f89f97bccf8
+        0x7f89f97bd26a
+        0x7f89f97b69c9
+        0x7f89f97b5f7d
+        0x556ebbbad4b5
+        0x556ebbb3a703
+        0x7f89f97aab8a
+        0x7f89f97aac4b
+        0x556ebbb3c255
+]
+hello read(3, (�!, 80) foo/38364 [] [
+        0x7f89f98840c1
+        0x7f89f97aab8a
+        0x7f89f97aac4b
+        0x556ebbb3c255
+]
+hello read(255, , 30) foo/38364 [] [
+        0x7f89f98840c1
+        0x556ebbb96628
+        0x556ebbb3f018
+        0x556ebbc185bb
+        0x556ebbb43d01
+        0x556ebbb47940
+        0x556ebbb47b0c
+        0x556ebbb47d2e
+        0x556ebbb3b522
+        0x7f89f97aab8a
+        0x7f89f97aac4b
+        0x556ebbb3c255
+]
+hello read(255, #!/bin/bash
+
+echo x > x
+cat x
+, 30) foo/38364 [] [
+        0x7f89f98840c1
+        0x556ebbb96628
+        0x556ebbb3f018
+        0x556ebbc185bb
+        0x556ebbb43d01
+        0x556ebbb47940
+        0x556ebbb47b0c
+        0x556ebbb47d2e
+        0x556ebbb3b522
+        0x7f89f97aab8a
+        0x7f89f97aac4b
+        0x556ebbb3c255
+]
+
+```
+
+An important advantage of the tracepoint probe type is interface stability as systemcalls do not change, but unfortunately,  the kernel stack is not available to the tracepoint-type probe. There is no one-size-fits-all solution as each probe type has its pros and cons.
+
+
+For a much more detailed demo by the bpftrace grandmaster himself (Brendan Gregg), check out this
+[Kernel analysis with bpftrace](https://lwn.net/Articles/793749/)
+article from
+[Linux Weekly News](https://lwn.net/).
+Some of the information may be out of date as the article dates to mid-2019, it's definitely worth a read for anyone who wants to learn more.
