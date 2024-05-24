@@ -2,3 +2,5 @@ remote_theme: underground-software/kdlp-theme
 collections:
   slides:
     output: true
+  articles:
+    output: true
