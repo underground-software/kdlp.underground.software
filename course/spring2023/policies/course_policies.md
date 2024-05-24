@@ -28,7 +28,7 @@
   * The review process spans 2 days.
   * Part 1: Initial submission
     * The student makes their submission to the mailing list using git-send-email.
-    * This submission is due on the listed assignment "due date", see the [course schedule](course_spring2023.html).
+    * This submission is due on the listed assignment "due date", see the [course schedule](../index).
     * If the initial submission is late, the student will get a zero on the entire assignment.
   * Part 2: Peer review
     * A student is given two other student names (call them student A and student B).
