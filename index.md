@@ -19,8 +19,8 @@ In response, we have created the Kernel Development Learning Pipeline a program 
 
 Our program:
 
- - develops and teaches an "Introduction to Linux Kernel Development" course with curriculum designed to offer a smooth onramp for contributing to the linux kernel.
- - participates in the wider linux community (sending patches upstream, attending and presenting at conferences, etc)
+ - develops and teaches an "Introduction to Linux Kernel Development" course with curriculum designed to offer a smooth onramp for contributing to the Linux kernel.
+ - participates in the wider Linux community (sending patches upstream, attending and presenting at conferences, etc)
  - recruits qualified students from our class to internship programs within Red Hat, personally recommending the best interns to hiring managers with the aim of bringing them into the industry as full time software engineers.
  - innovates the role open source can play in the classroom:
    - What if courses were run like an open source project, and students were encouraged to contribute to their learning by making their mark on the classes they take, leaving them better than they found them, and learning along the way.
@@ -29,8 +29,15 @@ Our program:
 
 Current offerings:
 
- - We work with the Miner School of Computer and Information Sciences at the University of Massachuesetts Lowell, to offer [our course to their students](https://www.uml.edu/catalog/courses/COMP/3085) on an ongoing basis
- - We are partnered with the Linux Foundation's LFX mentorship platform to offer our course as a [mentorship](https://mentorship.lfx.linuxfoundation.org/project/958fe36a-d763-4422-81af-c5ecf2465957).
+* Check out our
+[course](/course/index)
+page for more information about when and where we offer Intro to Linux Kernel Development.
+* Rado Vrbosky, who will be running the course at Masaryk Univeristy in Brno, CZ this fall
+will be giving a
+[talk](https://pretalx.com/devconf-cz-2024/talk/XSXKCT/)
+at
+[DevConf.CZ](https://www.devconf.info/cz/)
+in June 2024.
 
 Past Work:
 
