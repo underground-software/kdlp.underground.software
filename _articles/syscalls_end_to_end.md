@@ -12,7 +12,7 @@ of a bug in which case the kernel sent the program a fatal signal (e.g. `SIGILL`
 Today we demonstrate the mechanism by which your code can intentionally call a system function running in kernel mode; in other words, a system call.
 
 We want to know how the userspace invocation ultimately connects back to the `SYSCALL_DEFINE` macro that you hunted down, traced, and wrote a history report on during
-[E1](https://kdlp.underground.software/course/fall2023/assignments/E1.md)
+[E1](../course/fall2023/assignments/E1.md)
 
 Let's follow the path of a syscall on x86.
 

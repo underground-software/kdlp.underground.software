@@ -2,7 +2,7 @@
 layout: article
 title: Introduction to Git
 ---
-* We used [this](https://kdlp.underground.software/course/slides/git.html) slide deck
+* We used [this](/slides/git.html) slide deck
 
 * Git is distributed [version control](https://en.wikipedia.org/wiki/Version_control) software
 
