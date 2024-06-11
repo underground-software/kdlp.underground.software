@@ -89,7 +89,7 @@ module_init(priv_demo_init);
 module_exit(priv_demo_exit)
 ```
 
-We can build this with the same Makefile as shown [here on the E2 page](https://kdlp.underground.software/course/fall2023/assignments/E2.md).
+We can build this with the same Makefile as shown [here on the E2 page](../course/fall2023/assignments/E2.md).
 
 #### Fully Automated demo
 
@@ -98,7 +98,7 @@ To acquire and run this demo, enter your VM and run `git clone https://kdlp.unde
 
 ### Further look at kernelspace vs userspace demo
 
-We took another look at the demo we posted on [L05](L05.md) after class.
+We took another look at the demo we posted on [L05](../course/fall2023/lectures/L05.md) after class.
 
 That demo can be found
 [here](https://kdlp.underground.software/cgit/priv_rdmsr_demo/) and obtained by running:
@@ -106,9 +106,9 @@ That demo can be found
     git clone https://kdlp.underground.software/cgit/priv_rdmsr_demo
 
 Ensure that you are comfortable with some of the introductory details
-we discussed in [L05](L05.md).
+we discussed in [L05](../course/fall2023/lectures/L05.md).
 
-Recall from [L05](L05.md) that a trap is a type of CPU exception.
+Recall from [L05](../course/fall2023/lectures/L05.md) that a trap is a type of CPU exception.
 
 We browsed the source for the Linux implementation of trap handling to understand the codepath that executes when the user executes the "UD2" instruction and prints a message to the kernel ring buffer (`dmesg`).
 
@@ -128,7 +128,7 @@ Linux implements a lot of x86-specific IDT related code in
 
 ### Intro to kernelspace
 
-To begin, we used parts of the [Kernel Modules and Device Drivers](https://kdlp.underground.software/course/slides/modules_drivers.html) slide deck.
+To begin, we used parts of the [Kernel Modules and Device Drivers](/slides/modules_drivers.html) slide deck.
 
 * The slides are a little bit out of sync with how we have re-arranged the course and we have not yet reached device driver development.
 
