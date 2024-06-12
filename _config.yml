@@ -4,3 +4,5 @@ collections:
     output: true
   articles:
     output: true
+relative_links:
+  collections: true
