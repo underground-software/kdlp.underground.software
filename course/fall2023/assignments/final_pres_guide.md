@@ -20,7 +20,7 @@ and give the instructors feedback.
 	- How does your work fit into the big picture of...?
 		- Your academic career
 		- Your software engineering skill development
-		- Your understanding of open source sofware
+		- Your understanding of open source software
 	- What assignments did you particularly enjoy or not enjoy?
         - Explain why your felt that way
         - For those you enjoyed, how could you go further?

@@ -92,7 +92,7 @@ theme: white
 
 # Locking Data Structures
 - spinlock
-  - locking primitive that can be used to implement all other forms of mutual exlcusion
+  - locking primitive that can be used to implement all other forms of mutual exclusion
 - semaphore
   - Combination of integer value and two functions for increment and decrement (v,p)
 - mutex

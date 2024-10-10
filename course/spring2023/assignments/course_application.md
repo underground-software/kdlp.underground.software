@@ -24,7 +24,7 @@ e) If you have a resume, KDLP allows that it be attached to this email as a PDF 
 
 f) The email must contain your discord username that you will use to complete step 2
 
-g) If you prefer to use a different email to send and recieve email patches on our mailing list than the one you are using to send this message, you should specify this address. KDLP will provide instructions on the usage of gmail with our systems, but it is not required that all students use gmail.
+g) If you prefer to use a different email to send and receive email patches on our mailing list than the one you are using to send this message, you should specify this address. KDLP will provide instructions on the usage of gmail with our systems, but it is not required that all students use gmail.
 
 h) Include your time zone.
 

@@ -52,7 +52,7 @@ CPU0         CPU1
 - void {disable_irq, disable_irq_nosync, enable_irq}(int irq);
   - Used to disable a single interrupt
 - void local_irq_save(unsigned long flags);, void local_irq_disable(void);
-  - Diable all interrupts
+  - Disable all interrupts
 - void local_irq_restore(unsigned long flags);, void local_irq_enable(void);
   - Restores interrupts
 
@@ -83,7 +83,7 @@ CPU0         CPU1
 - Irq is the interrupt number, dev_id is a short of client data
 - Interrupt handlers should return a value indicating whether there was an actual interrupt to handle
   - IRQ_HANDLED if the IRQ was able to be handled by the top half
-  - IRQ_WAKE_THREAD if the bottom half shold be scheduled
+  - IRQ_WAKE_THREAD if the bottom half should be scheduled
   - IRQ_NONE if there was nothing to handle (or IRQ wasn’t from device)
 
 ---

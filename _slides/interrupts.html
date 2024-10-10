@@ -73,7 +73,7 @@ CPU0         CPU1<br />
 </li>
 <li>void local_irq_save(unsigned long flags);, void local_irq_disable(void);
 <ul>
-<li>Diable all interrupts</li>
+<li>Disable all interrupts</li>
 </ul>
 </li>
 <li>void local_irq_restore(unsigned long flags);, void local_irq_enable(void);
@@ -117,7 +117,7 @@ CPU0         CPU1<br />
 <li>Interrupt handlers should return a value indicating whether there was an actual interrupt to handle
 <ul>
 <li>IRQ_HANDLED if the IRQ was able to be handled by the top half</li>
-<li>IRQ_WAKE_THREAD if the bottom half shold be scheduled</li>
+<li>IRQ_WAKE_THREAD if the bottom half should be scheduled</li>
 <li>IRQ_NONE if there was nothing to handle (or IRQ wasn’t from device)</li>
 </ul>
 </li>

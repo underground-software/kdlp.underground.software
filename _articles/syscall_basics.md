@@ -2,7 +2,7 @@
 layout: article
 title: Syscall Basics
 ---
-### C system programing interactive demo
+### C system programming interactive demo
 
 0. the most basic C program possible: `main(){}`
 

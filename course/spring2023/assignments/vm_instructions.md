@@ -1,5 +1,5 @@
 ### How to set up your VM and Linux environment
-Start downloading the standard ISO image for Fedora for your architechture (most likely it would be x86_64, unless you have an M1 Mac or you are running Linux on ARM in which case you want the aarch64 ISO): <https://getfedora.org/en/server/download/>. This may take a while, depending on your connection, so get this started first.
+Start downloading the standard ISO image for Fedora for your architecture (most likely it would be x86_64, unless you have an M1 Mac or you are running Linux on ARM in which case you want the aarch64 ISO): <https://getfedora.org/en/server/download/>. This may take a while, depending on your connection, so get this started first.
 
 #### Get the appropriate software
 * Windows - [VirtualBox](https://www.virtualbox.org/wiki/Downloads):
