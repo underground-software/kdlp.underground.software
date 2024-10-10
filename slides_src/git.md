@@ -188,7 +188,7 @@ $ git merge feature1
 $ git merge --squash feature1
 \# Make some changes
 $ git add . && git commit -m "some message"
-- This allows you to make some more changes before you commmit your merge
+- This allows you to make some more changes before you commit your merge
 
 ---
 

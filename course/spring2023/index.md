@@ -12,13 +12,13 @@ Linux is the most widely used operating system in the world. The core software c
 
 Students will:
 
-* Stretch their C programing skills to the limit
+* Stretch their C programming skills to the limit
 
 * Create, develop, and test interesting and creative Linux kernel modules
 
 * Develop the ability to autonomously participate in the open source software community
 
-* Learn how to give and recieve feedback on code patches
+* Learn how to give and receive feedback on code patches
 
 * Demonstrate the ability to explain your code and your knowledge of Linux in your own words
 

@@ -32,7 +32,7 @@ Current offerings:
 * Check out our
 [course](/course/index)
 page for more information about when and where we offer Intro to Linux Kernel Development.
-* Rado Vrbosky, who will be running the course at Masaryk Univeristy in Brno, CZ this fall
+* Rado Vrbosky, who will be running the course at Masaryk University in Brno, CZ this fall
 will be giving a
 [talk](https://pretalx.com/devconf-cz-2024/talk/XSXKCT/)
 at

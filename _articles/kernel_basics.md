@@ -47,7 +47,7 @@ exception which the kernel may resolve by setting up appropriate mapping (e.g. m
 Here's a short AT&T-style x86 assembly file we can use to generate a binary that will attempt to execute a privileged instruction:
 
 ```
-global _start		; declare the _start symbol to have exernal linkage for visibility of linker
+global _start		; declare the _start symbol to have external linkage for visibility of linker
 _start:				; the true entry point for an x86 executable program
 	rdmsr			; execute the RDMSR instruction
 ```
