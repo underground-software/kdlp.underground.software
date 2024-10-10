@@ -36,7 +36,7 @@
     * If the student approves of a submission, then the student will reply to the approved email with what we call an "ack".
       * An "ack" consists of a single line containing the following: Acked-by: Firstname Lastname <email@domain.tld\>.
     * If the student sees problems with a submission, the student will reply to the problematic email with their feedback.
-    * In parallel, other students have been assigned the student's submission and the student should recieve feedback from two other students.
+    * In parallel, other students have been assigned the student's submission and the student should receive feedback from two other students.
     * These reviews are due one day past the initial submission, a late or no submission results in a zero for the review section of the assignment.
     * Reviews are graded based on how many issues a student missed.
       * The student receives 20% off for each unique issue not spotted with max penalty of 100%.
@@ -45,7 +45,7 @@
     * Regardless of whether the student made changes to their initial submission, they must make a final submission.
     * This is due two days after the initial submission, and due one day after receiving the reviews.
   * Overall assignment grading scheme (percentages are relative to the total assignment grade):
-    * The initial submission is purely for the peer-review process. It is crucial that the initial submission is made on time, otherwise, as stated above, the student will recieve a zero on the entire assignment.
+    * The initial submission is purely for the peer-review process. It is crucial that the initial submission is made on time, otherwise, as stated above, the student will receive a zero on the entire assignment.
     * Review 1: 10%
     * Review 2: 10%
     * Final Submission: 80%

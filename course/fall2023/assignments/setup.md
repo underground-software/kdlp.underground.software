@@ -124,7 +124,7 @@ If you see this, you have completed the basic installation of Fedora correctly. 
     * Make a commit to save this version of the repository so it can be shared. Run `git commit -s`.
         * the `-s` flag makes git include the `Signed-off-by` DCO line for you automatically.
     * Git will open an instance of your preferred text editor to let you input a message for the commit.
-        * Put a title containing a short summay of what you did on the first line (e.g. `Introductions: Added introduction for so and so`).
+        * Put a title containing a short summary of what you did on the first line (e.g. `Introductions: Added introduction for so and so`).
         * Press enter twice and write a more detailed explanation that will act as the body of the commit.
         * There should already be a signed off by DCO line for your account at the bottom. If not, add one.
         * Save your changes and exit the editor to finish the commit.
@@ -136,7 +136,7 @@ If you see this, you have completed the basic installation of Fedora correctly. 
         * `-1` means include the most recent 1 commit
         * `--cover-letter` means generate a cover letter for the whole patch series with a summary
         * `-v1` means mark this as the first version of this patch set
-        * `--rfc` means mark these patches as a request for comment. This is required for all intial submissions since they will be recieving peer feedback.
+        * `--rfc` means mark these patches as a request for comment. This is required for all initial submissions since they will be receiving peer feedback.
     * Git will generate two `.patch` files for you.
     * Edit the file `v1-0000-cover-letter.patch` and write your cover letter.
         * Follow the directions in the assignment submission guidelines
@@ -144,10 +144,10 @@ If you see this, you have completed the basic installation of Fedora correctly. 
 * Send your patches to the class mailing list.
     * Run the command `git send-email --to=introductions@kdlp.underground.software v1*.patch`
         * Each assignment will have its own special address to send submissions to. In this case it is `introductions@kdlp.underground.software`
-        * the expression `v1*.patch` will be exapanded by the shell into all file names matchin that pattern (any file whose name starts with `v1` and ends with `.patch`)
+        * the expression `v1*.patch` will be expanded by the shell into all file names matching that pattern (any file whose name starts with `v1` and ends with `.patch`)
     * Git send email will prompt you to ask whether it should send the emails. Type `a` and hit enter to send them all.
         * If it is successful, the output should end with `Result: 250` which indicates that the server accepted your emails.
-        * If it does not work. Do not hesistate to reach out and we can help with troubleshooting.
+        * If it does not work. Do not hesitate to reach out and we can help with troubleshooting.
 
 #### Check your work
 * While Logged in as your non root user account

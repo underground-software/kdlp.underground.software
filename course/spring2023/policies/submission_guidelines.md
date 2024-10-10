@@ -22,7 +22,7 @@ $ # generates patches from the three most recent commits (change -3 to whatever 
 
 All of the patches must follow the patch guidelines [1]. Those generated from a commit should follow the commit guidelines [2] and the cover letter must follow the cover letter guidelines [3].
 
-You will recieve an automatic zero on the assignment if any of the patches in your patchset are corrupt. This shouldn't be possible if you generate your patches with `git format-patch`, but if you edit the files manually they might get corrupted. You have been warned! The correct way to edit the patches is to edit the underlying commits (see `man git-rebase` and the `--amend` option from `man git-commit`) and then regenerate the patches. 
+You will receive an automatic zero on the assignment if any of the patches in your patchset are corrupt. This shouldn't be possible if you generate your patches with `git format-patch`, but if you edit the files manually they might get corrupted. You have been warned! The correct way to edit the patches is to edit the underlying commits (see `man git-rebase` and the `--amend` option from `man git-commit`) and then regenerate the patches. 
 
 #### [1] Patch Guidelines
 

@@ -10,7 +10,7 @@ Q: How can I stay informed about this program?
 
 A:
 [Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join)
-to recieve our triannual newsletter.
+to receive our triannual newsletter.
 
 Q: Who created and runs this program?
 
@@ -18,7 +18,7 @@ A: KDLP was created and developed by
 [Joel Savitz](https://joelsavitz.com)
 and
 [Charles Mirabile](https://github.com/charliemirabile)
-who run this program and actively teach the Introduction to Linux Kenrel Development course.
+who run this program and actively teach the Introduction to Linux Kernel Development course.
 
 We would like to thank the following people for their past and ongoing contributions to KDLP:
 

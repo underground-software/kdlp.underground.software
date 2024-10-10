@@ -69,7 +69,7 @@ module_exit(hello_exit);
 
 # Why not stick with userspace?
 - Context switches makes response time slower
-- Access to hardware requires priveledged instructions
+- Access to hardware requires privileged instructions
     - The most important drivers can’t be handled in user space
 
 ---

@@ -16,7 +16,7 @@ What is a Unix-like Operating System?
 --
 
 - Linux vs Unix & history: where does Linux come from?
-- building a distro, minimal distro ("aparatus")
+- building a distro, minimal distro ("apparatus")
 - what is a Linux process, syscall basics, file descriptor intro
 - e.g. grep in a child process (bill cs308 assignment 2)
 - open read write fork exec dup pipe wait close exit
@@ -28,9 +28,9 @@ Hardware meets software
 - What is CPU privilege
   - trying to execute forbidden instructions (rdmsr_priv_demo)
   - kernel abilities vs userspace
-- exceptions: traps, interupts, aborts
+- exceptions: traps, interrupts, aborts
 - featured example: Syscalls end-to-end
-  - tracing a syscall intruction from the invocation
+  - tracing a syscall instruction from the invocation
   - ??? stuff happens ???
   - response back to userspace
 
