@@ -270,9 +270,6 @@ li {
 	margin: 1rem 0;
 }
 
-#cgit .logo {
-	display: none;
-}
 	/* Search bar */
 #cgit > table > tbody > tr > td > form {
 	float: right;
@@ -441,11 +438,6 @@ li {
 	font-family: courier, mono;
 }
 
-/* hide the 'plain' button from 'tree' view */
-#cgit .list > tbody > tr > td:last-child > .button:last-child {
-	display: none;
-}
-
 #cgit ul.pager {
 	display: flex;
 	justify-content: center;
@@ -462,4 +454,8 @@ li {
 
 #cgit .content > a {
 	display: none;
+}
+
+#cgit a.button {
+	margin: 5px;
 }
