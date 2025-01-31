@@ -9,7 +9,7 @@ apply for Introduction to Linux Kernel Development via
 Q: How can I stay informed about this program?
 
 A:
-[Join our mailing list](https://groups.google.com/forum/#!forum/rh-kdlp/join)
+[Join our mailing list](https://groups.google.com/u/1/a/underground.software/g/kdlp/)
 to receive our triannual newsletter.
 
 Q: Who created and runs this program?
