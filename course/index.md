@@ -2,7 +2,9 @@
 
 |Semester|Institution(s)|Milestone|
 |---|---|---|
-|Ongoing: [Spring 2025 @ University of Texas San Antonio Department of Computer Science](https://spring2025-utsa.kdlp.underground.software)|University of Texas San Antonio|Third new University|
+|Upcoming: [Fall 2025 @ Miner School of Computer & Information Sciences](https://fall2025-uml.kdlp.underground.software)|UMass Lowell||
+|Upcoming: [Fall 2025 @ FI MUNI](https://fall2025-muni.kdlp.underground.software)|[Masaryk University](https://www.muni.cz/en)|Second new university|
+|[Spring 2025 @ University of Texas San Antonio Department of Computer Science](https://spring2025-utsa.kdlp.underground.software)|University of Texas San Antonio|Third new University|
 |[Fall 2024 @ Miner School of Computer & Information Sciences](https://fall2024-uml.kdlp.underground.software)|UMass Lowell||
 |[Fall 2024 @ FI MUNI](https://fall2024-muni.kdlp.underground.software)|[Masaryk University](https://www.muni.cz/en)|Second new university|
 |[Spring 2024](https://spring2024-iit.kdlp.underground.software)|[Technion](https://www.technion.ac.il/en/home-2/)|First new university|
